@@ -14,13 +14,13 @@
         },
         response: function (response) {
             if (response.status === 401) {
-                $window.location.href = window.configuration.clientBaseUrl + 'login';
+                $window.location.href = window.configuration.clientBaseUrl + '/home/login';
             }
             return response || $q.when(response);
         },
         responseError: function (response) {
             if (response.status === 401) {
-                $window.location.href = window.configuration.clientBaseUrl + 'login';
+                $window.location.href = window.configuration.clientBaseUrl + '/home/login';
             }
             return response || $q.when(response);
         }
