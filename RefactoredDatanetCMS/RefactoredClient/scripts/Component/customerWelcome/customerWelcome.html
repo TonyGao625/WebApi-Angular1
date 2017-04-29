@@ -1,0 +1,71 @@
+﻿<div class="container" ng-init="init()">
+    <section class="welcome-main">
+        <div class="container house">
+            <div class="row welcome-box">
+                <div class="col-xs-12 col-sm-6 col-md-6 house-bgd">
+                    <h3 class="house-info">Welcome {{userInfo.CompanyName}}</h3>
+                    <ul class="list-group welcome-ul">
+                        <li class="list-group-item welcome-li">
+                            <p style="font-weight:bold;">Company Contact Name</p>
+                            <p>{{userInfo.ContactName}}</p>
+                        </li>
+                        <li class="list-group-item welcome-li">
+                            <p style="font-weight:bold;">Company Contact Phone</p>
+                            <p>{{userInfo.ContactPhone}}</p>
+                        </li>
+                        <li class="list-group-item welcome-li">
+                            <p style="font-weight:bold;">Company Contact Email</p>
+                            <p><a href="mailto:{{userInfo.ContactEmail}}">{{userInfo.ContactEmail}}</a></p>
+                        </li>
+                   
+                    </ul>
+                    <div ng-show="userInfo.DisplayContractNo" style="margin: 0px 0px 0px 16px;" >
+                        <label style="font-weight:bold;">Contract Number</label>
+                        <div isteven-multi-select
+                             input-model="contractNumbers"
+                             output-model="contractNumber"
+                             button-label="Name"
+                             item-label="Name Desc"
+                             tick-property="ticked"
+                             selection-mode="single"
+                             helper-elements="all filter"
+                             max-height="100px"
+                             search-property="Name"
+                             orientation="vertical"
+                             on-item-click="selectContractNumber()">
+                        </div>
+                    </div>
+                    <a href="####" ng-click="toQuoteAndOrder()" class="welcome-link"><h3 class="view-order">View Quotes and Orders</h3></a>
+                    <p class="welcome-info">Any Questions ?</p>
+                    <p class="welcome-info">Please contact your Datanet account manager</p>
+                    <p class="welcome-info">Name: {{userInfo.ManagerName}}</p>
+                    <p class="welcome-info">Email: <a href="mailto:{{userInfo.ManagerEmail}}">{{userInfo.ManagerEmail}}</a> </p>
+                     <p class="welcome-info"> Phone: {{userInfo.ManagerPhone}}</p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <ul class="img-List">
+                        <li>
+                            <a href="####" ng-click="toOrder()">
+                                <img src="/Content/images/01.png" class="img-responsive">
+                                <span>Place An Order</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="####" ng-click="toQuote()">
+                                <img src="/Content/images/02.png" class="img-responsive">
+                                <span>Bulid A Quote</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="####" ng-click="QtoOrder()" >
+                                <img src="/Content/images/03.png" class="img-responsive">
+                                <span>Quote to Order</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>

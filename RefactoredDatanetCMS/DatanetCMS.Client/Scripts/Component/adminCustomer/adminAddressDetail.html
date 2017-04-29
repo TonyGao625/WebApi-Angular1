@@ -1,0 +1,77 @@
+﻿<tr class="childAddress-tr">
+    <td class="child-td" colspan="8">
+        <form class="form-horizontal" name="adminAddressForm" novalidate ng-submit="adminAddressForm.$valid && createOrUpdateAddress(address)">
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Address 1</label>
+                <div class="col-lg-9">
+                    <input type="text" required name="address1" ng-maxlength="100" maxlength="100" class="form-control input-sm" ng-model="address.Addr1" ng-change="address.enabled=true">
+                    <div ng-messages="adminAddressForm.address1.$error" class="error-message-con" ng-show="adminAddressForm.address1.$touched||adminAddressForm.$submitted">
+                        <div ng-message="required">Address1 is Required</div>
+                        <div ng-message="maxlength">Address1 should be less than 100 characters</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Address 2</label>
+                <div class="col-lg-9">
+                    <input type="text" name="address2" ng-maxlength="50" maxlength="50" class="form-control input-sm" ng-model="address.Addr2" ng-change="address.enabled=true">
+                    <div ng-messages="adminAddressForm.address2.$error" class="error-message-con" ng-show="adminAddressForm.address2.$touched||adminAddressForm.$submitted">
+                        <div ng-message="maxlength">Address2 should be less than 50 characters</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Address 3</label>
+                <div class="col-lg-9">
+                    <input type="text" name="address3" ng-maxlength="50" maxlength="50" class="form-control input-sm" ng-model="address.Addr3" ng-change="address.enabled=true">
+                    <div ng-messages="adminAddressForm.address3.$error" class="error-message-con" ng-show="adminAddressForm.address3.$touched||adminAddressForm.$submitted">
+                        <div ng-message="maxlength">Address3 should be less than 50 characters</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label">State</label>
+                <div class="col-lg-9">
+                    <input type="text" required name="state" ng-maxlength="30" maxlength="30" class="form-control input-sm" ng-model="address.State" ng-change="address.enabled=true">
+                    <div ng-messages="adminAddressForm.state.$error" class="error-message-con" ng-show="adminAddressForm.state.$touched||adminAddressForm.$submitted">
+                        <div ng-message="required">State is Required</div>
+                        <div ng-message="maxlength">State should be less than 30 characters</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label">PostCode</label>
+                <div class="col-lg-9">
+                    <input type="text" required name="PostCode" ng-maxlength="30" maxlength="30" class="form-control input-sm" ng-model="address.PostCode" ng-change="address.enabled=true">
+                    <div ng-messages="adminAddressForm.PostCode.$error" class="error-message-con" ng-show="adminAddressForm.PostCode.$touched||adminAddressForm.$submitted">
+                        <div ng-message="required">PostCode is Required</div>
+                        <div ng-message="maxlength">PostCode should be less than 30 characters</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Phone</label>
+                <div class="col-lg-9">
+                    <input type="text" required ng-maxlength="30"  maxlength="30" name="phone" class="form-control input-sm" ng-model="address.Phone" ng-change="address.enabled=true">
+                    <div ng-messages="adminAddressForm.phone.$error" class="error-message-con" ng-show="adminAddressForm.phone.$touched||adminAddressForm.$submitted">
+                        <div ng-message="required">Phone is Required</div>
+                        <div ng-message="maxlength">Phone should be less than 30 characters</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-6">
+                </div>
+                <div class="col-lg-4">
+                    <a href="#" class="btn btn-secondary" role="button" style="margin-top: 20px; float: right" ng-click="cancelAddress()">Cancel</a>
+                </div>
+                <div class="col-lg-2">
+                    <button type="submit" class="btn btn-primary showItemDisable" ng-disabled="!address.enabled" style="margin-top: 20px;float: right">Submit</button>
+                </div>
+            </div>
+        </form>
+    </td>
+</tr>
+
+
+

@@ -1,0 +1,36 @@
+﻿<tr class="childContract-tr">
+    <td class="child-td" colspan="4">
+        <form class="form-horizontal" name="contractForm" novalidate ng-submit="contractForm.$valid && createOrUpdateContract(contract)">
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Number</label>
+                <div class="col-lg-9">
+                    <input type="text" required name="name" ng-maxlength="30" maxlength="30" class="form-control input-sm" ng-model="contract.Name" ng-change="contract.enabled=true">
+                    <div ng-messages="contractForm.name.$error" class="error-message-con" ng-show="contractForm.name.$touched||contractForm.$submitted">
+                        <div ng-message="required">Number is Required</div>
+                        <div ng-message="maxlength">Number should be less than 30 characters</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Description</label>
+                <div class="col-lg-9">
+                    <input type="text" required name="desc" ng-maxlength="30" maxlength="30" class="form-control input-sm" ng-model="contract.Desc" ng-change="contract.enabled=true">
+                    <div ng-messages="contractForm.desc.$error" class="error-message-con" ng-show="contractForm.desc.$touched||contractForm.$submitted">
+                        <div ng-message="required">Description is Required</div>
+                        <div ng-message="maxlength">Description should be less than 30 characters</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-6">
+                </div>
+                <div class="col-lg-4">
+                    <a href="#" class="btn btn-secondary" role="button" style="margin-top: 20px; float: right" ng-click="cancelContract()">Cancel</a>
+                </div>
+                <div class="col-lg-2">
+                    <button type="submit" class="btn btn-primary showItemDisable" ng-disabled="!contract.enabled" style="margin-top: 20px;float: right">Submit</button>
+                </div>
+            </div>
+        </form>
+    </td>
+</tr>

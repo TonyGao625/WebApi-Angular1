@@ -1,0 +1,29 @@
+﻿angular.module("app").controller("loginCtrl", 
+['session', 'auth', '$scope', '$http', 'growl', '$templateRequest', '$compile', '$window', 'loginFactory',
+    function (
+        session, auth, $scope, $http, growl, $templateRequest, $compile, $window, loginFactory) {
+        var vm = this;
+        vm.login_data = {};
+    vm.login = function () {
+        auth.logIn(vm.login_data).then(function (isLogin) {
+            if (isLogin)
+            {
+                 var userInfo = session.getUser();
+                //if (userInfo.Role == "Admin") {
+                //    $window.location.href = window.configuration.clientBaseUrl;
+                //}
+                //if (userInfo.Role == "Manager") {
+                //    $window.location.href = window.configuration.clientBaseUrl + "quoteorder";
+                //}
+                //if (userInfo.Role == "Customer") {
+                //    $window.location.href = window.configuration.clientBaseUrl + "welcome"
+                //}
+                 if (userInfo.Role == "Manager" || userInfo.Role == "Admin") {
+                     $window.location.href = "/#/uom";
+                }
+            }
+        });
+    }
+}])
+
+

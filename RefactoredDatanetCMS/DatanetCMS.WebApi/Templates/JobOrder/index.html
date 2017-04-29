@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Job Order</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="/Templates/JobOrder/jquery.min.js"></script>
+        <script type="text/javascript" src="/Templates/JobOrder/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/Templates/JobOrder/bootstrap.min.css" />
+        <link rel="stylesheet" href="/Templates/JobOrder/template.css" />
+    </head>
+
+    <body>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-5">
+				    <img src="/Templates/JobOrder/logo.png" style="width: 100%" alt=""/>
+				</div>
+				<div class="col-xs-7">
+					<div class="row">
+						<div class="col-xs-5 text-right" style="padding-top: 36px;">
+							{{head_contact}}
+						</div>
+						<div class="col-xs-7">
+							<div class="row">
+								<div class="curved col-xs-6">
+									<table class="table table-bordered bottom_curved">
+										<tr>
+											<th>ORDER DATE:</th>
+										</tr>
+										<tr>
+											<td style="height: 40px;">{{head_order_date}}</td>
+										</tr>
+									</table>
+								</div>
+								<div class="curved col-xs-6 text-center">
+									<table class="table table-bordered bottom_curved">
+										<tr>
+											<th>REF NUMBER</th>
+										</tr>
+										<tr>
+											<td style="height: 40px;" class="text-left">{{head_ref_number}}</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<div class="row">
+								<div class="curved col-xs-12">
+									<table class="table table-bordered bottom_curved">
+										<tr>
+											<th>ACCOUNT MANAGER:</th>
+										</tr>
+										<tr>
+											<td style="height: 80px;">{{head_account_manager}}</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+                <div class="curved  col-xs-12">
+                    <table class="table table-bordered bottom_curved">
+                        <tr>
+                            <th>DELIVER TO:</th>
+                        </tr>
+                        <tr>
+                            <td style="height: 120px;">{{head_deliver_to}}</td>
+                        </tr>
+                    </table>
+                </div>
+			</div>
+			{{table_details}}
+			{{page_break_bank}}
+			<div class="form-group row" style="padding-top: 2px; page-break-inside: avoid;">
+				<div class="col-xs-6">
+					<span id="bank_eft_refnumber">REFERENCE NUMBER: {{head_ref_number}}</span>
+					<img src="/Templates/JobOrder/bank.jpg" style="width: 100%" alt="" />
+				</div>
+				<div class="col-xs-1"></div>
+				<div class="col-xs-5">
+					<div class="row">
+						<div class="col-xs-5"></div>
+						<div class="table_four_curved col-xs-7">
+							<table class="table table-bordered four_curved">
+								<tr>
+									<td><label>SUB TOTAL</label></td>
+									<td class="text-right"><label>{{sum_sub_total}}</label></td>
+								</tr>
+								<tr>
+									<td><label>GST</label></td>
+									<td class="text-right"><label>{{sum_gst}}</label></td>
+								</tr>
+								<tr>
+									<td><label>AMOUNT</label></td>
+									<td class="text-right"><label>{{sum_amount}}</label></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 text-right">
+							<h4><b>NOTE: ALL PRICES SHOWN IN AUD</b></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{page_break_term}}
+			<div class="row" style="padding-top: 2px; page-break-inside: avoid;">
+				<div class="col-xs-6">
+					<label style="font-size: 12px;">Terms and Conditions</label>
+					<div>
+						<div>1. Return of goods will not be accepted unless otherwise agreed with the supplier.</div>
+						<div>2. All goods remain the property of the company until payment is received in full.</div>
+						<div>3. Payment for all goods will be made on or before agreed credit terms.</div>
+						<div>4. Order valid for 30 days.</div>
+					</div>
+					<div style="margin-top: 6px;">Datanet Asia Pacific Pty Ltd T/A Datanet</div>
+				</div>
+				<div class="col-xs-6 text-right">
+					<table class="table borderless" style="margin-bottom: 0;">
+						<tr>
+							<td class="text-right" style="padding: 0;">
+								<div>
+									2.11, Delhi Corp. Centre<br>
+									32 Delhi Road<br>
+									North Ryde<br>
+									NSW 2113<br>
+									T (02) 8069 8962<br>
+									F (08) 9362 6210
+								</div>
+								<div>salesnsw@datanet.com.au</div>
+							</td>
+							<td class="text-right" style="padding: 0;">
+								<div>
+									28 Stiles Avenue<br>
+									Burswood<br>
+									WA 6100<br>
+									T (08) 9470 7300<br>
+									F (08) 9362 6210
+								</div>
+								<div>sales@datanet.com.au</div>
+							</td>
+							<td class="text-right" style="padding: 0;">
+								<div>
+									96 Gilbert St<br>
+									Adelaide<br>
+									SA 5000<br>
+									T (08) 8410 6088<br>
+									F (08) 8410 6099
+								</div>
+								<div>salessa@datanet.com.au</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

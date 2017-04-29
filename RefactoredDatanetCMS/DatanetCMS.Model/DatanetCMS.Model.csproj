@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DD74C1A9-2222-4D47-A9EA-1F5EB9D4BC6C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DatanetCMS.Model</RootNamespace>
+    <AssemblyName>DatanetCMS.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountModel\LoginModel.cs" />
+    <Compile Include="BuyerGroupModel\BuyerGroupModel.cs" />
+    <Compile Include="BuyerGroupModel\BuyerGroupModelConvert.cs" />
+    <Compile Include="CategoryModel\CategoryModel.cs" />
+    <Compile Include="CategoryModel\CategoryModelConvert.cs" />
+    <Compile Include="ContractNumberModel\ContractNumberModel.cs" />
+    <Compile Include="ContractNumberModel\ContractNumberModelConvert.cs" />
+    <Compile Include="CustomerModel\CustomerModel.cs" />
+    <Compile Include="CustomerModel\CustomerModelConvert.cs" />
+    <Compile Include="DeliveryAddrModel\DeliveryAddrBulkModel.cs" />
+    <Compile Include="DeliveryAddrModel\DeliveryAddrModel.cs" />
+    <Compile Include="DeliveryAddrModel\DeliveryAddrModelConvert.cs" />
+    <Compile Include="SettingModel\EmailTemplateModel.cs" />
+    <Compile Include="FilterModel.cs" />
+    <Compile Include="ManagerModel\ManagerModel.cs" />
+    <Compile Include="ManagerModel\ManagerModelConvert.cs" />
+    <Compile Include="OrderModel\CustomerOrderModel.cs" />
+    <Compile Include="OrderModel\OrderAddressModel.cs" />
+    <Compile Include="OrderModel\OrderAddressModelConvert.cs" />
+    <Compile Include="OrderModel\OrderDeliveryAddrModelConvert.cs" />
+    <Compile Include="OrderModel\OrderDevliveryAddrModel.cs" />
+    <Compile Include="OrderModel\OrderDocModel.cs" />
+    <Compile Include="OrderModel\OrderDocModelConvert.cs" />
+    <Compile Include="OrderModel\OrderHistoryModel.cs" />
+    <Compile Include="OrderModel\OrderHistoryModelConvert.cs" />
+    <Compile Include="OrderModel\OrderInfoModel.cs" />
+    <Compile Include="OrderModel\OrderInfoModelConvert.cs" />
+    <Compile Include="OrderModel\OrderModel.cs" />
+    <Compile Include="OrderModel\OrderModelConvert.cs" />
+    <Compile Include="OrderModel\OrderNumberModel.cs" />
+    <Compile Include="OrderModel\OrderProductModel.cs" />
+    <Compile Include="OrderModel\OrderProductModelConvert.cs" />
+    <Compile Include="OrderModel\QuoteOrderModel.cs" />
+    <Compile Include="OrderModel\QuoteOrderModelConvert.cs" />
+    <Compile Include="PageModel.cs" />
+    <Compile Include="PdfModel\PdfQuoteModel.cs" />
+    <Compile Include="ProductModel\ProductModel.cs" />
+    <Compile Include="ProductModel\ProductModelConvert.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultModel.cs" />
+    <Compile Include="UomModel\UomModel.cs" />
+    <Compile Include="UomModel\UomModelConvert.cs" />
+    <Compile Include="UploadModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatanetCMS.DAO\DatanetCMS.DAO.csproj">
+      <Project>{c568df6a-4322-4d81-b117-ecef91c4d399}</Project>
+      <Name>DatanetCMS.DAO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

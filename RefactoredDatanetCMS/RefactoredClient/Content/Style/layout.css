@@ -1,0 +1,368 @@
+﻿/*************Common******************/
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.receiver-con {
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    padding: 0 5px;
+}
+
+.clear {
+    clear: both;
+}
+
+.center-flex {
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    display: flex;
+    align-items: center;
+}
+
+.center-greytext {
+    text-align: center;
+    color: darkgray;
+}
+
+.center-text {
+    text-align: center;
+}
+
+[contenteditable='true'] {
+    cursor: text;
+}
+
+
+.error-message-con {
+    background-color: #E57373;
+    color: white;
+    position: absolute;
+    z-index: 999;
+}
+
+    .error-message-con.ng-active {
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+.btn-icon {
+    background-color: transparent;
+}
+
+button[disabled].btn-icon .icon-svg {
+    fill: #bdbdbd !important;
+}
+a[disabled].btn-icon .icon-svg {
+     fill: #bdbdbd !important;
+}
+
+.save-btn {
+    color: #4caf50;
+}
+.revert-btn {
+    color: ##0081c3;
+}
+
+.progress-load {
+    z-index:4;
+    position: fixed;
+    top: 0;
+    height: 5px;
+    background-color: #5cb85c;
+    width: 0;
+}
+
+    .progress-load.active {
+        -webkit-animation: loading 0.5s forwards;
+        -moz-animation: loading 0.5s forwards;
+        -ms-animation: loading 0.5s forwards;
+        -o-animation: loading 0.5s forwards;
+        animation: loading 0.5s forwards;
+    }
+
+    .progress-load.last {
+        -webkit-animation: last 0.5s forwards;
+        -moz-animation: last 0.5s forwards;
+        -ms-animation: last 0.5s forwards;
+        -o-animation: last 0.5s forwards;
+        animation: last 0.5s forwards;
+    }
+
+.growl-message {
+    -moz-word-break:break-word ;
+    -o-word-break: break-word;
+    word-break:break-word;
+}
+
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('/Content/fonts/glyphicons-halflings-regular.eot'); /* IE9 Compat Modes */
+    src: url('/Content/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/Content/fonts/glyphicons-halflings-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('/Content/fonts/glyphicons-halflings-regular.woff') format('woff'), /* Pretty Modern Browsers */
+    url('/Content/fonts/glyphicons-halflings-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('/Content/fonts/glyphicons-halflings-regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+
+@keyframes loading {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 30%;
+    }
+}
+
+@-webkit-keyframes loading {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 30%;
+    }
+}
+
+@-ms-keyframes loading {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 30%;
+    }
+}
+
+@-o-keyframes loading {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 30%;
+    }
+}
+
+@keyframes last {
+    0% {
+        width: 30%;
+    }
+
+    99% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@-o-keyframes last {
+    0% {
+        width: 30%;
+    }
+
+    99% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@-webkit-keyframes last {
+    0% {
+        width: 30%;
+    }
+
+    99% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@-ms-keyframes last {
+    0% {
+        width: 30%;
+    }
+
+    99% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+/*************Common******************/
+
+
+
+
+
+
+
+/*******Bootstrap override***********/
+/*.table td, .table th {
+    padding: 0.25rem;
+    vertical-align: middle;
+    border-right: 1px solid #ccc;
+    cursor: default;
+}
+
+.table tbody {
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}*/
+
+
+
+
+/*******Bootstrap override***********/
+
+
+/* AUTOCOMPLETE */
+
+.autocomplete {
+    width: 100%;
+    position: relative;
+}
+
+    .autocomplete ul {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        border-left: 1px solid #888;
+        border-right: 1px solid #888;
+        border-bottom: 1px solid #888;
+        z-index: 1;
+    }
+
+    .autocomplete li {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        padding: 0.4em;
+        background-color: #fff;
+    }
+
+        .autocomplete li.active {
+            width: 100%;
+            background-color: #4bf;
+        }
+
+    .autocomplete .highlight {
+        background-color: #E2E2E2;
+    }
+
+    .autocomplete li.active .highlight {
+        background: #666;
+        color: #fff;
+    }
+
+/* icons */
+
+.material-icons {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+/**************Table****************/
+.table .edit-con {
+    width: 100%;
+    border-width: 0;
+    background-color: transparent;
+    text-overflow: ellipsis;
+    font-weight: 100;
+}
+
+.table input.edit-con.active {
+    background-color: white;
+    border-width: 2px;
+    font-weight: 100;
+}
+
+.list-container {
+    margin: 20px;
+    margin-top: 80px
+}
+
+    .list-container form.search-form {
+        margin: 5px 0 20px 0;
+    }
+
+    .list-container .add-btn {
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .list-container .action-btn {
+        margin: 0 10px;
+    }
+
+.textoverflow {
+    text-overflow: ellipsis;
+}
+
+.buttonCenter {
+    text-align: center;
+}
+/**************Table****************/
+
+/************Layout**************/
+
+
+.menu {
+    position: fixed;
+    width: 250px;
+    background-color: #ececec;
+    height: calc(100vh - 64px);
+}
+
+.dashboard {
+    margin-left: 250px;
+    height: calc(100vh - 64px);
+    overflow-y: auto;
+}
+/**************PageSize Option****************/
+.prolongtext {
+    display: inline;
+    width: 126px;
+}
+
+.page-item:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+}
+
+.hidden {
+    display: none;
+}
+
+.paddingbottom {
+    padding-bottom: 150px;
+}
+/**************PageSize Option****************/

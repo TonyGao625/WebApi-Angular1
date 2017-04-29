@@ -1,0 +1,48 @@
+﻿
+<div class="container">
+    <div class="list-container">
+        <form class="search-form form-inline float-xs-left">
+            <input class="form-control" type="text" maxlength="30" placeholder="Search for Name" ng-model="filterCategory">
+            <button type="submit" class="btn btn-default" ng-click="$root.checkIfEdit()&&search()" >Search</button>
+        </form>
+        <table class="table table-hover table-bordered">
+            <thead class="thead-inverse">
+            <tr>
+                <th width="5%">#</th>
+                <th width="85%">Name</th>
+                <th width="10%" class="center-text">
+                    <button class="btn-icon add-btn" ng-disabled="addDisable" ng-click="$root.checkIfEdit()&&add($event)">
+                        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path fill="#00e676" class="icon-svg" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+                        </svg>
+                    </button>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="category in categories">
+                <th >{{$index+1}}</th>
+                <td title="{{category.CategoryName}}">
+                    {{category.CategoryName}}
+                </td>
+                <td class="center-text">
+                    <button class="btn-icon cursor-pointer action-btn" ng-click="$root.checkIfEdit() && showItem(category,$event);addDisable=false">
+                        <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                            <path fill="#000000" d="M3,3H21V5H3V3M3,7H15V9H3V7M3,11H21V13H3V11M3,15H15V17H3V15M3,19H21V21H3V19Z"/>
+                        </svg>
+                    </button>
+                    <button class="btn-icon cursor-pointer action-btn" ng-click="delete(category)">
+                        <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                            <path fill="#000000" d="M3,16.74L7.76,12L3,7.26L7.26,3L12,7.76L16.74,3L21,7.26L16.24,12L21,16.74L16.74,21L12,16.24L7.26,21L3,16.74M12,13.41L16.74,18.16L18.16,16.74L13.41,12L18.16,7.26L16.74,5.84L12,10.59L7.26,5.84L5.84,7.26L10.59,12L5.84,16.74L7.26,18.16L12,13.41Z"/>
+                        </svg>
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+            <div class="text-center">
+                <custom-pager page="{{page}}" pages-count="{{pagesCount}}" total-count="{{totalCount}}" search-func="$root.checkIfEdit()&&search(page)"></custom-pager>
+            </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+﻿admin-buyer-group .multiSelect .buttonLabel {
+  color: #666;
+  font-weight: 100;
+}
+admin-buyer-group td.col-lg-10.ng-binding {
+  color: #666;
+}
+admin-buyer-group .child-tr .child-td form {
+  width: 100%;
+  margin: auto;
+}
+admin-buyer-group .child-tr .child-td form .withScroll {
+  width: 96.3%;
+}
+admin-buyer-group .child-tr .child-td form .withProductScroll {
+  width: 97.3%;
+}
+admin-buyer-group .child-tr .child-td form .multiSelect > button {
+  color: lightgray;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  cursor: pointer;
+  padding: 1px 8px 1px 8px;
+  font-size: 14px;
+  min-height: 28px !important;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: normal;
+  background-color: #fff;
+  background-image: linear-gradient(#fff, rgba(247, 247, 247, 0));
+  width: 250px;
+  height: 20px;
+}
+admin-buyer-group .child-tr .child-td form .table-fixed thead {
+  width: 97%;
+}
+admin-buyer-group .child-tr .child-td form .table-fixed tbody {
+  height: 100px;
+  overflow-y: auto;
+  width: 100%;
+}
+admin-buyer-group .child-tr .child-td form .table-fixed thead,
+admin-buyer-group .child-tr .child-td form .table-fixed tbody,
+admin-buyer-group .child-tr .child-td form .table-fixed tr,
+admin-buyer-group .child-tr .child-td form .table-fixed td,
+admin-buyer-group .child-tr .child-td form .table-fixed th {
+  display: block;
+}
+admin-buyer-group .child-tr .child-td form .table-fixed tbody td,
+admin-buyer-group .child-tr .child-td form .table-fixed thead > tr > th {
+  float: left;
+  border-bottom-width: 0;
+}

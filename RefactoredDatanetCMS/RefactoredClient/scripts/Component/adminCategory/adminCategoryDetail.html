@@ -1,0 +1,30 @@
+﻿<tr class="child-tr">
+    <td class="child-td" colspan="3">
+        <form class="form-horizontal" name="categoryForm" novalidate ng-submit="categoryForm.$valid && createOrUpdate(category)">
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Name</label>
+                <div class="col-lg-9">
+                    <input type="text" required name="categoryName" ng-maxlength="30" maxlength="30" class="form-control input-sm" ng-model="category.CategoryName" ng-change="category.enabled=true">
+                    <div ng-messages="categoryForm.categoryName.$error" class="error-message-con" ng-show="categoryForm.categoryName.$touched||categoryForm.$submitted">
+                        <div ng-message="required">Category Name is Required</div>
+                        <div ng-message="maxlength">Category Name should be less than 30 characters</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-6">
+                </div>
+                <div class="col-lg-4">
+                    <a href="#" class="btn btn-secondary" role="button" style="margin-top: 20px; float: right;margin-right:-21px;" ng-click="cancel()">Cancel</a>
+                </div>
+                <div class="col-lg-2">
+                    <button type="submit" class="btn btn-primary showItemDisable" ng-disabled="!category.enabled" style="margin-top: 20px;float: right">Submit</button>
+
+                </div>
+            </div>
+        </form>
+    </td>
+</tr>
+
+
+

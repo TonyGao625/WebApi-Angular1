@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f0e7546ffe66459584b5c729ac94e2c2" Name="Diagram1" ZoomLevel="63">
+        <EntityTypeShape EntityType="DatanetCMSWebModel.AppLog" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DatanetCMSWebModel.BuyerGroup" Width="1.5" PointX="0.75" PointY="11.5" />
+        <EntityTypeShape EntityType="DatanetCMSWebModel.Category" Width="1.5" PointX="9" PointY="28.375" />
+        <EntityTypeShape EntityType="DatanetCMSWebModel.ContractNumber" Width="1.5" PointX="8.25" PointY="10.125" />
+        <EntityTypeShape EntityType="DatanetCMSWebModel.Customer" Width="1.5" PointX="6" PointY="10.125" />
+        <EntityTypeShape EntityType="DatanetCMSWebModel.DeliveryAddress" Width="1.5" PointX="8.25" PointY="5.625" />
+        <EntityTypeShape EntityType="DatanetCMSWebModel.EmailTemplate" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DatanetCMSWebModel.GroupProduct" Width="1.5" PointX="3" PointY="11.375" />
+        <EntityTypeShape EntityType="DatanetCMSWebModel.Manager" Width="1.5" PointX="3.75" PointY="7.125" />
+        <EntityTypeShape EntityType="DatanetCMSWebModel.Order" Width="1.5" PointX="8.25" PointY="13.75" />
+        <EntityTypeShape EntityType="DatanetCMSWebModel.OrderAddress" Width="1.5" PointX="10.5" PointY="9" />
+        <EntityTypeShape EntityType="DatanetCMSWebModel.OrderDoc" Width="1.5" PointX="10.5" PointY="21.375" />
+        <EntityTypeShape EntityType="DatanetCMSWebModel.OrderHistory" Width="1.5" PointX="10.5" PointY="13.875" />
+        <EntityTypeShape EntityType="DatanetCMSWebModel.OrderNumber" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DatanetCMSWebModel.OrderProduct" Width="1.5" PointX="13.5" PointY="15.375" />
+        <EntityTypeShape EntityType="DatanetCMSWebModel.Product" Width="1.5" PointX="11.25" PointY="25.875" />
+        <EntityTypeShape EntityType="DatanetCMSWebModel.sysdiagram" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DatanetCMSWebModel.Uom" Width="1.5" PointX="9" PointY="25.125" />
+        <AssociationConnector Association="DatanetCMSWebModel.FK_Customer_BuyerGroup" />
+        <AssociationConnector Association="DatanetCMSWebModel.FK_GPRelation_BuyerGroup" />
+        <AssociationConnector Association="DatanetCMSWebModel.FK_Product_Category" />
+        <AssociationConnector Association="DatanetCMSWebModel.FK_ContractNumber_Customer" />
+        <AssociationConnector Association="DatanetCMSWebModel.FK_Customer_Manager" />
+        <AssociationConnector Association="DatanetCMSWebModel.FK_DeliveryAddr_Customer" />
+        <AssociationConnector Association="DatanetCMSWebModel.FK_Order_Customer" />
+        <AssociationConnector Association="DatanetCMSWebModel.FK_OrderAddr_DeliveryAddr" />
+        <AssociationConnector Association="DatanetCMSWebModel.FK_GPRelation_Product" />
+        <AssociationConnector Association="DatanetCMSWebModel.FK_OrderAddress_Order" />
+        <AssociationConnector Association="DatanetCMSWebModel.FK_OrderDoc_Order" />
+        <AssociationConnector Association="DatanetCMSWebModel.FK_OrderHistory_Order" />
+        <AssociationConnector Association="DatanetCMSWebModel.FK_OrderProduct_Order" />
+        <AssociationConnector Association="DatanetCMSWebModel.FK_OrderProduct_Product" />
+        <AssociationConnector Association="DatanetCMSWebModel.FK_Product_Uom" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

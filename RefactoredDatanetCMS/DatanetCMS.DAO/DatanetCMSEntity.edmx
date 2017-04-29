@@ -1,0 +1,1422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DatanetCMSWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AppLogs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Thread" Type="nvarchar(max)" />
+          <Property Name="Level" Type="nvarchar(max)" />
+          <Property Name="Logger" Type="nvarchar(max)" />
+          <Property Name="Message" Type="nvarchar(max)" />
+          <Property Name="Exception" Type="nvarchar(max)" />
+          <Property Name="Controller" Type="nvarchar(max)" />
+          <Property Name="Action" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="BuyerGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="EditBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="EditTime" Type="datetime" />
+          <Property Name="ExpireTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="EditBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="EditTime" Type="datetime" />
+          <Property Name="ExpireTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ContractNumber">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerId" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Desc" Type="nvarchar(max)" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="EditBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="EditTime" Type="datetime" />
+          <Property Name="ExpireTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CompanyName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="LoginId" Type="nvarchar" MaxLength="100" />
+          <Property Name="LoginPassword" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="ManagerId" Type="int" />
+          <Property Name="ContractNo" Type="nvarchar" MaxLength="100" />
+          <Property Name="PurchaseType" Type="nvarchar" MaxLength="10" />
+          <Property Name="DisplayContractNo" Type="bit" />
+          <Property Name="PoDocMandatory" Type="bit" />
+          <Property Name="BuyerGroupId" Type="int" />
+          <Property Name="DeliveryCharge" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Logo" Type="nvarchar(max)" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="EditBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="EditTime" Type="datetime" />
+          <Property Name="ExpireTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="DeliveryAddress">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Addr1" Type="nvarchar(max)" />
+          <Property Name="Addr2" Type="nvarchar(max)" />
+          <Property Name="Addr3" Type="nvarchar(max)" />
+          <Property Name="State" Type="nvarchar" MaxLength="100" />
+          <Property Name="PostCode" Type="nvarchar" MaxLength="100" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="100" />
+          <Property Name="CustomerId" Type="int" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="EditBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="EditTime" Type="datetime" />
+          <Property Name="ExpireTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="EmailTemplate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="50" />
+          <Property Name="Body" Type="nvarchar" MaxLength="4000" />
+        </EntityType>
+        <EntityType Name="GroupProduct">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BuyerGroupId" Type="int" />
+          <Property Name="ProductId" Type="int" />
+          <Property Name="Price" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="EditBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="EditTime" Type="datetime" />
+          <Property Name="ExpireTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Manager">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="LoginName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Password" Type="nvarchar" MaxLength="100" />
+          <Property Name="Role" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="EditBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="EditTime" Type="datetime" />
+          <Property Name="ExpireTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderCode" Type="nvarchar" MaxLength="100" />
+          <Property Name="QuoteCode" Type="nvarchar" MaxLength="100" />
+          <Property Name="CustomerId" Type="int" />
+          <Property Name="CompanyName" Type="nvarchar" MaxLength="100" />
+          <Property Name="CustomerContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ManagerId" Type="int" />
+          <Property Name="ManagerName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="Mode" Type="nvarchar" MaxLength="10" />
+          <Property Name="PurchaseType" Type="nvarchar" MaxLength="10" />
+          <Property Name="PurchaseNumber" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsBuildOrder" Type="bit" />
+          <Property Name="DeliveryCharge" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="GSTRate" Type="float" />
+          <Property Name="GST" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="EditBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="EditTime" Type="datetime" />
+          <Property Name="PDFPath" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="OrderAddress">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderId" Type="int" />
+          <Property Name="AddrId" Type="int" />
+          <Property Name="Addr1" Type="nvarchar(max)" />
+          <Property Name="Addr2" Type="nvarchar(max)" />
+          <Property Name="Addr3" Type="nvarchar(max)" />
+          <Property Name="State" Type="nvarchar" MaxLength="100" />
+          <Property Name="PostCode" Type="nvarchar" MaxLength="100" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="EditBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="EditTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="OrderDoc">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderId" Type="int" />
+          <Property Name="PoDocPath" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="EditTime" Type="datetime" />
+          <Property Name="EditBy" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="OrderHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderId" Type="int" />
+          <Property Name="Note" Type="nvarchar(max)" />
+          <Property Name="TableName" Type="nvarchar" MaxLength="100" />
+          <Property Name="FieldName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Operator" Type="nvarchar" MaxLength="100" />
+          <Property Name="OldValue" Type="nvarchar" MaxLength="100" />
+          <Property Name="NewValue" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="OrderNumber">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Prefix" Type="nvarchar" MaxLength="50" />
+          <Property Name="CurrentNumber" Type="int" />
+          <Property Name="Mode" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="OrderProduct">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderId" Type="int" />
+          <Property Name="ProductId" Type="int" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="EditBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="EditTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="100" />
+          <Property Name="ShortDesc" Type="nvarchar(max)" />
+          <Property Name="LongDesc" Type="nvarchar(max)" />
+          <Property Name="Vendor" Type="nvarchar" MaxLength="100" />
+          <Property Name="UomId" Type="int" />
+          <Property Name="CategoryId" Type="int" />
+          <Property Name="Image" Type="nvarchar(max)" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="EditBy" Type="varchar" MaxLength="100" />
+          <Property Name="EditTime" Type="datetime" />
+          <Property Name="ExpireTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Uom">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="EditBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="EditTime" Type="datetime" />
+          <Property Name="ExpireTime" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_ContractNumber_Customer">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+          <End Role="ContractNumber" Type="Self.ContractNumber" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ContractNumber">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Customer_BuyerGroup">
+          <End Role="BuyerGroup" Type="Self.BuyerGroup" Multiplicity="0..1" />
+          <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BuyerGroup">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Customer">
+              <PropertyRef Name="BuyerGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Customer_Manager">
+          <End Role="Manager" Type="Self.Manager" Multiplicity="0..1" />
+          <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manager">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Customer">
+              <PropertyRef Name="ManagerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeliveryAddr_Customer">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+          <End Role="DeliveryAddress" Type="Self.DeliveryAddress" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DeliveryAddress">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GPRelation_BuyerGroup">
+          <End Role="BuyerGroup" Type="Self.BuyerGroup" Multiplicity="0..1" />
+          <End Role="GroupProduct" Type="Self.GroupProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BuyerGroup">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GroupProduct">
+              <PropertyRef Name="BuyerGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GPRelation_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+          <End Role="GroupProduct" Type="Self.GroupProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GroupProduct">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Customer">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderAddr_DeliveryAddr">
+          <End Role="DeliveryAddress" Type="Self.DeliveryAddress" Multiplicity="0..1" />
+          <End Role="OrderAddress" Type="Self.OrderAddress" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeliveryAddress">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderAddress">
+              <PropertyRef Name="AddrId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderAddress_Order">
+          <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+          <End Role="OrderAddress" Type="Self.OrderAddress" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderAddress">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDoc_Order">
+          <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+          <End Role="OrderDoc" Type="Self.OrderDoc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderDoc">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistory_Order">
+          <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+          <End Role="OrderHistory" Type="Self.OrderHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderHistory">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderProduct_Order">
+          <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+          <End Role="OrderProduct" Type="Self.OrderProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderProduct">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderProduct_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+          <End Role="OrderProduct" Type="Self.OrderProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderProduct">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Category">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Uom">
+          <End Role="Uom" Type="Self.Uom" Multiplicity="0..1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Uom">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="UomId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DatanetCMSWebModelStoreContainer">
+          <EntitySet Name="AppLogs" EntityType="Self.AppLogs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BuyerGroup" EntityType="Self.BuyerGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ContractNumber" EntityType="Self.ContractNumber" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeliveryAddress" EntityType="Self.DeliveryAddress" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmailTemplate" EntityType="Self.EmailTemplate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GroupProduct" EntityType="Self.GroupProduct" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Manager" EntityType="Self.Manager" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderAddress" EntityType="Self.OrderAddress" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderDoc" EntityType="Self.OrderDoc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderHistory" EntityType="Self.OrderHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderNumber" EntityType="Self.OrderNumber" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderProduct" EntityType="Self.OrderProduct" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Uom" EntityType="Self.Uom" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ContractNumber_Customer" Association="Self.FK_ContractNumber_Customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="ContractNumber" EntitySet="ContractNumber" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Customer_BuyerGroup" Association="Self.FK_Customer_BuyerGroup">
+            <End Role="BuyerGroup" EntitySet="BuyerGroup" />
+            <End Role="Customer" EntitySet="Customer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Customer_Manager" Association="Self.FK_Customer_Manager">
+            <End Role="Manager" EntitySet="Manager" />
+            <End Role="Customer" EntitySet="Customer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeliveryAddr_Customer" Association="Self.FK_DeliveryAddr_Customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="DeliveryAddress" EntitySet="DeliveryAddress" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GPRelation_BuyerGroup" Association="Self.FK_GPRelation_BuyerGroup">
+            <End Role="BuyerGroup" EntitySet="BuyerGroup" />
+            <End Role="GroupProduct" EntitySet="GroupProduct" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GPRelation_Product" Association="Self.FK_GPRelation_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="GroupProduct" EntitySet="GroupProduct" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Customer" Association="Self.FK_Order_Customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderAddr_DeliveryAddr" Association="Self.FK_OrderAddr_DeliveryAddr">
+            <End Role="DeliveryAddress" EntitySet="DeliveryAddress" />
+            <End Role="OrderAddress" EntitySet="OrderAddress" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderAddress_Order" Association="Self.FK_OrderAddress_Order">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderAddress" EntitySet="OrderAddress" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDoc_Order" Association="Self.FK_OrderDoc_Order">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderDoc" EntitySet="OrderDoc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistory_Order" Association="Self.FK_OrderHistory_Order">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderHistory" EntitySet="OrderHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderProduct_Order" Association="Self.FK_OrderProduct_Order">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderProduct" EntitySet="OrderProduct" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderProduct_Product" Association="Self.FK_OrderProduct_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="OrderProduct" EntitySet="OrderProduct" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Category" Association="Self.FK_Product_Category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Uom" Association="Self.FK_Product_Uom">
+            <End Role="Uom" EntitySet="Uom" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DatanetCMSWebModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DatanetCMSWebEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AppLogs" EntityType="DatanetCMSWebModel.AppLog" />
+          <EntitySet Name="BuyerGroups" EntityType="DatanetCMSWebModel.BuyerGroup" />
+          <EntitySet Name="Categories" EntityType="DatanetCMSWebModel.Category" />
+          <EntitySet Name="ContractNumbers" EntityType="DatanetCMSWebModel.ContractNumber" />
+          <EntitySet Name="Customers" EntityType="DatanetCMSWebModel.Customer" />
+          <EntitySet Name="DeliveryAddresses" EntityType="DatanetCMSWebModel.DeliveryAddress" />
+          <EntitySet Name="EmailTemplates" EntityType="DatanetCMSWebModel.EmailTemplate" />
+          <EntitySet Name="GroupProducts" EntityType="DatanetCMSWebModel.GroupProduct" />
+          <EntitySet Name="Managers" EntityType="DatanetCMSWebModel.Manager" />
+          <EntitySet Name="Orders" EntityType="DatanetCMSWebModel.Order" />
+          <EntitySet Name="OrderAddresses" EntityType="DatanetCMSWebModel.OrderAddress" />
+          <EntitySet Name="OrderDocs" EntityType="DatanetCMSWebModel.OrderDoc" />
+          <EntitySet Name="OrderHistories" EntityType="DatanetCMSWebModel.OrderHistory" />
+          <EntitySet Name="OrderNumbers" EntityType="DatanetCMSWebModel.OrderNumber" />
+          <EntitySet Name="OrderProducts" EntityType="DatanetCMSWebModel.OrderProduct" />
+          <EntitySet Name="Products" EntityType="DatanetCMSWebModel.Product" />
+          <EntitySet Name="sysdiagrams" EntityType="DatanetCMSWebModel.sysdiagram" />
+          <EntitySet Name="Uoms" EntityType="DatanetCMSWebModel.Uom" />
+          <AssociationSet Name="FK_Customer_BuyerGroup" Association="DatanetCMSWebModel.FK_Customer_BuyerGroup">
+            <End Role="BuyerGroup" EntitySet="BuyerGroups" />
+            <End Role="Customer" EntitySet="Customers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GPRelation_BuyerGroup" Association="DatanetCMSWebModel.FK_GPRelation_BuyerGroup">
+            <End Role="BuyerGroup" EntitySet="BuyerGroups" />
+            <End Role="GroupProduct" EntitySet="GroupProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Category" Association="DatanetCMSWebModel.FK_Product_Category">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ContractNumber_Customer" Association="DatanetCMSWebModel.FK_ContractNumber_Customer">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="ContractNumber" EntitySet="ContractNumbers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Customer_Manager" Association="DatanetCMSWebModel.FK_Customer_Manager">
+            <End Role="Manager" EntitySet="Managers" />
+            <End Role="Customer" EntitySet="Customers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeliveryAddr_Customer" Association="DatanetCMSWebModel.FK_DeliveryAddr_Customer">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="DeliveryAddress" EntitySet="DeliveryAddresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Customer" Association="DatanetCMSWebModel.FK_Order_Customer">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderAddr_DeliveryAddr" Association="DatanetCMSWebModel.FK_OrderAddr_DeliveryAddr">
+            <End Role="DeliveryAddress" EntitySet="DeliveryAddresses" />
+            <End Role="OrderAddress" EntitySet="OrderAddresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GPRelation_Product" Association="DatanetCMSWebModel.FK_GPRelation_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="GroupProduct" EntitySet="GroupProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderAddress_Order" Association="DatanetCMSWebModel.FK_OrderAddress_Order">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderAddress" EntitySet="OrderAddresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDoc_Order" Association="DatanetCMSWebModel.FK_OrderDoc_Order">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderDoc" EntitySet="OrderDocs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderHistory_Order" Association="DatanetCMSWebModel.FK_OrderHistory_Order">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderHistory" EntitySet="OrderHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderProduct_Order" Association="DatanetCMSWebModel.FK_OrderProduct_Order">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderProduct" EntitySet="OrderProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderProduct_Product" Association="DatanetCMSWebModel.FK_OrderProduct_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="OrderProduct" EntitySet="OrderProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Uom" Association="DatanetCMSWebModel.FK_Product_Uom">
+            <End Role="Uom" EntitySet="Uoms" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AppLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Thread" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Level" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Logger" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Exception" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Controller" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Action" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="BuyerGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="EditBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EditTime" Type="DateTime" Precision="3" />
+          <Property Name="ExpireTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Customers" Relationship="DatanetCMSWebModel.FK_Customer_BuyerGroup" FromRole="BuyerGroup" ToRole="Customer" />
+          <NavigationProperty Name="GroupProducts" Relationship="DatanetCMSWebModel.FK_GPRelation_BuyerGroup" FromRole="BuyerGroup" ToRole="GroupProduct" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="EditBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EditTime" Type="DateTime" Precision="3" />
+          <Property Name="ExpireTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Products" Relationship="DatanetCMSWebModel.FK_Product_Category" FromRole="Category" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="ContractNumber">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerId" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="EditBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EditTime" Type="DateTime" Precision="3" />
+          <Property Name="ExpireTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Customer" Relationship="DatanetCMSWebModel.FK_ContractNumber_Customer" FromRole="ContractNumber" ToRole="Customer" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LoginId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LoginPassword" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ContactName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ContactPhone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ContactEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ManagerId" Type="Int32" />
+          <Property Name="ContractNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PurchaseType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayContractNo" Type="Boolean" />
+          <Property Name="PoDocMandatory" Type="Boolean" />
+          <Property Name="BuyerGroupId" Type="Int32" />
+          <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Logo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="EditBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EditTime" Type="DateTime" Precision="3" />
+          <Property Name="ExpireTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="BuyerGroup" Relationship="DatanetCMSWebModel.FK_Customer_BuyerGroup" FromRole="Customer" ToRole="BuyerGroup" />
+          <NavigationProperty Name="ContractNumbers" Relationship="DatanetCMSWebModel.FK_ContractNumber_Customer" FromRole="Customer" ToRole="ContractNumber" />
+          <NavigationProperty Name="Manager" Relationship="DatanetCMSWebModel.FK_Customer_Manager" FromRole="Customer" ToRole="Manager" />
+          <NavigationProperty Name="DeliveryAddresses" Relationship="DatanetCMSWebModel.FK_DeliveryAddr_Customer" FromRole="Customer" ToRole="DeliveryAddress" />
+          <NavigationProperty Name="Orders" Relationship="DatanetCMSWebModel.FK_Order_Customer" FromRole="Customer" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="DeliveryAddress">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Addr1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Addr2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Addr3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PostCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerId" Type="Int32" />
+          <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="EditBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EditTime" Type="DateTime" Precision="3" />
+          <Property Name="ExpireTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Customer" Relationship="DatanetCMSWebModel.FK_DeliveryAddr_Customer" FromRole="DeliveryAddress" ToRole="Customer" />
+          <NavigationProperty Name="OrderAddresses" Relationship="DatanetCMSWebModel.FK_OrderAddr_DeliveryAddr" FromRole="DeliveryAddress" ToRole="OrderAddress" />
+        </EntityType>
+        <EntityType Name="EmailTemplate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Body" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="GroupProduct">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BuyerGroupId" Type="Int32" />
+          <Property Name="ProductId" Type="Int32" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="EditBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EditTime" Type="DateTime" Precision="3" />
+          <Property Name="ExpireTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="BuyerGroup" Relationship="DatanetCMSWebModel.FK_GPRelation_BuyerGroup" FromRole="GroupProduct" ToRole="BuyerGroup" />
+          <NavigationProperty Name="Product" Relationship="DatanetCMSWebModel.FK_GPRelation_Product" FromRole="GroupProduct" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Manager">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LoginName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Role" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="EditBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EditTime" Type="DateTime" Precision="3" />
+          <Property Name="ExpireTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Customers" Relationship="DatanetCMSWebModel.FK_Customer_Manager" FromRole="Manager" ToRole="Customer" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="QuoteCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerId" Type="Int32" />
+          <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerContactName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ManagerId" Type="Int32" />
+          <Property Name="ManagerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ContactName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ContactEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ContactPhone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PurchaseType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PurchaseNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsBuildOrder" Type="Boolean" />
+          <Property Name="DeliveryCharge" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="GSTRate" Type="Double" />
+          <Property Name="GST" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EditBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EditTime" Type="DateTime" Precision="3" />
+          <Property Name="PDFPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Customer" Relationship="DatanetCMSWebModel.FK_Order_Customer" FromRole="Order" ToRole="Customer" />
+          <NavigationProperty Name="OrderAddresses" Relationship="DatanetCMSWebModel.FK_OrderAddress_Order" FromRole="Order" ToRole="OrderAddress" />
+          <NavigationProperty Name="OrderDocs" Relationship="DatanetCMSWebModel.FK_OrderDoc_Order" FromRole="Order" ToRole="OrderDoc" />
+          <NavigationProperty Name="OrderHistories" Relationship="DatanetCMSWebModel.FK_OrderHistory_Order" FromRole="Order" ToRole="OrderHistory" />
+          <NavigationProperty Name="OrderProducts" Relationship="DatanetCMSWebModel.FK_OrderProduct_Order" FromRole="Order" ToRole="OrderProduct" />
+        </EntityType>
+        <EntityType Name="OrderAddress">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderId" Type="Int32" />
+          <Property Name="AddrId" Type="Int32" />
+          <Property Name="Addr1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Addr2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Addr3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PostCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EditBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EditTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="DeliveryAddress" Relationship="DatanetCMSWebModel.FK_OrderAddr_DeliveryAddr" FromRole="OrderAddress" ToRole="DeliveryAddress" />
+          <NavigationProperty Name="Order" Relationship="DatanetCMSWebModel.FK_OrderAddress_Order" FromRole="OrderAddress" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="OrderDoc">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderId" Type="Int32" />
+          <Property Name="PoDocPath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="EditTime" Type="DateTime" Precision="3" />
+          <Property Name="EditBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Order" Relationship="DatanetCMSWebModel.FK_OrderDoc_Order" FromRole="OrderDoc" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="OrderHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderId" Type="Int32" />
+          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TableName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FieldName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Operator" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="OldValue" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NewValue" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Order" Relationship="DatanetCMSWebModel.FK_OrderHistory_Order" FromRole="OrderHistory" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="OrderNumber">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Prefix" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CurrentNumber" Type="Int32" />
+          <Property Name="Mode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="OrderProduct">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderId" Type="Int32" />
+          <Property Name="ProductId" Type="Int32" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="EditBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EditTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Order" Relationship="DatanetCMSWebModel.FK_OrderProduct_Order" FromRole="OrderProduct" ToRole="Order" />
+          <NavigationProperty Name="Product" Relationship="DatanetCMSWebModel.FK_OrderProduct_Product" FromRole="OrderProduct" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ShortDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LongDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Vendor" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UomId" Type="Int32" />
+          <Property Name="CategoryId" Type="Int32" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="EditBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="EditTime" Type="DateTime" Precision="3" />
+          <Property Name="ExpireTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Category" Relationship="DatanetCMSWebModel.FK_Product_Category" FromRole="Product" ToRole="Category" />
+          <NavigationProperty Name="GroupProducts" Relationship="DatanetCMSWebModel.FK_GPRelation_Product" FromRole="Product" ToRole="GroupProduct" />
+          <NavigationProperty Name="OrderProducts" Relationship="DatanetCMSWebModel.FK_OrderProduct_Product" FromRole="Product" ToRole="OrderProduct" />
+          <NavigationProperty Name="Uom" Relationship="DatanetCMSWebModel.FK_Product_Uom" FromRole="Product" ToRole="Uom" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Uom">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="EditBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EditTime" Type="DateTime" Precision="3" />
+          <Property Name="ExpireTime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Products" Relationship="DatanetCMSWebModel.FK_Product_Uom" FromRole="Uom" ToRole="Product" />
+        </EntityType>
+        <Association Name="FK_Customer_BuyerGroup">
+          <End Type="DatanetCMSWebModel.BuyerGroup" Role="BuyerGroup" Multiplicity="0..1" />
+          <End Type="DatanetCMSWebModel.Customer" Role="Customer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BuyerGroup">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Customer">
+              <PropertyRef Name="BuyerGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GPRelation_BuyerGroup">
+          <End Type="DatanetCMSWebModel.BuyerGroup" Role="BuyerGroup" Multiplicity="0..1" />
+          <End Type="DatanetCMSWebModel.GroupProduct" Role="GroupProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BuyerGroup">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GroupProduct">
+              <PropertyRef Name="BuyerGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Category">
+          <End Type="DatanetCMSWebModel.Category" Role="Category" Multiplicity="0..1" />
+          <End Type="DatanetCMSWebModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ContractNumber_Customer">
+          <End Type="DatanetCMSWebModel.Customer" Role="Customer" Multiplicity="0..1" />
+          <End Type="DatanetCMSWebModel.ContractNumber" Role="ContractNumber" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ContractNumber">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Customer_Manager">
+          <End Type="DatanetCMSWebModel.Manager" Role="Manager" Multiplicity="0..1" />
+          <End Type="DatanetCMSWebModel.Customer" Role="Customer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manager">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Customer">
+              <PropertyRef Name="ManagerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeliveryAddr_Customer">
+          <End Type="DatanetCMSWebModel.Customer" Role="Customer" Multiplicity="0..1" />
+          <End Type="DatanetCMSWebModel.DeliveryAddress" Role="DeliveryAddress" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DeliveryAddress">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Customer">
+          <End Type="DatanetCMSWebModel.Customer" Role="Customer" Multiplicity="0..1" />
+          <End Type="DatanetCMSWebModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderAddr_DeliveryAddr">
+          <End Type="DatanetCMSWebModel.DeliveryAddress" Role="DeliveryAddress" Multiplicity="0..1" />
+          <End Type="DatanetCMSWebModel.OrderAddress" Role="OrderAddress" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeliveryAddress">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderAddress">
+              <PropertyRef Name="AddrId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GPRelation_Product">
+          <End Type="DatanetCMSWebModel.Product" Role="Product" Multiplicity="0..1" />
+          <End Type="DatanetCMSWebModel.GroupProduct" Role="GroupProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GroupProduct">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderAddress_Order">
+          <End Type="DatanetCMSWebModel.Order" Role="Order" Multiplicity="0..1" />
+          <End Type="DatanetCMSWebModel.OrderAddress" Role="OrderAddress" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderAddress">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDoc_Order">
+          <End Type="DatanetCMSWebModel.Order" Role="Order" Multiplicity="0..1" />
+          <End Type="DatanetCMSWebModel.OrderDoc" Role="OrderDoc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderDoc">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderHistory_Order">
+          <End Type="DatanetCMSWebModel.Order" Role="Order" Multiplicity="0..1" />
+          <End Type="DatanetCMSWebModel.OrderHistory" Role="OrderHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderHistory">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderProduct_Order">
+          <End Type="DatanetCMSWebModel.Order" Role="Order" Multiplicity="0..1" />
+          <End Type="DatanetCMSWebModel.OrderProduct" Role="OrderProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderProduct">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderProduct_Product">
+          <End Type="DatanetCMSWebModel.Product" Role="Product" Multiplicity="0..1" />
+          <End Type="DatanetCMSWebModel.OrderProduct" Role="OrderProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderProduct">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Uom">
+          <End Type="DatanetCMSWebModel.Uom" Role="Uom" Multiplicity="0..1" />
+          <End Type="DatanetCMSWebModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Uom">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="UomId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DatanetCMSWebModelStoreContainer" CdmEntityContainer="DatanetCMSWebEntities">
+          <EntitySetMapping Name="AppLogs">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.AppLog">
+              <MappingFragment StoreEntitySet="AppLogs">
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="Controller" ColumnName="Controller" />
+                <ScalarProperty Name="Exception" ColumnName="Exception" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Logger" ColumnName="Logger" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="Thread" ColumnName="Thread" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BuyerGroups">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.BuyerGroup">
+              <MappingFragment StoreEntitySet="BuyerGroup">
+                <ScalarProperty Name="ExpireTime" ColumnName="ExpireTime" />
+                <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+                <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="ExpireTime" ColumnName="ExpireTime" />
+                <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+                <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContractNumbers">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.ContractNumber">
+              <MappingFragment StoreEntitySet="ContractNumber">
+                <ScalarProperty Name="ExpireTime" ColumnName="ExpireTime" />
+                <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+                <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="ExpireTime" ColumnName="ExpireTime" />
+                <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+                <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+                <ScalarProperty Name="BuyerGroupId" ColumnName="BuyerGroupId" />
+                <ScalarProperty Name="PoDocMandatory" ColumnName="PoDocMandatory" />
+                <ScalarProperty Name="DisplayContractNo" ColumnName="DisplayContractNo" />
+                <ScalarProperty Name="PurchaseType" ColumnName="PurchaseType" />
+                <ScalarProperty Name="ContractNo" ColumnName="ContractNo" />
+                <ScalarProperty Name="ManagerId" ColumnName="ManagerId" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="LoginPassword" ColumnName="LoginPassword" />
+                <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeliveryAddresses">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.DeliveryAddress">
+              <MappingFragment StoreEntitySet="DeliveryAddress">
+                <ScalarProperty Name="ExpireTime" ColumnName="ExpireTime" />
+                <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+                <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Addr3" ColumnName="Addr3" />
+                <ScalarProperty Name="Addr2" ColumnName="Addr2" />
+                <ScalarProperty Name="Addr1" ColumnName="Addr1" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmailTemplates">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.EmailTemplate">
+              <MappingFragment StoreEntitySet="EmailTemplate">
+                <ScalarProperty Name="Body" ColumnName="Body" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GroupProducts">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.GroupProduct">
+              <MappingFragment StoreEntitySet="GroupProduct">
+                <ScalarProperty Name="ExpireTime" ColumnName="ExpireTime" />
+                <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+                <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="BuyerGroupId" ColumnName="BuyerGroupId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Managers">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.Manager">
+              <MappingFragment StoreEntitySet="Manager">
+                <ScalarProperty Name="ExpireTime" ColumnName="ExpireTime" />
+                <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+                <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="PDFPath" ColumnName="PDFPath" />
+                <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+                <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="GST" ColumnName="GST" />
+                <ScalarProperty Name="GSTRate" ColumnName="GSTRate" />
+                <ScalarProperty Name="DeliveryCharge" ColumnName="DeliveryCharge" />
+                <ScalarProperty Name="IsBuildOrder" ColumnName="IsBuildOrder" />
+                <ScalarProperty Name="PurchaseNumber" ColumnName="PurchaseNumber" />
+                <ScalarProperty Name="PurchaseType" ColumnName="PurchaseType" />
+                <ScalarProperty Name="Mode" ColumnName="Mode" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="ManagerName" ColumnName="ManagerName" />
+                <ScalarProperty Name="ManagerId" ColumnName="ManagerId" />
+                <ScalarProperty Name="CustomerContactName" ColumnName="CustomerContactName" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="QuoteCode" ColumnName="QuoteCode" />
+                <ScalarProperty Name="OrderCode" ColumnName="OrderCode" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderAddresses">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.OrderAddress">
+              <MappingFragment StoreEntitySet="OrderAddress">
+                <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+                <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Addr3" ColumnName="Addr3" />
+                <ScalarProperty Name="Addr2" ColumnName="Addr2" />
+                <ScalarProperty Name="Addr1" ColumnName="Addr1" />
+                <ScalarProperty Name="AddrId" ColumnName="AddrId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderDocs">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.OrderDoc">
+              <MappingFragment StoreEntitySet="OrderDoc">
+                <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+                <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="PoDocPath" ColumnName="PoDocPath" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderHistories">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.OrderHistory">
+              <MappingFragment StoreEntitySet="OrderHistory">
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="NewValue" ColumnName="NewValue" />
+                <ScalarProperty Name="OldValue" ColumnName="OldValue" />
+                <ScalarProperty Name="Operator" ColumnName="Operator" />
+                <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+                <ScalarProperty Name="TableName" ColumnName="TableName" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderNumbers">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.OrderNumber">
+              <MappingFragment StoreEntitySet="OrderNumber">
+                <ScalarProperty Name="Mode" ColumnName="Mode" />
+                <ScalarProperty Name="CurrentNumber" ColumnName="CurrentNumber" />
+                <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderProducts">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.OrderProduct">
+              <MappingFragment StoreEntitySet="OrderProduct">
+                <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+                <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="ExpireTime" ColumnName="ExpireTime" />
+                <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+                <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="UomId" ColumnName="UomId" />
+                <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+                <ScalarProperty Name="LongDesc" ColumnName="LongDesc" />
+                <ScalarProperty Name="ShortDesc" ColumnName="ShortDesc" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Uoms">
+            <EntityTypeMapping TypeName="DatanetCMSWebModel.Uom">
+              <MappingFragment StoreEntitySet="Uom">
+                <ScalarProperty Name="ExpireTime" ColumnName="ExpireTime" />
+                <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+                <ScalarProperty Name="EditBy" ColumnName="EditBy" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

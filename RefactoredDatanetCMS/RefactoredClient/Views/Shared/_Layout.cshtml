@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
+    @Styles.Render("~/Content/css")
+
+</head>
+<body>
+    <main>
+        @RenderBody()
+    </main>
+    @Scripts.Render("~/Js")
+    @*<script>
+        angular.module('app')
+            .config([
+                'loginUserProvider', function (loginUserProvider)
+                {
+                    loginUserProvider.setProfile(@Html.Raw(ViewBag.UserJson));
+                }
+            ]);
+        window.googleMapKey = '@System.Configuration.ConfigurationManager.AppSettings["GoogleMapApiKey"]';
+    </script>*@
+
+</body>
+</html>

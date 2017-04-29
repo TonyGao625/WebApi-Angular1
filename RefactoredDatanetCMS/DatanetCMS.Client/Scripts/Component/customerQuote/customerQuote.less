@@ -1,0 +1,1633 @@
+﻿customer-quote {
+    * {
+        margin: 0,20px,0,0;
+        padding: 0;
+        font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box; /* Firefox */
+        -webkit-box-sizing: border-box; /* Safari */
+    }
+
+    .multiSelect .buttonLabel {
+        white-space: normal;
+        word-break: break-word;
+      
+        overflow:hidden;
+    }
+
+    .ctrl-wrap {
+        overflow: hidden;
+        margin-bottom: 15px;
+        position: relative;
+
+        span {
+            color: #000;
+            font-weight: bold;
+            display: inline-block;
+            width: 95px;
+            height: 20px;
+            text-align: right;
+        }
+    }
+
+    button.btn.btn-link.order-address:hover {
+        color: red;
+    }
+
+    .order-total {
+        float: right;
+        margin-right: 50px;
+
+        span {
+            width: 95px;
+            display: inline-block;
+            height: 20px;
+            margin-right: 0px;
+            float: right;
+            overflow: hidden;
+            text-align: right;
+        }
+    }
+
+    .order-address {
+        position: relative;
+        left: 8px;
+    }
+
+    .order-total {
+        margin-right: 0px;
+    }
+    /*.order-total span {
+        width: 90px;
+        margin-right: 0px;
+        float: right;
+        overflow: hidden;
+        height: 20px;
+    }*/
+    section {
+        margin-bottom: 20px;
+    }
+
+    .order-show {
+        hr {
+            background: #333;
+            height: 3px;
+        }
+
+        form[name="quoteForm"] {
+            padding-left: 30px;
+            padding-right: 13px;
+
+            .form-group {
+                .add-new-address {
+                    margin-left: -15px;
+                }
+            }
+
+            .form-group {
+                margin-left: -15px;
+              
+                .multiSelect > button {
+                    margin-left: -7px;
+                    min-width: 250px;
+                }
+            }
+        }
+
+        form > .control-group {
+            margin-bottom: 35px;
+
+            .btn-link {
+                margin-left: -15px;
+            }
+        }
+
+        form > .control-group input {
+            width: 95%;
+        }
+
+        .purchase-doc {
+            margin-top: 15px;
+        }
+
+        .file-btn {
+            margin-top: 15px;
+        }
+
+        .quote-address {
+            font-weight: normal;
+            margin-top: 12px;
+        }
+    }
+
+    @media(max-width:370px) {
+        .checkboxLayer.show {
+            max-width: 300px;
+        }
+ .order-show form[name="quoteForm"] .form-group .multiSelect > button{
+     width:100%;
+ }
+        .order-show form[name="quoteForm"] .form-group {
+            margin-bottom: 35px;
+
+            .form-control {
+                margin-bottom: 5px;
+            }
+        }
+
+        .multiSelect .buttonLabel {
+            max-width: 300px;
+        }
+
+        .ctrl-wrap .ctrl-thead {
+            display: none;
+        }
+
+        form[name="quoteForm"] {
+            .form-group:nth-of-type(4) {
+                margin-top: -13px;
+            }
+        }
+
+        .ctrl-wrap .Delivery-charge {
+            float: left;
+            margin-top: -6px;
+            padding-left: 16px;
+        }
+
+        .ctrl-wrap .Delivery-charge span {
+            position: relative;
+            width: 95px;
+            height: 20px;
+            overflow: hidden;
+            display: inline-block;
+            top: 6px;
+            text-align: right;
+        }
+
+        .order-total {
+            margin-right: 0px;
+        }
+
+        .order-total span {
+            width: 90px;
+            margin-right: 0px;
+            float: right;
+            overflow: hidden;
+            height: 20px;
+        }
+
+        ul {
+            li:after {
+                content: "020";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+            .list-group-item {
+                padding: 10px 15px;
+
+                .order-type {
+                    display: inline-block;
+                    width: 200px;
+                    height: 38px;
+                    word-wrap: break-word;
+                    overflow: hidden;
+                    padding-left: 5px;
+                    text-align: left;
+                }
+
+                .order-price {
+                    padding-left: 5px;
+                    margin-right: 4px;
+                    width: 115px;
+                    overflow: hidden;
+                    height: 26px;
+                    display: inline-block;
+                }
+
+                .quantity-form {
+                    position: relative;
+                    overflow: hidden;
+                    height: 22px;
+                    width: 73px;
+                    float: right;
+
+                    .decrement {
+                        border: 1px solid #cacbcb;
+                        border-right: 0;
+                        height: 22px;
+                        line-height: 20px;
+                        width: 16px;
+                        text-align: center;
+                        color: #666;
+                        margin: 0;
+                        background: #fff;
+                        float: left;
+                    }
+
+                    #quantity {
+                        position: absolute;
+                        left: 16px;
+                        top: 0;
+                        border: 1px solid #cacbcb;
+                        width: 42px;
+                        height: 22px;
+                        line-height: 20px;
+                        text-align: center;
+                        padding: 1px;
+                        margin: 0;
+                        font-size: 12px;
+                        font-family: verdana;
+                        color: #333;
+                        -webkit-appearance: none;
+                    }
+
+                    .increment {
+                        float: right;
+                        border: 1px solid #cacbcb;
+                        border-right: 0;
+                        border: 1px solid #cacbcb;
+                        border-left: 0;
+                        color: #666;
+                        height: 22px;
+                        line-height: 20px;
+                        width: 16px;
+                        text-align: center;
+                        color: #666;
+                        margin: 0;
+                        background: #fff;
+                    }
+                }
+
+                .order-sum {
+                    float: left;
+                    width: 130px;
+                    overflow: hidden;
+                    height: 20px;
+                    margin-left: 64px;
+                }
+
+                .img-container {
+                    width: 60px;
+                    height: 60px;
+                    overflow: hidden;
+                    float: left;
+                    background: #efefef;
+                }
+
+                .btn:hover {
+                    color: red;
+                }
+
+                .btn {
+                    padding: 2px 6px;
+                    border-radius: 4px;
+                    width: 73px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    float: right;
+                }
+            }
+        }
+
+        .ctrl-wrap {
+            .cart_money {
+                position: relative;
+                height: 100px;
+
+                .Delivery-charge {
+                    position: absolute;
+                    top: 0px;
+                    right: 17px;
+                }
+
+                .order-total {
+                    position: absolute;
+                    top: 25px;
+                    right: 17px;
+                }
+
+                .order-gst {
+                    position: absolute;
+                    top: 50px;
+                    right: 7px;
+                    width: 140px;
+                    overflow: hidden;
+                }
+
+                .order-amount {
+                    width: 160px;
+                    top: 75px;
+                    position: absolute;
+                    right: 8px;
+                }
+            }
+        }
+    }
+
+    @media(min-width:370px) and (max-width:767px) {
+        .ctrl-wrap .ctrl-thead {
+            display: none;
+        }
+         .order-show form[name="quoteForm"] .form-group .multiSelect > button{
+             width:100%;
+        }
+        .order-show form[name="quoteForm"] .form-group {
+            margin-bottom: 35px;
+
+            .form-control {
+                margin-bottom: 5px;
+            }
+        }
+
+        .checkboxLayer.show {
+            max-width: 300px;
+        }
+
+        .multiSelect .buttonLabel {
+            max-width: 370px;
+        }
+
+        form[name="quoteForm"] {
+            .form-group:nth-of-type(4) {
+                margin-top: -13px;
+            }
+        }
+
+        .ctrl-wrap .Delivery-charge {
+            float: left;
+            margin-top: -6px;
+            padding-left: 16px;
+        }
+
+        .ctrl-wrap .Delivery-charge span {
+            position: relative;
+            width: 95px;
+            height: 20px;
+            overflow: hidden;
+            display: inline-block;
+            top: 6px;
+            text-align: right;
+        }
+
+        ul {
+            li:after {
+                content: "020";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+            .list-group-item {
+                padding: 10px 15px;
+
+                .order-type {
+                    width: 200px;
+                    height: 38px;
+                    word-wrap: break-word;
+                    overflow: hidden;
+                    padding-left: 5px;
+                    display: block;
+                    text-align: left;
+                }
+
+                .order-price {
+                    padding-left: 5px;
+                    margin-right: 4px;
+                    width: 115px;
+                    overflow: hidden;
+                    height: 26px;
+                }
+
+                .quantity-form {
+                    position: relative;
+                    overflow: hidden;
+                    height: 22px;
+                    width: 73px;
+                    float: right;
+                    top: -25px;
+
+                    .decrement {
+                        border: 1px solid #cacbcb;
+                        border-right: 0;
+                        height: 22px;
+                        line-height: 20px;
+                        width: 16px;
+                        text-align: center;
+                        color: #666;
+                        margin: 0;
+                        background: #fff;
+                        float: left;
+                    }
+
+                    #quantity {
+                        position: absolute;
+                        left: 16px;
+                        top: 0;
+                        border: 1px solid #cacbcb;
+                        width: 42px;
+                        height: 22px;
+                        line-height: 20px;
+                        text-align: center;
+                        padding: 1px;
+                        margin: 0;
+                        font-size: 12px;
+                        font-family: verdana;
+                        color: #333;
+                        -webkit-appearance: none;
+                    }
+
+                    .increment {
+                        float: right;
+                        border: 1px solid #cacbcb;
+                        border-right: 0;
+                        border: 1px solid #cacbcb;
+                        border-left: 0;
+                        color: #666;
+                        height: 22px;
+                        line-height: 20px;
+                        width: 16px;
+                        text-align: center;
+                        color: #666;
+                        margin: 0;
+                        background: #fff;
+                    }
+                }
+
+                .order-sum {
+                    margin-top: 10px;
+                    width: 140px;
+                    overflow: hidden;
+                    height: 20px;
+                    margin-left: 64px;
+                }
+
+                .img-container {
+                    width: 60px;
+                    height: 60px;
+                    overflow: hidden;
+                    float: left;
+                    background: #efefef;
+                }
+
+                .btn:hover {
+                    color: red;
+                }
+
+                .btn {
+                    margin-top: -25px;
+                    padding: 2px 6px;
+                    border-radius: 4px;
+                    width: 73px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    float: right;
+                }
+            }
+        }
+
+        .ctrl-wrap {
+            .cart_money {
+                position: relative;
+                height: 100px;
+
+                .Delivery-charge {
+                    position: absolute;
+                    top: 0px;
+                    right: 17px;
+                }
+
+                .order-total {
+                    position: absolute;
+                    top: 25px;
+                    right: 17px;
+                }
+
+                .order-gst {
+                    position: absolute;
+                    top: 50px;
+                    right: 7px;
+                    width: 140px;
+                    overflow: hidden;
+                }
+
+                .order-amount {
+                    width: 160px;
+                    top: 75px;
+                    position: absolute;
+                    right: 8px;
+                }
+            }
+        }
+    }
+
+    @media(min-width:768px) {
+        .ctrl-wrap .Delivery-charge {
+            position: absolute;
+            margin-top: -6px;
+            right: 210px;
+        }
+
+        .ctrl-wrap .Delivery-charge span {
+            position: relative;
+            width: 80px;
+            height: 20px;
+            overflow: hidden;
+            display: inline-block;
+            top: 6px;
+        }
+
+        #price_box {
+            margin-top: 18px;
+            float: right;
+        }
+
+        .order-show {
+            ul .list-group-item .btn {
+                margin-top: 16px;
+            }
+
+            ul .list-group-item .btn:hover {
+                color: red;
+            }
+
+            form[name="quoteForm"] {
+                input[type="email"] {
+                    width: 300px;
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+
+                input[name="contactName"] {
+                    width: 300px;
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+
+                input[name="contactPhone"] {
+                    width: 300px;
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+
+                input[name="contactEmail"] {
+                    margin-left: 9px;
+                }
+
+                .row {
+                    margin-top: 15px;
+
+                    label {
+                        width: 168px;
+                        text-align: right;
+                    }
+
+                    .btn-default {
+                        display: block;
+                        width: 40px;
+                        margin-left: 180px;
+                        margin-top: 5px;
+                    }
+
+                    button[type="file"] {
+                        margin-left: 10px;
+                    }
+                    /*div {
+                        display: inline-block;
+                        margin-left: 10px;
+                    }*/
+                }
+            }
+        }
+    }
+
+    @media(min-width:768px) and (max-width:991px) {
+        button.btn.btn-link.order-address:hover {
+            color: red;
+        }
+       .order-show form[name="quoteForm"] .form-group .multiSelect > button{
+           width:100%;
+        }
+          .multiSelect .buttonLabel {
+        white-space: normal;
+        word-break: break-word;
+        max-height:40px;
+        overflow:hidden;
+    }
+
+        .checkboxLayer.show {
+            max-width: 375px;
+        }
+
+        .buttonLabel {
+            max-width: 475px;
+        }
+
+        .ctrl-wrap .ctrl-thead {
+            display: block;
+            height: 33px;
+            line-height: 32px;
+            margin: 0 0 10px;
+            background: #f3f3f3;
+            border: 1px solid #e9e9e9;
+            border-top: 0;
+
+            div {
+                float: left;
+                font-weight: bold;
+            }
+
+            .column-good {
+                width: 150px;
+                text-align: right;
+            }
+
+            .column-price {
+                width: 220px;
+                padding-right: 11px;
+                text-align: right;
+                margin-left: 78px;
+            }
+
+            .column-quantity {
+                width: 80px;
+                text-align: center;
+                margin-left: 22px;
+                padding-right: 6px;
+            }
+
+            .column-sum {
+                width: 120px;
+                padding-right: 24px;
+                text-align: right;
+            }
+
+            .column-operate {
+                width: 75px;
+                text-align: center;
+            }
+        }
+
+        .ctrl-wrap .Delivery-charge {
+            position: absolute;
+            margin-top: -6px;
+            right: 210px;
+        }
+
+        .ctrl-wrap .Delivery-charge span {
+            position: relative;
+            width: 95px;
+            height: 20px;
+            overflow: hidden;
+            display: inline-block;
+            top: 6px;
+        }
+
+        .order-total {
+            margin-right: 50px;
+        }
+
+        .order-total span {
+            width: 95px;
+            margin-right: 0px;
+            float: right;
+            overflow: hidden;
+            height: 20px;
+        }
+
+        ul {
+            li:after {
+                content: "020";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+            .list-group-item {
+                padding: 10px 15px;
+                position: relative;
+
+                .order-type {
+                    width: 380px;
+                    height: 38px;
+                    word-wrap: break-word;
+                    overflow: hidden;
+                    padding-left: 5px;
+                    margin-top: 18px;
+                    display: inline-block;
+                    text-align: left;
+                }
+
+                .order-price {
+                    padding-left: 5px;
+                    margin-right: 4px;
+                    width: 75px;
+                    overflow: hidden;
+                    height: 26px;
+                    position: absolute;
+                    right: 300px;
+                    margin-top: 18px;
+                    display: inline-block;
+                }
+
+                .quantity-form {
+                    position: absolute;
+                    overflow: hidden;
+                    height: 22px;
+                    width: 73px;
+                    right: 210px;
+                    margin-top: 18px;
+                    display: inline-block;
+
+                    .decrement {
+                        border: 1px solid #cacbcb;
+                        border-right: 0;
+                        height: 22px;
+                        line-height: 20px;
+                        width: 16px;
+                        text-align: center;
+                        color: #666;
+                        margin: 0;
+                        background: #fff;
+                        float: left;
+                    }
+
+                    #quantity {
+                        position: absolute;
+                        left: 16px;
+                        top: 0;
+                        border: 1px solid #cacbcb;
+                        width: 42px;
+                        height: 22px;
+                        line-height: 18px;
+                        text-align: center;
+                        padding: 1px;
+                        margin: 0;
+                        font-size: 12px;
+                        font-family: verdana;
+                        color: #333;
+                        -webkit-appearance: none;
+                    }
+
+                    .increment {
+                        float: right;
+                        border: 1px solid #cacbcb;
+                        border-right: 0;
+                        border: 1px solid #cacbcb;
+                        border-left: 0;
+                        color: #666;
+                        height: 22px;
+                        line-height: 20px;
+                        width: 16px;
+                        text-align: center;
+                        color: #666;
+                        margin: 0;
+                        background: #fff;
+                    }
+                }
+
+                .order-sum {
+                    display: inline-block;
+                    width: 95px;
+                    overflow: hidden;
+                    height: 20px;
+                    position: absolute;
+                    right: 80px;
+                    margin-top: 18px;
+                    text-align: right;
+                    margin-right: 20px;
+                }
+
+                .img-container {
+                    width: 60px;
+                    height: 60px;
+                    overflow: hidden;
+                    float: left;
+                    background: #efefef;
+                }
+
+                .btn:hover {
+                    color: red;
+                }
+
+                .btn {
+               
+                    text-decoration: none;
+                    padding: 2px 6px;
+                    border-radius: 4px;
+                    width: 73px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    float: right;
+                }
+            }
+        }
+
+        form[name="quoteForm"] {
+            //样式与order的不同
+            .form-group:nth-of-type(4) {
+                margin-top: -13px;
+            }
+
+            .form-group {
+                position: relative;
+                margin-bottom: 25px;
+
+                .contact-name {
+                    padding-left: 7px;
+                }
+
+                .quote-address {
+                    font-weight: bold;
+                    margin-left: 50px;
+                }
+
+                .contact-email {
+                    padding-left: 7px;
+                }
+
+                label {
+                    margin-left: 60px;
+                }
+
+                .order-info {
+                    margin-left: 0px;
+                }
+
+                .ng-isolate-scope {
+                    position: absolute;
+                    top: 12px;
+                    left: 180px;
+                }
+
+                button.btn.btn-link {
+                    position: relative;
+                    top: 40px;
+                    left: 6px;
+                }
+            }
+
+            .ng-active {
+                position: absolute;
+                top: 0px;
+                left: 500px;
+            }
+        }
+
+        form[name="orderForm"] {
+            .control-group > btn-link {
+                position: relative;
+                top: 25px;
+                left: 30px;
+            }
+
+            .control-group {
+                margin-left: -15px;
+                position: relative;
+
+                .order-address {
+                    position: relative;
+                    top: 25px;
+                    left: 14px;
+                }
+
+                .ng-isolate-scope {
+                    position: absolute;
+                    top: 5px;
+                    left: 150px;
+
+                    span > .ng-binding {
+                        margin-left: 25px;
+                    }
+                }
+            }
+        }
+
+        .ctrl-wrap {
+            .cart_money {
+                position: relative;
+                height: 100px;
+
+                .Delivery-charge {
+                    position: absolute;
+                    top: 0px;
+                    right: 101px;
+                }
+
+                .order-total {
+                    position: absolute;
+                    top: 25px;
+                    right: 51px;
+                }
+
+                .order-gst {
+                    position: absolute;
+                    top: 50px;
+                    right: 91px;
+                    width: 140px;
+                    overflow: hidden;
+                }
+
+                .order-amount {
+                    width: 160px;
+                    top: 75px;
+                    position: absolute;
+                    right: 92px;
+                }
+            }
+        }
+    }
+
+    @media(min-width:992px) and (max-width:1169px) {
+        .navbar-form {
+            margin-right: -30px;
+        }
+          .multiSelect .buttonLabel {
+        white-space: normal;
+        word-break: break-word;
+        max-height:40px;
+        overflow:hidden;
+    }
+        .checkboxLayer.show {
+            max-width: 375px;
+        }
+ .order-show form[name="quoteForm"] .form-group .multiSelect > button{
+     width:100%;
+ }
+        .buttonLabel {
+            width: 690px;
+        }
+
+        .ctrl-wrap .ctrl-thead {
+            display: block;
+            height: 33px;
+            line-height: 32px;
+            margin: 0 0 10px;
+            background: #f3f3f3;
+            border: 1px solid #e9e9e9;
+            border-top: 0;
+
+            div {
+                float: left;
+                font-weight: bold;
+            }
+
+            .column-good {
+                width: 160px;
+                text-align: right;
+            }
+
+            .column-price {
+                width: 220px;
+                padding-right: 11px;
+                text-align: right;
+                margin-left: 287px;
+            }
+
+            .column-quantity {
+                width: 80px;
+                text-align: center;
+                margin-left: 22px;
+            }
+
+            .column-sum {
+                width: 120px;
+                padding-right: 24px;
+                text-align: right;
+            }
+        }
+        /*与order页面不同*/
+        /*.ctrl-wrap .Delivery-charge {
+            position: absolute;
+            margin-top: -6px;
+            right: 210px;
+        }*/
+        .ctrl-wrap .Delivery-charge span {
+            position: relative;
+            width: 95px;
+            height: 20px;
+            overflow: hidden;
+            display: inline-block;
+            top: 6px;
+        }
+
+        .order-total {
+            margin-right: 50px;
+        }
+
+        .order-total span {
+            width: 95px;
+            margin-right: 0px;
+            float: right;
+            overflow: hidden;
+            height: 20px;
+        }
+        //与order页面不同
+        form[name="quoteForm"] .form-group .ng-isolate-scope {
+            position: absolute;
+            top: 12px;
+            left: 180px;
+        }
+
+        form[name="quoteForm"] .form-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+         form[name="quoteForm"] .form-group button.btn.btn-link {
+            position: relative;
+            top: 32px;
+            left: 6px;
+        }
+
+
+        ul {
+            li:after {
+                content: "020";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+            .list-group-item {
+                padding: 10px 15px;
+                position: relative;
+
+                .order-type {
+                    display: inline-block;
+                    width: 400px;
+                    height: 38px;
+                    word-break: break-all;
+                    word-wrap: break-word;
+                    overflow: hidden;
+                    padding-left: 5px;
+                    margin-top: 18px;
+                    text-align: left;
+                }
+
+                .order-price {
+                    padding-left: 5px;
+                    margin-right: 4px;
+                    width: 75px;
+                    overflow: hidden;
+                    height: 26px;
+                    position: absolute;
+                    right: 300px;
+                    margin-top: 18px;
+                    display: inline-block;
+                }
+
+                .quantity-form {
+                    position: absolute;
+                    overflow: hidden;
+                    height: 22px;
+                    width: 73px;
+                    right: 210px;
+                    margin-top: 18px;
+                    display: inline-block;
+
+                    .decrement {
+                        border: 1px solid #cacbcb;
+                        border-right: 0;
+                        height: 22px;
+                        line-height: 20px;
+                        width: 16px;
+                        text-align: center;
+                        color: #666;
+                        margin: 0;
+                        background: #fff;
+                        float: left;
+                    }
+
+                    #quantity {
+                        position: absolute;
+                        left: 16px;
+                        top: 0;
+                        border: 1px solid #cacbcb;
+                        width: 42px;
+                        height: 22px;
+                        line-height: 18px;
+                        text-align: center;
+                        padding: 1px;
+                        margin: 0;
+                        font-size: 12px;
+                        font-family: verdana;
+                        color: #333;
+                        -webkit-appearance: none;
+                    }
+
+                    .increment {
+                        float: right;
+                        border: 1px solid #cacbcb;
+                        border-right: 0;
+                        border: 1px solid #cacbcb;
+                        border-left: 0;
+                        color: #666;
+                        height: 22px;
+                        line-height: 20px;
+                        width: 16px;
+                        text-align: center;
+                        color: #666;
+                        margin: 0;
+                        background: #fff;
+                    }
+                }
+
+                .order-sum {
+                    display: inline-block;
+                    width: 95px;
+                    overflow: hidden;
+                    height: 20px;
+                    position: absolute;
+                    right: 80px;
+                    margin-top: 18px;
+                    text-align: right;
+                    margin-right: 20px;
+                }
+
+                .img-container {
+                    width: 60px;
+                    height: 60px;
+                    overflow: hidden;
+                    float: left;
+                    background: #efefef;
+                }
+
+                .btn:hover {
+                    color: red;
+                }
+
+                .btn {
+                    padding: 2px 6px;
+                    border-radius: 4px;
+                    width: 73px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    float: right;
+                }
+            }
+        }
+
+        form[name="quoteForm"] {
+            .form-group:nth-of-type(4) {
+                margin-top: -13px;
+            }
+
+            .form-group {
+                position: relative;
+
+                .contact-name {
+                    padding-left: 7px;
+                }
+
+                .quote-address {
+                    font-weight: bold;
+                    margin-left: 50px;
+                }
+
+                .contact-email {
+                    padding-left: 7px;
+                }
+
+                label {
+                    margin-left: 60px;
+                }
+
+                .order-info {
+                    margin-left: 0px;
+                }
+                /**/
+                button.btn.btn-link {
+                    position: relative;
+                    top: 40px;
+                    left: 6px;
+                }
+            }
+
+            .ng-active {
+                position: absolute;
+                top: 0px;
+                left: 500px;
+            }
+        }
+
+        form[name="quoteForm"] {
+            .control-group > btn-link {
+                position: relative;
+                top: 25px;
+                left: 30px;
+            }
+
+            .control-group {
+                margin-left: -15px;
+                position: relative;
+
+                .order-address {
+                    position: relative;
+                    top: 25px;
+                    left: 14px;
+                }
+
+                .ng-isolate-scope {
+                    position: absolute;
+                    top: 2px;
+                    left: 150px;
+
+                    span > .ng-binding {
+                        margin-left: 25px;
+                    }
+                }
+            }
+        }
+
+        .ctrl-wrap {
+            .cart_money {
+                position: relative;
+                height: 100px;
+
+                .Delivery-charge {
+                    position: absolute;
+                    top: 0px;
+                    right: 100px;
+                }
+
+                .order-total {
+                    position: absolute;
+                    top: 25px;
+                    right: 50px;
+                }
+
+                .order-gst {
+                    position: absolute;
+                    top: 50px;
+                    right: 90px;
+                    width: 140px;
+                    overflow: hidden;
+                }
+
+                .order-amount {
+                    width: 160px;
+                    top: 71px;
+                    position: absolute;
+                    right: 91px;
+                }
+            }
+        }
+    }
+
+    @media(min-width:1170px) {
+        .checkboxLayer.show {
+            max-width: 375px;
+        }
+          .multiSelect .buttonLabel {
+        white-space: normal;
+        word-break: break-word;
+        max-height:40px;
+        overflow:hidden;
+    }
+        .order-show form[name="quoteForm"] .form-group .multiSelect > button{
+            width:100%;
+        }
+        .buttonLabel {
+            width: 790px;
+        }
+
+        .ctrl-wrap .ctrl-thead {
+            display: block;
+            height: 33px;
+            line-height: 32px;
+            margin: 0 0 10px;
+            background: #f3f3f3;
+            border: 1px solid #e9e9e9;
+            border-top: 0;
+
+            div {
+                float: left;
+                font-weight: bold;
+            }
+
+            .column-good {
+                width: 250px;
+                text-align: center;
+            }
+
+            .column-price {
+                width: 220px;
+                padding-right: 11px;
+                text-align: right;
+                margin-left: 427px;
+            }
+
+            .column-quantity {
+                width: 80px;
+                text-align: center;
+                margin-left: 22px;
+            }
+
+            .column-sum {
+                width: 120px;
+                padding-right: 24px;
+                text-align: right;
+            }
+        }
+
+        .ctrl-wrap .Delivery-charge {
+            position: absolute;
+            margin-top: -6px;
+            right: 205px;
+        }
+        //与order页面不同
+        .ctrl-wrap .Delivery-charge span {
+            position: relative;
+            width: 95px;
+            height: 20px;
+            overflow: hidden;
+            display: inline-block;
+            top: 6px;
+        }
+
+        form[name="quoteForm"] {
+            .control-group > btn-link {
+                position: relative;
+                top: 25px;
+                left: 30px;
+            }
+
+            .control-group {
+                margin-left: -15px;
+                position: relative;
+
+                .order-address {
+                    position: relative;
+                    top: 25px;
+                    left: 14px;
+                }
+
+                .ng-isolate-scope {
+                    position: absolute;
+                    top: 5px;
+                    left: 150px;
+
+                    span > .ng-binding {
+                        margin-left: 25px;
+                    }
+                }
+            }
+        }
+
+        form[name="quoteForm"] {
+            .form-group:nth-of-type(4) {
+                margin-top: -13px;
+            }
+
+            .form-group {
+                margin-bottom: 25px;
+
+                .contact-name {
+                    padding-left: 7px;
+                }
+
+                .quote-address {
+                    font-weight: bold;
+                    margin-left: 50px;
+                }
+
+                .contact-email {
+                    padding-left: 7px;
+                }
+
+                position: relative;
+
+                label {
+                    margin-left: 60px;
+                }
+
+                .order-info {
+                    margin-left: 0px;
+                }
+
+                .ng-isolate-scope {
+                    position: absolute;
+                    top: 12px;
+                    left: 180px;
+                }
+
+                button.btn.btn-link {
+                    position: relative;
+                    top: 40px;
+                    left: 6px;
+                }
+            }
+
+            .ng-active {
+                position: absolute;
+                top: 0px;
+                left: 500px;
+            }
+        }
+
+        .order-total {
+            span {
+                width: 95px;
+                display: inline-block;
+                height: 20px;
+            }
+        }
+
+        ul {
+            li:after {
+                content: "020";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+            .list-group-item {
+                padding: 10px 15px;
+                position: relative;
+
+                .order-type {
+                    display: inline-block;
+                    width: 400px;
+                    height: 38px;
+                    word-break: break-all;
+                    word-wrap: break-word;
+                    overflow: hidden;
+                    padding-left: 5px;
+                    margin-top: 18px;
+                    text-align: left;
+                }
+
+                .order-price {
+                    padding-left: 5px;
+                    margin-right: 4px;
+                    width: 75px;
+                    overflow: hidden;
+                    height: 26px;
+                    position: absolute;
+                    right: 300px;
+                    margin-top: 18px;
+                    display: inline-block;
+                }
+
+                .quantity-form {
+                    position: absolute;
+                    overflow: hidden;
+                    height: 22px;
+                    width: 73px;
+                    right: 210px;
+                    margin-top: 18px;
+                    display: inline-block;
+
+                    .decrement {
+                        border: 1px solid #cacbcb;
+                        border-right: 0;
+                        height: 22px;
+                        line-height: 20px;
+                        width: 16px;
+                        text-align: center;
+                        color: #666;
+                        margin: 0;
+                        background: #fff;
+                        float: left;
+                    }
+
+                    #quantity {
+                        position: absolute;
+                        left: 16px;
+                        top: 0;
+                        border: 1px solid #cacbcb;
+                        width: 42px;
+                        height: 22px;
+                        line-height: 18px;
+                        text-align: center;
+                        padding: 1px;
+                        margin: 0;
+                        font-size: 12px;
+                        font-family: verdana;
+                        color: #333;
+                        -webkit-appearance: none;
+                    }
+
+                    .increment {
+                        float: right;
+                        border: 1px solid #cacbcb;
+                        border-right: 0;
+                        border: 1px solid #cacbcb;
+                        border-left: 0;
+                        color: #666;
+                        height: 22px;
+                        line-height: 20px;
+                        width: 16px;
+                        text-align: center;
+                        color: #666;
+                        margin: 0;
+                        background: #fff;
+                    }
+                }
+
+                .order-sum {
+                    width: 95px;
+                    overflow: hidden;
+                    height: 20px;
+                    position: absolute;
+                    right: 80px;
+                    margin-top: 18px;
+                    display: inline-block;
+                    text-align: right;
+                    margin-right: 20px;
+                }
+
+                .img-container {
+                    width: 60px;
+                    height: 60px;
+                    overflow: hidden;
+                    float: left;
+                    background: #efefef;
+                }
+
+                .btn:hover {
+                    color: red;
+                }
+
+                .btn {
+                    padding: 2px 6px;
+                    border-radius: 4px;
+                    width: 73px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    float: right;
+                }
+            }
+        }
+
+        .ctrl-wrap {
+            .cart_money {
+                position: relative;
+                height: 100px;
+
+                .Delivery-charge {
+                    position: absolute;
+                    top: 0px;
+                    right: 100px;
+                }
+
+                .order-total {
+                    position: absolute;
+                    top: 25px;
+                    right: 99px;
+
+                    span {
+                        width: 95px;
+                        text-align: right;
+                        display: inline-block;
+                        height: 20px;
+                    }
+                }
+
+                .order-gst {
+                    position: absolute;
+                    top: 50px;
+                    right: 89px;
+                    width: 140px;
+                    overflow: hidden;
+                }
+
+                .order-amount {
+                    width: 160px;
+                    top: 75px;
+                    position: absolute;
+                    right: 90px;
+                }
+            }
+        }
+    }
+
+    .clear-btn:hover {
+        color: red;
+    }
+}
+form[name="addressForm"]{
+    position:relative;
+    label{
+        display:inline-block;
+        width:65px;
+        top:5px;
+        position:relative;
+    }
+    .address-mesg{
+       display:inline-block;
+       margin-left:15px;
+    }
+    .form-control{
+        margin-top:10px;
+    }
+}
+

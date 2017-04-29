@@ -1,0 +1,45 @@
+﻿<section id="login-section" >
+    <div class="login-bgd" id="login-bgd" >
+        <div class="container row login_main_wrap ">
+            <p class="col-xs-12 login-p col-sm-3">Efficiency Through Technology </p>
+            <p class="login_arrow "><img class="img-responsive" src="../../../Content/images/login_arr.png"  /></p>   
+            <div class="login-main">
+
+                <div class="header-login">
+                    <div class="account-title">
+                        <span>User Login</span>
+                        <!--<a href="javascript:;">User Login</a>-->
+                    </div>
+                    <form method="post" name="myLogin" novalidate>
+                        <div class="login_form">
+                            <p class="has-feedback ">
+                         
+                            <input type="text" name="userName" placeholder="User name" id="userName" ng-model="loginCtrl.login_data.userName" required  />
+                             <span class="glyphicon glyphicon-user login_icon "></span>
+                             <span class="error" ng-show="(myLogin.$submitted || myLogin.userName.$touched)&& myLogin.userName.$error.required">User name is required</span>
+                            </p>
+                            <p class="has-feedback ">
+                             
+                                <input type="password" name="password" placeholder="Password" id="password" ng-model="loginCtrl.login_data.userPwd" required >
+                                <span class="glyphicon glyphicon-lock login_icon"></span>
+                                <span class="error" ng-show="(myLogin.$submitted || myLogin.password.$touched)&& myLogin.password.$error.required">Password is required</span>
+                            </p>
+                            <div><input type="submit" value="Log in" class="btn btn-primary" ng-click="myLogin.$valid && loginCtrl.login()"></div>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+   
+   if (document.body.clientWidth >= 1300 && document.body.clientWidth <= 1400)
+    {
+       
+       document.getElementById("login-section").style.marginBottom = "0px";
+       document.getElementById("login-bgd").style.height = "600px";     
+    }
+</script>

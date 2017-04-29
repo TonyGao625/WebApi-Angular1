@@ -1,0 +1,149 @@
+﻿<tr class="child-tr">
+    <td class="child-td" colspan="3">
+        <form class="form-horizontal" name="buyerGroupForm" novalidate style="min-height:320px">
+            <div class="form-group">
+                <div class="col-lg-4">
+                    <label class="control-label">Name</label>
+                    <input type="text" required name="code" ng-maxlength="20" maxlength="20" class="form-control input-sm" ng-model="groupProduct.Code" ng-change="groupProduct.enabled=true">
+                    <div ng-messages="buyerGroupForm.code.$error" class="error-message-con" ng-show="buyerGroupForm.code.$touched||buyerGroupForm.$submitted">
+                        <div ng-message="required">Buyer Group Name is Required</div>
+                        <div ng-message="maxlength">Buyer Group Name should be less than 20 characters</div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-5 selectCustomer">
+                    <label class="control-label">Select Customer</label>
+                    <div>
+                        <div ng-class="{withScroll:selectedCustomers.length>=5}">
+                            <table class="table table-condensed table-bordered" style="margin-bottom: -0px;">
+                                <thead class="thead-inverse">
+                                    <tr>
+                                        <th class="col-lg-10">
+                                            <div isteven-multi-select
+                                                 input-model="adminBuyerGroupCtrl.customerList"
+                                                 output-model="selectedCustomer"
+                                                 button-label="CompanyName"
+                                                 item-label="CompanyName"
+                                                 tick-property="ticked"
+                                                 selection-mode="single"
+                                                 helper-elements="all filter"
+                                                 max-height="150px"
+                                                 on-open="groupProduct.enabled = false"
+                                                 on-close="groupProduct.enabled = true"
+                                                 search-property="CompanyName">
+                                            </div>
+                                        </th>
+                                        <th class="col-lg-2 center-text">
+                                            <a class="btn-icon add-btn" style="margin: auto;" ng-click="adminBuyerGroupCtrl.addCustomer();groupProduct.enabled=true">
+                                                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 0h24v24H0z" fill="none" />
+                                                    <path fill="#00e676" class="icon-svg" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
+                                                </svg>
+                                            </a>
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+
+                        <div style="max-height: 200px;overflow-y: auto">
+                            <table class="table table-condensed table-bordered">
+                                <tbody>
+                                    <tr ng-repeat="customer in selectedCustomers track by $index">
+                                        <td class="col-lg-10" style="padding-left: 14px">
+                                            {{customer.Name}}
+                                        </td>
+                                        <td class="col-lg-2 center-text">
+                                            <a class="btn-icon cursor-pointer action-btn" ng-click="adminBuyerGroupCtrl.deleteCustomer(customer);groupProduct.enabled=true">
+                                                <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                                                    <path fill="#000000" d="M3,16.74L7.76,12L3,7.26L7.26,3L12,7.76L16.74,3L21,7.26L16.24,12L21,16.74L16.74,21L12,16.24L7.26,21L3,16.74M12,13.41L16.74,18.16L18.16,16.74L13.41,12L18.16,7.26L16.74,5.84L12,10.59L7.26,5.84L5.84,7.26L10.59,12L5.84,16.74L7.26,18.16L12,13.41Z" />
+                                                </svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 selectProduct">
+                    <label class="control-label">Set up Price for Product</label>
+                    <div>
+                        <div ng-class="{withProductScroll:selectedProducts.length>=5}">
+                            <table class="table table-condensed table-bordered" style="margin-bottom: -0px;">
+                                <thead class="thead-inverse">
+                                    <tr>
+                                        <th width="60%">
+                                            <div isteven-multi-select
+                                                 input-model="adminBuyerGroupCtrl.productList"
+                                                 output-model="selectedProduct"
+                                                 button-label="Code"
+                                                 item-label="Code"
+                                                 tick-property="ticked"
+                                                 selection-mode="single"
+                                                 helper-elements="all filter"
+                                                 max-height="150px"
+                                                 search-property="Code"
+                                                 on-open="groupProduct.enabled = false"
+                                                 on-close="groupProduct.enabled = true">
+                                            </div>
+                                        </th>
+                                        <th width="20%">
+                                            <input class="edit-con" ng-class="{active:focus}" ng-trim="true" ng-focus="focus=true"
+                                                   ng-blur="focus=false;" name="price" type="number" placeholder="Enter Price" ng-model="price" max="999999" min="1" />
+                                        </th>
+                                        <th width="20%" class="center-text">
+                                            <a class="btn-icon add-btn" style="margin: auto" ng-click="adminBuyerGroupCtrl.addProduct(buyerGroupForm.price.$valid);groupProduct.enabled=true">
+                                                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 0h24v24H0z" fill="none" />
+                                                    <path fill="#00e676" class="icon-svg" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
+                                                </svg>
+                                            </a>
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div style="max-height: 200px;overflow-y: auto">
+                            <table class="table table-condensed table-bordered">
+                                <tbody>
+                                    <tr ng-repeat="product in selectedProducts track by $index ">
+                                        <td width="60%" style="padding-left: 14px">
+                                            {{product.Code}}
+                                        </td>
+                                        <td width="20%">
+                                            {{product.Price|number : 2}}
+                                        </td>
+                                        <td width="20%" class="center-text">
+                                            <button class="btn-icon cursor-pointer action-btn" ng-click="adminBuyerGroupCtrl.deleteProduct(product);groupProduct.enabled=true">
+                                                <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                                                    <path fill="#000000" d="M3,16.74L7.76,12L3,7.26L7.26,3L12,7.76L16.74,3L21,7.26L16.24,12L21,16.74L16.74,21L12,16.24L7.26,21L3,16.74M12,13.41L16.74,18.16L18.16,16.74L13.41,12L18.16,7.26L16.74,5.84L12,10.59L7.26,5.84L5.84,7.26L10.59,12L5.84,16.74L7.26,18.16L12,13.41Z" />
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-6">
+                </div>
+                <div class="col-lg-5">
+                    <a href="#" class="btn btn-secondary" role="button" style="margin-top: 20px; float: right;margin-right:-21px;" ng-click="adminBuyerGroupCtrl.cancel()">Cancel</a>
+                </div>
+                <div class="col-lg-1">
+                    <button type="submit" ng-click="buyerGroupForm.$valid&&adminBuyerGroupCtrl.createOrUpdate(groupProduct)" class="btn btn-primary showItemDisable" ng-disabled="!groupProduct.enabled" style="margin-top: 20px; float: right">Submit</button>
+                </div>
+            </div>
+        </form>
+    </td>
+</tr>
+
+
+

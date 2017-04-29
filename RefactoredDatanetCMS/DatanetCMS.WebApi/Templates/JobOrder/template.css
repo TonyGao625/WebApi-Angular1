@@ -1,0 +1,126 @@
+﻿
+/* Common */
+
+body {
+    font-size: 12px;
+    font-weight: inherit;
+    font-family: arial;
+}
+
+label {
+    font-weight: bolder;
+}
+
+#bank_eft_refnumber {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    bottom: 3px;
+    left: 32%;
+}
+
+.borderless > tbody > tr > td,
+.borderless > tbody > tr > th,
+.borderless > tfoot > tr > td,
+.borderless > tfoot > tr > th,
+.borderless > thead > tr > td,
+.borderless > thead > tr > th {
+    border: none;
+    vertical-align: bottom;
+}
+
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > th {
+    color: white;
+    text-transform: uppercase;
+    background-color: #3366ff;
+}
+
+/* Right-Angled Table */
+
+.right_angled {
+    border-collapse: separate;
+    border: 3px solid black;
+}
+
+.table_right_angled > .table-bordered > tbody > tr > td,
+.table_right_angled > .table-bordered > tbody > tr > th,
+.table_right_angled > .table-bordered > tfoot > tr > td,
+.table_right_angled > .table-bordered > tfoot > tr > th,
+.table_right_angled > .table-bordered > thead > tr > td,
+.table_right_angled > .table-bordered > thead > tr > th {
+    border: 0;
+    border-right: 3px solid black;
+    border-bottom: 2px solid dimgrey;
+}
+
+.table_right_angled > .table-bordered tr:first-child th {
+    border-top: 0;
+}
+
+.table_right_angled > .table-bordered tr:last-child td {
+    border-bottom: 0;
+}
+
+.table_right_angled > .table-bordered tr td:first-child,
+.table_right_angled > .table-bordered tr th:first-child {
+    border-left: 0;
+}
+
+.table_right_angled > .table-bordered tr td:last-child,
+.table_right_angled > .table-bordered tr th:last-child {
+    border-right: 0;
+}
+
+/* Curved Table */
+
+.curved > .table-bordered > tbody > tr > td,
+.curved > .table-bordered > tbody > tr > th,
+.curved > .table-bordered > tfoot > tr > td,
+.curved > .table-bordered > tfoot > tr > th,
+.curved > .table-bordered > thead > tr > td,
+.curved > .table-bordered > thead > tr > th {
+    border: 0;
+}
+
+.bottom_curved {
+    border: 3px solid black;
+    border-collapse: separate;
+    border-radius: 0 0 15px 15px;
+}
+
+.four_curved {
+    border: 3px solid black;
+    border-collapse: separate;
+    border-radius: 15px;
+}
+
+.table_four_curved label {
+    margin-bottom: 0;
+}
+
+.table_four_curved > .table-bordered > tbody > tr > td {
+    border: 3px solid black;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.table_four_curved > .table-bordered tr:first-child th {
+    border-top: 0;
+}
+
+.table_four_curved > .table-bordered tr:last-child td {
+    border-bottom: 0;
+}
+
+.table_four_curved > .table-bordered tr td:first-child,
+.table_four_curved > .table-bordered tr th:first-child {
+    border-left: 0;
+}
+
+.table_four_curved > .table-bordered tr td:last-child,
+.table_four_curved > .table-bordered tr th:last-child {
+    border-right: 0;
+}

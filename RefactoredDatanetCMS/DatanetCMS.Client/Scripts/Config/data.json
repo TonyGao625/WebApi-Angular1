@@ -1,0 +1,5 @@
+﻿{
+  "baseUrl": "http://localhost:57001/api/",
+  "clientBaseUrl": "http://localhost:56488/",
+  "fileUrl": "http://localhost:57001/files/podoc/"
+}

@@ -1,0 +1,130 @@
+﻿<section ng-init="init()">
+    <div confirm-on-exit="!saving"
+         confirm-message-window="All your changes will be lost."
+         confirm-message-route="All your changes will be lost. Are you sure you want to do this?">
+    </div>
+    <div class="order-show container">
+        <div class="ctrl-wrap">
+            <div class="ctrl-thead">
+                <div class="column-good">Product</div>
+                <div class="column-price">Price</div>
+                <div class="column-quantity">Quantity</div>
+                <div class="column-sum">Amount</div>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="product in products track by product.Id">
+                    <div><img class="img-container" src="{{product.Image}}"/>
+                    </div>
+                    <span class="order-type">{{product.Code}} {{product.ShortDesc}}</span>
+
+                    <div class="order-price"><strong>{{product.Price | currency : "$"}}</strong>
+                    </div>
+                    <div class="quantity-form">
+                        <a class="decrement" ng-click="decrease(product)">-</a>
+                        <input id="quantity" type="text" ng-model="product.Quantity" ng-change="changeQuantity(product)"  ng-disabled="fromQuoteToOrder"/>
+                        <a class="increment" ng-click="increase(product)">+</a>
+                    </div>
+                    <div class="order-sum"><strong>{{product.Price * product.Quantity | currency : "$"}}</strong>
+                    </div>
+                    <button class="btn btn-link " ng-click="removeProduct(product)" ng-disabled="fromQuoteToOrder">Remove</button>
+                </li>
+            </ul>
+            <div class="cart_money">
+                <!--<div class="Delivery-charge">Delivery Charge: <span>{{ deliveryCharge | currency : "$"}}</span></div>-->
+                <div class="Delivery-charge">Delivery Charge: <span>{{ userInfo.DeliveryCharge | currency : "$"}}</span></div>
+                <div class="order-total">SUB TOTAL:&nbsp;<span>{{getSubtotal() | currency : "$"}}</span></div>
+                <div class="order-gst">GST: <span>{{getGST() | currency : "$"}}</span></div>
+                <div class="order-amount">Amount: <span>{{getTotal() | currency : "$"}}</span></div>
+            </div>
+           
+        </div>
+        <form name="orderForm" novalidate>
+
+            <div class="form-group">
+                <label class="contact-name">Contact Name: </label>
+                <input name="contactName" type="text" ng-model="contactName" ng-maxlength="50" maxlength="50" required class="form-control"/>
+                <div ng-messages="orderForm.contactName.$error" class="error-message-con" ng-show="orderForm.contactName.$touched || orderForm.$submitted">
+                    <div ng-message="required">Contact name is Required</div>
+                    <div ng-message="maxlength">Contact name should be less than 50 characters</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="contact-email">Contact Email: </label>
+                <input type="email" name="contactEmail" ng-model="contactEmail" ng-maxlength="50" maxlength="50" required class="form-control"/>
+                <div ng-messages="orderForm.contactEmail.$error" class="error-message-con" ng-show="orderForm.contactEmail.$touched || orderForm.$submitted">
+                    <div ng-message="required">Contact email is Required</div>
+                    <div ng-message="email">Not valid emai address</div>
+                    <div ng-message="maxlength">Contact email should be less than 50 characters</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Contact Phone: </label>
+                <input name="contactPhone" type="text" ng-model="contactPhone" ng-maxlength="50" maxlength="50" required class="form-control"/>
+                <div ng-messages="orderForm.contactPhone.$error" class="error-message-con" ng-show="orderForm.contactPhone.$touched || orderForm.$submitted">
+                    <div ng-message="required">Contact phone is Required</div>
+                    <div ng-message="maxlength">Contact phone should be less than 50 characters</div>
+                </div>
+            </div>
+
+
+            <div ng-if="userInfo.PurchaseType==1" class="control-group row row-fluid " >
+                <label class="control-label order-info">Contract Number: </label>
+                <!--ng-if="!userInfo.DisplayContractNo"-->
+                <div class="control-number" 
+                     isteven-multi-select
+                     input-model="contractNumbers"
+                     output-model="vm.contractNumber"
+                     button-label="Name"
+                     item-label="Name Desc"
+                     tick-property="ticked"
+                     selection-mode="single"
+                     helper-elements="all filter"
+                     max-height="100px"
+                     search-property="Name Desc"
+                     on-item-click="">
+                </div>
+                <!-- TODO: INSERT CONTRACT CODE SELECTED IN WELCOME PAGE 
+                <span ng-if="userInfo.DisplayContractNo" class="contract-number">{{selectedContractNumber}}</span>-->
+            </div>
+            <div ng-if="userInfo.PurchaseType==2" class="control-group row row-fluid puchase-order-number-wrap">
+                <label class="control-label order-info">Purchase Order Number: </label>
+                <input type="text" ng-model="vm.purchaseCode" name="pon" class="form-control puchase-order-number" ng-maxlength="100" required>
+                <div ng-messages="orderForm.pon.$error" class="error-message-con" ng-if="orderForm.pon.$touched||orderForm.$submitted">
+                    <div ng-message="required">Purchase order number is Required</div>
+                    <div ng-message="maxlength">Purchase order number should be less than 100 characters</div>
+                </div>
+            </div>
+            <div ng-if="userInfo.PoDocMandatory" class="control-group row row-fluid form-group purchase-doc">
+                <label class="control-label order-info purchase-info" >Purchase Doc: </label>
+                <button class="btn btn-sm btn-link btn_file" type="file"  ngf-select="uploadFiles($file, $invalidFiles)"
+                        accept="*/*" ngf-max-size="5MB">
+                    Select File
+                </button>
+                <span class="file-info">{{filePath}}</span>
+                <img src="/Content/images/uploading.svg" style="vertical-align: middle;" ng-show="isUploading"/>
+                <div class="error-message-con" ng-if="errFile" style="margin-left: 183px">
+                    <div ng-if="errFile.$error==='maxSize'">5M is limited</div>
+                </div>
+            </div>
+            <div class="control-group row row-fluid delivery-wrap">
+                <label class="control-label order-info deliver-info" >Delivery Address: </label>
+                <div class="kongjian" isteven-multi-select
+                     input-model="deliveryAddrs"
+                     output-model="deliveryAddr"
+                     button-label="Addr1 Addr2 Addr3 State PostCode"
+                     item-label="Addr1 Addr2 Addr3 State PostCode"
+                     tick-property="ticked"
+                     selection-mode="single"
+                     helper-elements="filter"
+                     max-height="150px"
+                     search-property="Addr1 Addr2 Addr3 State PostCode"
+                     on-item-click="calcDeliveryCharge(data)">
+                </div>
+                <button type="button" class="btn btn-link order-address" ng-click="addAddress()">
+                    Add new address
+                </button>
+            </div>
+            <button type="submit" ng-disabled="saving" style="padding:6px 10px;" class="btn btn-primary  pull-right" ng-click="orderForm.$valid && saveOrder(ordreForm)">Place Order</button>
+        </form>
+    </div>
+</section>

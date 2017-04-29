@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@*
+    This snippet displays a list of links of the pages immediately under the top-most page in the content tree.
+    This is the home page for a standard website.
+    It also highlights the current active page/section in the navigation with the css class "current".
+*@
+@{ var selection = CurrentPage.Site().Children.Where("Visible"); }
+
+<div id="header_container">
+    <div id="header">
+        <ul class="nav navbar-nav ng-cloak">
+            @foreach (var item in selection)
+            {
+                if (item.DocumentTypeAlias.ToString().StartsWith("admin"))
+                {
+                    <li class="@(item.IsAncestorOrSelf(CurrentPage) ? "current" : null) ng-cloak" ng-if="'@(item.DocumentTypeAlias.ToString() != "adminQuoteAndOrder")'? userInfo.Role==='Admin':true">
+                        <a href="@item.Url">@item.Name</a>
+                    </li>
+                }
+            }
+        </ul>
+        <div class="navbar-right">
+            <div class="dropdown">
+                <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span ng-bind="userInfo.Name"></span>
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="####" ng-click="logout()">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

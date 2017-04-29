@@ -1,0 +1,39 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Login</title>
+    @Styles.Render("~/bundles/css")
+</head>
+<body>
+    <div growl limit-messages="1"></div>
+    <div class="progress progress-load" ng-class="{active:$root.loading>0,last:$root.loading>60}"></div>
+    @RenderBody()
+    <footer>
+        <div class="container">
+            <h3 class="footer-h3">Contact Us</h3>
+            <p class="footer-address">
+                <span class="glyphicon glyphicon-map-marker"></span>
+                WA - 28 Stiles Avenue, Burswood, WA, 6100
+            </p>
+            <p class="footer-address" style="padding-left:29px"> SA - 96 Gilbert Street, Adelaide, SA, 5000</p>
+            <p class="footer-address" style="padding-left:29px"> NSW - Suite 2.11, Delhi Corp. Centre, 32 Delhi Road, North Ryde, NSW, 2113</p>
+
+            <p class="footer-phone">
+                <span class="glyphicon glyphicon-earphone"></span>
+                Phone - 1300 3282638
+            </p>
+            <p class="footer-email">
+                <span class="glyphicon glyphicon-envelope"></span>
+                <span>Email - </span><a href="mailto:sales@datanet.com.au">sales@datanet.com.au</a>
+
+            </p>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/Js")
+</body>
+</html>

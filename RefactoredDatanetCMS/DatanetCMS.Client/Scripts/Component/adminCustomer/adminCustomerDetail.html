@@ -1,0 +1,225 @@
+﻿<tr class="child-tr">
+    <td class="child-td" colspan="8">
+        <ul class="nav nav-tabs">
+            <li class="active overview" ng-click="getOverViewByCustomerId($event,customer)">
+                <a href="#" data-toggle="tab">Overview</a>
+            </li>
+            <li ng-click="$root.checkIfEdit()&&$root.checkIfChangeTab($event,customer)&&getContractNumberByCustomerId($event,customer)" class="contract">
+                <a href="#" data-toggle="tab">Contract</a>
+            </li>
+            <li ng-click="$root.checkIfEdit()&&$root.checkIfChangeTab($event,customer)&&getAddressByCustomerId($event,customer)" class="address">
+                <a href="#" data-toggle="tab">Address</a>
+            </li>
+        </ul>
+        <form class="form-horizontal" name="customerForm" novalidate>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="col-md-5 control-label">Company Name</label>
+                        <div class="col-md-7">
+                            <input type="text" required name="companyName" ng-maxlength="30" maxlength="30" class="form-control" ng-model="customer.CompanyName" ng-change="customer.enabled=true">
+                            <div ng-messages="customerForm.companyName.$error" class="error-message-con" ng-show="customerForm.CompanyName.$touched||customerForm.$submitted">
+                                <div ng-message="required">Company name is required</div>
+                                <div ng-message="maxlength">Company Name should be less than 30 characters</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="col-md-5 control-label">Logo</label>
+                        <div class="col-md-7">
+                            <div class="img-hover {{customer.Logo?'active':''}}">
+                                <div class="glyphicon glyphicon-remove cursor-pointer" ng-click="clearImg($event,customer);"></div>
+                                <div class="img-container" id="bc" ng-style="{'background-image': 'url('+  (customer.Logo != undefined ? customer.Logo: '/Content/images/default.svg') +' )'}">
+                                </div>
+                            </div>
+                            <div class="btn-browser">
+                                <span class="btn-file {{customer.Logo == undefined?'disabled':''}}">
+                                    Browse
+                                    <input type="file" class="fileInput" name="myImage" ng-disabled="customer.Logo == undefined" upload-image ng-model="image" accept="image/jpeg,image/png,image/gif,image/jpg"
+                                           dimensions="height > 0 && width>0" id="{{$index}}" ng-change="customer.enabled=true;">
+                                </span>
+                            </div>
+                            <div ng-messages="customerForm.myImage.$error" style="margin-top: 35px" class="error-message-con" ng-show="customerForm.myImage.$touched && customerForm.myImage.$invalid ">
+                                <div ng-message="image"> Not a JPEG,GIF,JPG or PNG!</div>
+                                <div ng-message="size"> Size should be less than 5MB</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row row-fluid">
+                    <div class="col-md-6">
+                        <label class="col-md-5 control-label">Login Id</label>
+                        <div class="col-md-7">
+                            <input type="text" required name="loginId" ng-maxlength="30" maxlength="30" class="form-control" ng-model="customer.LoginId" ng-change="customer.enabled=true">
+                            <div ng-messages="customerForm.loginId.$error" class="error-message-con" ng-show="customerForm.loginId.$touched||customerForm.$submitted">
+                                <div ng-message="required">Login id is Required</div>
+                                <div ng-message="maxlength">Login id should be less than 30 characters</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="col-md-5 control-label">Login Password</label>
+                        <div class="col-md-7">
+                            <input type="text" required name="loginPwd" ng-maxlength="50" maxlength="50" class="form-control" ng-model="customer.LoginPassword" ng-change="customer.enabled=true">
+                            <div ng-messages="customerForm.loginPwd.$error" class="error-message-con" ng-show="customerForm.loginPwd.$touched||customerForm.$submitted">
+                                <div ng-message="required">Login password is Required</div>
+                                <div ng-message="maxlength">Login password should be less than 50 characters</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row row-fluid">
+                    <div class="col-md-6">
+                        <label class="col-md-5 control-label">Contact Name</label>
+                        <div class="col-md-7">
+                            <input type="text" required name="contactName" ng-maxlength="50" maxlength="50" class="form-control" ng-model="customer.ContactName" ng-change="customer.enabled=true">
+                            <div ng-messages="customerForm.contactName.$error" class="error-message-con" ng-show="customerForm.contactName.$touched||customerForm.$submitted">
+                                <div ng-message="required">Contact name is Required</div>
+                                <div ng-message="maxlength">Contact name should be less than 50 characters</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="col-md-5 control-label">Contact Email</label>
+                        <div class="col-md-7">
+                            <input type="email" required name="contactEmail" ng-maxlength="50" maxlength="50" class="form-control" ng-model="customer.ContactEmail" ng-change="customer.enabled=true">
+                            <div ng-messages="customerForm.contactEmail.$error" class="error-message-con" ng-show="customerForm.contactEmail.$touched||customerForm.$submitted">
+                                <div ng-message="required">Contact email is Required</div>
+                                <div ng-message="email">Not valid emai address</div>
+                                <div ng-message="maxlength">Contact email should be less than 50 characters</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row row-fluid">
+                    <div class="col-md-6">
+                        <label class="col-md-5 control-label">Contact Phone</label>
+                        <div class="col-md-7">
+                            <input type="text" required name="contactPhone" ng-maxlength="50" maxlength="50" class="form-control" ng-model="customer.ContactPhone" ng-change="customer.enabled=true">
+                            <div ng-messages="customerForm.contactPhone.$error" class="error-message-con" ng-show="customerForm.contactPhone.$touched||customerForm.$submitted">
+                                <div ng-message="required">Contact phone is Required</div>
+                                <div ng-message="maxlength">Contact phone should be less than 50 characters</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row row-fluid">
+                    <div class="col-md-6">
+                        <label class="col-md-5 control-label">Manager</label>
+                        <div class="col-md-7" style="margin-top:6px">
+                            <div isteven-multi-select
+                                 input-model="managers"
+                                 output-model="customer.Manager"
+                                 button-label="Name"
+                                 item-label="Name"
+                                 tick-property="ticked"
+                                 selection-mode="single"
+                                 helper-elements="all filter"
+                                 max-height="100px"
+                                 search-property="Name"
+                                 on-item-click="customer.enabled=true"
+                                 orientation="horizontal">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="col-md-5 control-label">Buyer Group</label>
+                        <div class="col-md-7" style="margin-top:6px">
+                            <div isteven-multi-select
+                                 input-model="buyerGroups"
+                                 output-model="customer.BuyerGroup"
+                                 button-label="Code"
+                                 item-label="Code"
+                                 tick-property="ticked"
+                                 selection-mode="single"
+                                 helper-elements="all filter"
+                                 max-height="100px"
+                                 search-property="Code"
+                                 on-item-click="customer.enabled=true"
+                                 orientation="horizontal">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row row-fluid">
+                    <div class="col-md-6">
+                        <label class="col-md-5 control-label">
+                            Dispaly Contract NO
+                        </label>
+                        <div class="col-md-7 controls" style="margin-top:8px">
+                            <input type="checkbox" name="displayContractNo" ng-model="customer.DisplayContractNo" ng-change="customer.enabled=true">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="col-md-5 control-label">Purchase Type</label>
+                        <div class="col-md-7" style="margin-top:8px">
+                            <label style="font-weight: 100" > <input type="radio" name="purchaseType" ng-model="customer.PurchaseType" ng-change="customer.enabled=true" value=1> Contract</label>
+                            <label style="font-weight: 100"> <input type="radio" class="marginLeft" name="purchaseType" ng-model="customer.PurchaseType" ng-change="customer.enabled=true" value=2> PO</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row row-fluid">
+                    <div class="col-md-6 control-group">
+                        <label class="col-md-5 control-label">PO Doc Mandatory</label>
+                        <div class="col-md-7" style="margin-top:8px">
+                            <input type="checkbox" name="poDocMandatory" ng-model="customer.PoDocMandatory" ng-change="customer.enabled=true">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row row-fluid">
+                    <div class="col-md-6">
+                        <label class="col-md-5 control-label">Delivery Charge</label>
+                        <div class="col-md-7">
+                            <input type="number" required name="deliveryCharge" class="form-control" ng-model="customer.DeliveryCharge" ng-change="customer.enabled=true" ng-max="99999999" ng-min="0">
+                            <div ng-messages="customerForm.deliveryCharge.$error" class="error-message-con" ng-show="customerForm.deliveryCharge.$touched||customerForm.$submitted">
+                                <div ng-message="required">Delivery Charge is Required</div>
+                                <div ng-message="number" class="validMessage">Charge should be between 1 to 99999999</div>
+                                <div ng-message="min" class="validMessage">Charge should be between 1 to 99999999</div>
+                                <div ng-message="max" class="validMessage">Charge should be between 1 to 99999999</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-6">
+                </div>
+                <div class="col-lg-5">
+                    <a href="#" class="btn btn-secondary" role="button" style="margin-top: 20px; float: right" ng-click="cancel()">Cancel</a>
+                </div>
+                <div class="col-lg-1">
+                    <button type="submit" ng-click="customerForm.$valid && createOrUpdate(customer)" class="btn btn-primary showItemDisable" ng-disabled="!customer.enabled" style="margin-top: 20px; float: right">Submit</button>
+
+                </div>
+            </div>
+
+        </form>
+    </td>
+</tr>
+
+
+
+
+
+
+
+
+

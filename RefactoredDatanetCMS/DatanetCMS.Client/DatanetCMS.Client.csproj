@@ -1,0 +1,747 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\UmbracoCms.7.5.10\build\UmbracoCms.props" Condition="Exists('..\packages\UmbracoCms.7.5.10\build\UmbracoCms.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2321AD04-1291-48BE-BA90-33E9BE6F79BC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DatanetCMS.Client</RootNamespace>
+    <AssemblyName>DatanetCMS.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="businesslogic, Version=1.0.6261.14292, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\businesslogic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ClientDependency.Core, Version=1.9.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClientDependency.1.9.2\lib\net45\ClientDependency.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ClientDependency.Core.Mvc, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClientDependency-Mvc5.1.8.0.0\lib\net45\ClientDependency.Core.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="cms, Version=1.0.6261.14293, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\cms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="controls, Version=1.0.6261.14294, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\controls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CookComputing.XmlRpcV2, Version=2.5.0.0, Culture=neutral, PublicKeyToken=a7d6e17aa302004d, processorArchitecture=MSIL">
+      <HintPath>..\packages\xmlrpcnet.2.5.0\lib\net20\CookComputing.XmlRpcV2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Examine, Version=0.1.81.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Examine.0.1.81\lib\net45\Examine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ImageProcessor, Version=2.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageProcessor.2.5.2\lib\net45\ImageProcessor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ImageProcessor.Web, Version=4.8.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageProcessor.Web.4.8.2\lib\net45\ImageProcessor.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="interfaces, Version=1.0.6261.14289, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Lucene.Net, Version=2.9.4.1, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lucene.Net.2.9.4.1\lib\net40\Lucene.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MarkdownSharp, Version=1.14.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Markdown.1.14.7\lib\net45\MarkdownSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=1.0.1559.20655, Culture=neutral">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Common.1.0.0\lib\net45\Microsoft.CodeAnalysis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.1.0.0\lib\net45\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.2.1\lib\net45\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MiniProfiler, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
+      <HintPath>..\packages\MiniProfiler.2.1.0\lib\net40\MiniProfiler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Semver, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\semver.1.1.2\lib\net451\Semver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLCE4Umbraco, Version=1.0.6261.14294, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\SQLCE4Umbraco.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.1.36.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.1.36\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.1, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe.Entity, Version=4.0.0.1, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\System.Data.SqlServerCe.Entity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata, Version=1.0.21.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.1.0.21\lib\portable-net45+win8\System.Reflection.Metadata.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="TidyNet, Version=1.0.0.0, Culture=neutral">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\TidyNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="umbraco, Version=1.0.6261.14296, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\umbraco.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Umbraco.Core, Version=1.0.6261.14290, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\Umbraco.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="umbraco.DataLayer, Version=1.0.6261.14292, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\umbraco.DataLayer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="umbraco.editorControls, Version=1.0.6261.14298, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\umbraco.editorControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="umbraco.MacroEngines, Version=1.0.6261.14298, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\umbraco.MacroEngines.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Umbraco.ModelsBuilder, Version=3.0.5.96, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Umbraco.ModelsBuilder.3.0.5\lib\Umbraco.ModelsBuilder.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="umbraco.providers, Version=1.0.6261.14294, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\umbraco.providers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Umbraco.Web.UI, Version=1.0.6261.14299, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\Umbraco.Web.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UmbracoExamine, Version=0.7.0.14293, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.5.10\lib\UmbracoExamine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UrlRewritingNet.UrlRewriter, Version=2.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UrlRewritingNet.2.0.7\lib\UrlRewritingNet.UrlRewriter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.controller.js" />
+    <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.htm" />
+    <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.resource.js" />
+    <Content Include="config\grid.editors.config.js" />
+    <Content Include="config\Lang\cs-CZ.user.xml" />
+    <Content Include="config\Lang\da-DK.user.xml" />
+    <Content Include="config\Lang\de-DE.user.xml" />
+    <Content Include="config\Lang\en-GB.user.xml" />
+    <Content Include="config\Lang\en-US.user.xml" />
+    <Content Include="config\Lang\es-ES.user.xml" />
+    <Content Include="config\Lang\fr-FR.user.xml" />
+    <Content Include="config\Lang\he-IL.user.xml" />
+    <Content Include="config\Lang\it-IT.user.xml" />
+    <Content Include="config\Lang\ja-JP.user.xml" />
+    <Content Include="config\Lang\ko-KR.user.xml" />
+    <Content Include="config\Lang\nb-NO.user.xml" />
+    <Content Include="config\Lang\nl-NL.user.xml" />
+    <Content Include="config\Lang\pl-PL.user.xml" />
+    <Content Include="config\Lang\pt-BR.user.xml" />
+    <Content Include="config\Lang\ru-RU.user.xml" />
+    <Content Include="config\Lang\sv-SE.user.xml" />
+    <Content Include="config\Lang\zh-CN.user.xml" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\01.png" />
+    <Content Include="Content\images\02.png" />
+    <Content Include="Content\images\03.png" />
+    <Content Include="Content\images\bd.jpg" />
+    <Content Include="Content\images\datanet.png" />
+    <Content Include="Content\images\datanetlogo.JPG" />
+    <Content Include="Content\images\datanet_CMYK.png" />
+    <Content Include="Content\images\datanet_RGB.jpg" />
+    <Content Include="Content\images\default.svg" />
+    <Content Include="Content\images\icon\CANCELCODES.PNG" />
+    <Content Include="Content\images\icon\DELIVERY REPORT.PNG" />
+    <Content Include="Content\images\icon\DRIVERS.PNG" />
+    <Content Include="Content\images\icon\HOME.PNG" />
+    <Content Include="Content\images\icon\LOCATIONS.PNG" />
+    <Content Include="Content\images\icon\STOPCODES.PNG" />
+    <Content Include="Content\images\icon\SUPPLIERS.PNG" />
+    <Content Include="Content\images\icon\UOM.PNG" />
+    <Content Include="Content\images\icon\USERS.PNG" />
+    <Content Include="Content\images\loginimage.jpg" />
+    <Content Include="Content\images\login_arr.png" />
+    <Content Include="Content\images\uploading.svg" />
+    <Content Include="Content\Style\base.css" />
+    <Content Include="Content\Style\bootstrap.min.css" />
+    <Content Include="Content\Style\colors.css" />
+    <Content Include="Content\Style\datetimepicker.css" />
+    <Content Include="Content\Style\glyphicons.css" />
+    <Content Include="Content\Style\isteven-multi-select.css" />
+    <Content Include="Content\Style\layout.css" />
+    <Content Include="Content\Style\reset.css" />
+    <Content Include="default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\imageprocessor\security.config" />
+    <Content Include="config\imageprocessor\processing.config" />
+    <Content Include="config\imageprocessor\cache.config" />
+    <Content Include="App_Plugins\ModelsBuilder\package.manifest" />
+    <Content Include="Scripts\Component\adminBuyerGroup\adminBuyerGroup.controller.js" />
+    <Content Include="Scripts\Component\adminBuyerGroup\adminBuyerGroup.css">
+      <DependentUpon>adminBuyerGroup.less</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\adminBuyerGroup\adminBuyerGroup.directive.js" />
+    <Content Include="Scripts\Component\adminBuyerGroup\adminBuyerGroup.factory.js" />
+    <Content Include="Scripts\Component\adminBuyerGroup\adminBuyerGroup.html" />
+    <Content Include="Scripts\Component\adminBuyerGroup\adminBuyerGroup.min.css">
+      <DependentUpon>adminBuyerGroup.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\adminBuyerGroup\adminBuyerGroupDetail.html" />
+    <Content Include="Scripts\Component\adminCategory\adminCategory.css">
+      <DependentUpon>adminCategory.less</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\adminCategory\adminCategory.factory.js" />
+    <Content Include="Scripts\Component\adminCategory\adminCategory.controller.js" />
+    <Content Include="Scripts\Component\adminCategory\adminCategory.directive.js" />
+    <Content Include="Scripts\Component\adminCategory\adminCategory.html" />
+    <Content Include="Scripts\Component\adminCategory\adminCategory.min.css">
+      <DependentUpon>adminCategory.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\adminCategory\adminCategoryDetail.html" />
+    <Content Include="Scripts\Component\adminContract\adminContract.factory.js" />
+    <Content Include="Scripts\Component\adminCustomer\adminAddress.html" />
+    <Content Include="Scripts\Component\adminCustomer\adminAddressDetail.html" />
+    <Content Include="Scripts\Component\adminCustomer\adminContract.html" />
+    <Content Include="Scripts\Component\adminCustomer\adminContractDetail.html" />
+    <Content Include="Scripts\Component\adminCustomer\adminCustomer.controller.js" />
+    <Content Include="Scripts\Component\adminCustomer\adminCustomer.css">
+      <DependentUpon>adminCustomer.less</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\adminCustomer\adminCustomer.directive.js" />
+    <Content Include="Scripts\Component\adminCustomer\adminCustomer.factory.js" />
+    <Content Include="Scripts\Component\adminCustomer\adminCustomer.html" />
+    <Content Include="Scripts\Component\adminCustomer\adminCustomer.min.css">
+      <DependentUpon>adminCustomer.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\adminCustomer\adminCustomerDetail.html" />
+    <Content Include="Scripts\Component\adminCustomer\adminCustomerOverView.html" />
+    <Content Include="Scripts\Component\adminDeliveryAddr\adminDeliveryAddr.factory.js" />
+    <Content Include="Scripts\Component\adminEmailTemplate\adminEmailTemplate.controller.js" />
+    <Content Include="Scripts\Component\adminEmailTemplate\adminEmailTemplate.css">
+      <DependentUpon>adminEmailTemplate.less</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\adminEmailTemplate\adminEmailTemplate.directive.js" />
+    <Content Include="Scripts\Component\adminEmailTemplate\adminEmailTemplate.factory.js" />
+    <Content Include="Scripts\Component\adminEmailTemplate\adminEmailTemplate.html" />
+    <Content Include="Scripts\Component\adminEmailTemplate\adminEmailTemplate.min.css">
+      <DependentUpon>adminEmailTemplate.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\adminManager\adminManager.css">
+      <DependentUpon>adminManager.less</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\adminManager\adminManager.directive.js" />
+    <Content Include="Scripts\Component\adminManager\adminManager.factory.js" />
+    <Content Include="Scripts\Component\adminManager\adminManager.html" />
+    <Content Include="Scripts\Component\adminManager\adminManager.min.css">
+      <DependentUpon>adminManager.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\adminManager\adminManagerDetail.html" />
+    <Content Include="Scripts\Component\adminProduct\adminProduct.controller.js" />
+    <Content Include="Scripts\Component\adminProduct\adminProduct.css">
+      <DependentUpon>adminProduct.less</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\adminProduct\adminProduct.directive.js" />
+    <Content Include="Scripts\Component\adminProduct\adminProduct.factory.js" />
+    <Content Include="Scripts\Component\adminProduct\adminProduct.html" />
+    <Content Include="Scripts\Component\adminProduct\adminProduct.min.css">
+      <DependentUpon>adminProduct.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\adminProduct\adminProductDetail.html" />
+    <Content Include="Scripts\Component\adminQuoteAndOrder\adminQuoteAndOrder.controller.js" />
+    <Content Include="Scripts\Component\adminQuoteAndOrder\adminQuoteAndOrder.css">
+      <DependentUpon>adminQuoteAndOrder.less</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\adminQuoteAndOrder\adminQuoteAndOrder.directive.js" />
+    <Content Include="Scripts\Component\adminQuoteAndOrder\adminQuoteAndOrder.factory.js" />
+    <Content Include="Scripts\Component\adminQuoteAndOrder\adminQuoteAndOrder.html" />
+    <Content Include="Scripts\Component\adminQuoteAndOrder\adminQuoteAndOrder.min.css">
+      <DependentUpon>adminQuoteAndOrder.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\adminQuoteAndOrder\adminQuoteAndOrderDetail.html" />
+    <Content Include="Scripts\Component\adminUom\adminUom.controller.js" />
+    <Content Include="Scripts\Component\adminUom\adminUom.css">
+      <DependentUpon>adminUom.less</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\adminUom\adminUom.directive.js" />
+    <Content Include="Scripts\Component\adminUom\adminUom.factory.js" />
+    <Content Include="Scripts\Component\adminUom\adminUom.html" />
+    <Content Include="Scripts\Component\adminUom\adminUom.min.css">
+      <DependentUpon>adminUom.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\adminUom\adminUomDetail.html" />
+    <Content Include="Scripts\Component\customerOrder\addressForm.html" />
+    <Content Include="Scripts\Component\customerOrder\customerOrder.controller.js" />
+    <Content Include="Scripts\Component\customerOrder\customerOrder.css">
+      <DependentUpon>customerOrder.less</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\customerOrder\customerOrder.directive.js" />
+    <Content Include="Scripts\Component\customerOrder\customerOrder.factory.js" />
+    <Content Include="Scripts\Component\customerOrder\customerOrder.html" />
+    <Content Include="Scripts\Component\customerOrder\customerOrder.min.css">
+      <DependentUpon>customerOrder.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\customerProduct\customerProduct.controller.js" />
+    <Content Include="Scripts\Component\customerProduct\customerProduct.css">
+      <DependentUpon>customerProduct.less</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\customerProduct\customerProduct.directive.js" />
+    <Content Include="Scripts\Component\customerProduct\customerProduct.factory.js" />
+    <Content Include="Scripts\Component\customerProduct\customerProduct.html" />
+    <Content Include="Scripts\Component\customerProduct\customerProduct.min.css">
+      <DependentUpon>customerProduct.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\customerQToOrder\customerQToOrder.controller.js" />
+    <Content Include="Scripts\Component\customerQToOrder\customerQToOrder.css" />
+    <Content Include="Scripts\Component\customerQToOrder\customerQToOrder.directive.js" />
+    <Content Include="Scripts\Component\customerQToOrder\customerQToOrder.factory.js" />
+    <Content Include="Scripts\Component\customerQToOrder\customerQToOrder.html" />
+    <Content Include="Scripts\Component\customerQToOrder\customerQToOrder.min.css" />
+    <Content Include="Scripts\Component\customerQToOrder\customerQuoteDetail.html" />
+    <Content Include="Scripts\Component\customerQuoteAndOrder\customerOrderDetail.html" />
+    <Content Include="Scripts\Component\customerQuoteAndOrder\customerQuoteAndOrder.controller.js" />
+    <Content Include="Scripts\Component\customerQuoteAndOrder\customerQuoteAndOrder.css" />
+    <Content Include="Scripts\Component\customerQuoteAndOrder\customerQuoteAndOrder.directive.js" />
+    <Content Include="Scripts\Component\customerQuoteAndOrder\customerQuoteAndOrder.factory.js" />
+    <Content Include="Scripts\Component\customerQuoteAndOrder\customerQuoteAndOrder.html" />
+    <Content Include="Scripts\Component\customerQuoteAndOrder\customerQuoteAndOrder.min.css" />
+    <Content Include="Scripts\Component\customerQuote\addressForm.html" />
+    <Content Include="Scripts\Component\customerQuote\customerQuote.controller.js" />
+    <Content Include="Scripts\Component\customerQuote\customerQuote.css">
+      <DependentUpon>customerQuote.less</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\customerQuote\customerQuote.directive.js" />
+    <Content Include="Scripts\Component\customerQuote\customerQuote.factory.js" />
+    <Content Include="Scripts\Component\customerQuote\customerQuote.html" />
+    <Content Include="Scripts\Component\customerQuote\customerQuote.min.css">
+      <DependentUpon>customerQuote.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\customerWelcome\customerWelcome.controller.js" />
+    <Content Include="Scripts\Component\customerWelcome\customerWelcome.css">
+      <DependentUpon>customerWelcome.less</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\customerWelcome\customerWelcome.directive.js" />
+    <Content Include="Scripts\Component\customerWelcome\customerWelcome.factory.js" />
+    <Content Include="Scripts\Component\customerWelcome\customerWelcome.html" />
+    <Content Include="Scripts\Component\customerWelcome\customerWelcome.min.css">
+      <DependentUpon>customerWelcome.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Component\login\login.controller.js" />
+    <Content Include="Scripts\Component\login\login.css" />
+    <Content Include="Scripts\Component\login\login.directive.js" />
+    <Content Include="Scripts\Component\login\login.factory.js" />
+    <Content Include="Scripts\Component\login\login.html" />
+    <Content Include="Scripts\Component\login\login.min.css" />
+    <Content Include="Scripts\Config\app.js" />
+    <Content Include="Scripts\Config\config.js" />
+    <Content Include="Scripts\Config\run.js" />
+    <Content Include="Scripts\Plugins\angular-growl\angular-growl.min.css" />
+    <Content Include="Scripts\Plugins\angular-growl\angular-growl.min.js" />
+    <Content Include="Scripts\Plugins\angular\angular-animate.min.js" />
+    <Content Include="Scripts\Plugins\angular\angular-aria.min.js" />
+    <Content Include="Scripts\Plugins\angular\angular-material.min.js" />
+    <Content Include="Scripts\Plugins\angular\angular-messages.min.js" />
+    <Content Include="Scripts\Plugins\angular\angular-sanitize.min.js" />
+    <Content Include="Scripts\Plugins\angular\angular-ui.router.min.js" />
+    <Content Include="Scripts\Plugins\angular\angular.min.js" />
+    <Content Include="Scripts\Plugins\angular\version.txt" />
+    <Content Include="Scripts\Plugins\datepicker\datetimepicker.min.js" />
+    <Content Include="Scripts\Plugins\jquery\bootbox.min.js" />
+    <Content Include="Scripts\Plugins\jquery\bootstrap.min.js" />
+    <Content Include="Scripts\Plugins\jquery\boottypehead.js" />
+    <Content Include="Scripts\Plugins\jquery\isteven-multi-select.js" />
+    <Content Include="Scripts\Plugins\jquery\jquery-2.2.4.min.js" />
+    <Content Include="Scripts\Plugins\jquery\modernizr-2.6.2.js" />
+    <Content Include="Scripts\Plugins\jquery\tether.min.js" />
+    <Content Include="Scripts\Plugins\moment\moment.min.js" />
+    <Content Include="Scripts\Plugins\ng-upload-file\ng-file-upload-shim.js" />
+    <Content Include="Scripts\Plugins\ng-upload-file\ng-file-upload.min.js" />
+    <Content Include="Scripts\Plugins\swiper\swiper.min.js" />
+    <Content Include="Scripts\Service\auth.service.js" />
+    <Content Include="Scripts\Service\httpRequest.js" />
+    <Content Include="Scripts\Component\adminBuyerGroup\adminBuyerGroup.less" />
+    <Content Include="Scripts\Component\adminCustomer\adminCustomer.less" />
+    <Content Include="Scripts\Config\data.json" />
+    <None Include="Properties\PublishProfiles\Client.pubxml" />
+    <None Include="Properties\PublishProfiles\DatanetCMSClient.pubxml" />
+    <Content Include="Scripts\Component\customerProduct\customerProduct.less" />
+    <Content Include="Scripts\Component\adminCategory\adminCategory.less" />
+    <Content Include="Scripts\Component\customerQuote\customerQuote.less" />
+    <Content Include="Scripts\Component\customerOrder\customerOrder.less" />
+    <Content Include="Scripts\Component\adminManager\adminManager.less" />
+    <Content Include="Scripts\Component\customerWelcome\customerWelcome.less" />
+    <Content Include="Scripts\Component\login\login.less" />
+    <Content Include="Scripts\Component\adminQuoteAndOrder\adminQuoteAndOrder.less" />
+    <Content Include="Scripts\Component\customerQToOrder\customerQToOrder.less" />
+    <Content Include="Scripts\Component\customerQuoteAndOrder\customerQuoteAndOrder.less" />
+    <Content Include="Scripts\Component\adminEmailTemplate\adminEmailTemplate.less" />
+    <None Include="Views\AdminBuyGroup.cshtml" />
+    <Content Include="Scripts\Service\localStorage.service.js" />
+    <Content Include="Scripts\Service\saveLocalStorage.js" />
+    <Content Include="Scripts\Service\session.service.js" />
+    <Content Include="Scripts\Utilities\controller\customerMaster.controller.js" />
+    <Content Include="Scripts\Utilities\controller\master.controller.js" />
+    <Content Include="Scripts\Utilities\directive\angular-csv-import.js" />
+    <Content Include="Scripts\Utilities\directive\confirmOnExit.js" />
+    <Content Include="Scripts\Utilities\directive\customPager.directive.js" />
+    <Content Include="Scripts\Utilities\directive\initDatetime.js" />
+    <Content Include="Scripts\Utilities\directive\pager.html" />
+    <Content Include="Scripts\Utilities\directive\popover.js" />
+    <Content Include="Scripts\Utilities\directive\uploadImage.js" />
+    <Content Include="Scripts\Utilities\factory\bearerAuthInterceptor.factory.js" />
+    <Content Include="Scripts\Utilities\filter\quantity.filter.js" />
+    <Content Include="Scripts\Utilities\filter\timezonefilter.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Media.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Macro.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Embed.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Base.cshtml" />
+    <Content Include="Views\Partials\Grid\Bootstrap3.cshtml" />
+    <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
+    <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
+    <Content Include="Views\Partials\Grid\Bootstrap2-Fluid.cshtml" />
+    <Content Include="Media\Web.config" />
+    <Content Include="config\UrlRewriting.config" />
+    <Content Include="config\umbracoSettings.config" />
+    <Content Include="config\trees.config" />
+    <Content Include="config\tinyMceConfig.config" />
+    <Content Include="config\scripting.config" />
+    <Content Include="config\metablogConfig.config" />
+    <Content Include="config\log4net.config" />
+    <Content Include="config\FileSystemProviders.config" />
+    <Content Include="config\feedProxy.config" />
+    <Content Include="config\ExamineSettings.config" />
+    <Content Include="config\ExamineIndex.config" />
+    <Content Include="config\EmbeddedMedia.config" />
+    <Content Include="config\Dashboard.config" />
+    <Content Include="config\ClientDependency.config" />
+    <Content Include="config\BaseRestExtensions.config" />
+    <Content Include="config\applications.config" />
+    <Content Include="config\404handlers.config" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\Style\glyphicons.less" />
+    <Content Include="Scripts\Plugins\angular\angular-animate.min.js.map" />
+    <Content Include="Scripts\Plugins\angular\angular-aria.min.js.map" />
+    <Content Include="Scripts\Plugins\angular\angular-messages.min.js.map" />
+    <Content Include="Scripts\Plugins\angular\angular-sanitize.min.js.map" />
+    <Content Include="Scripts\Plugins\angular\angular.min.js.map" />
+    <Content Include="Scripts\Plugins\angular\errors.json" />
+    <Content Include="Scripts\Plugins\angular\version.json" />
+    <Content Include="Views\Master.cshtml" />
+    <Content Include="Views\AdminUom.cshtml" />
+    <Content Include="Views\AdminProduct.cshtml" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="Scripts\Component\adminUom\adminUom.less" />
+    <Content Include="Views\Partials\Navigation.cshtml" />
+    <Content Include="Scripts\Component\adminProduct\adminProduct.less" />
+    <Content Include="Views\CustomerMaster.cshtml" />
+    <Content Include="Views\AdminCustomer.cshtml" />
+    <Content Include="Views\AdminManager.cshtml" />
+    <Content Include="Views\AdminCategory.cshtml" />
+    <Content Include="Views\CustomerOrder.cshtml" />
+    <Content Include="Views\CustomerWelcome.cshtml" />
+    <Content Include="Views\CustomerProduct.cshtml" />
+    <Content Include="Views\CustomerQuote.cshtml" />
+    <Content Include="Views\CustomerQuoteToOrder.cshtml" />
+    <Content Include="Views\LoginMaster.cshtml" />
+    <Content Include="Views\LoginPage.cshtml" />
+    <Content Include="Views\AdminQuoteAndOrder.cshtml" />
+    <Content Include="Views\CustomerQuoteAndOrder.cshtml" />
+    <Content Include="Views\AdminEmailTemplate.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Scripts\Component\adminManager\adminManager.controller.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56488</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56488/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\UmbracoCms.7.5.10\build\UmbracoCms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\UmbracoCms.7.5.10\build\UmbracoCms.props'))" />
+    <Error Condition="!Exists('..\packages\UmbracoCms.7.5.10\build\UmbracoCms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\UmbracoCms.7.5.10\build\UmbracoCms.targets'))" />
+  </Target>
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
+  <Import Project="..\packages\UmbracoCms.7.5.10\build\UmbracoCms.targets" Condition="Exists('..\packages\UmbracoCms.7.5.10\build\UmbracoCms.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

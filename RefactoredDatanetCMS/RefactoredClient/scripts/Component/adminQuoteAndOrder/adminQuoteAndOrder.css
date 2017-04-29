@@ -1,0 +1,49 @@
+﻿quote-and-order .list-container .list_box {
+  padding-left: 0px;
+}
+quote-and-order .list-container .list_box .quote-order-info {
+  padding-left: 0px;
+}
+quote-and-order .quote-order-btn {
+  top: 25px;
+}
+quote-and-order .quote-order-btn .quote-order-search:hover,
+quote-and-order .quote-order-btn .quote-order-search:focus,
+quote-and-order .quote-order-btn .quote-order-search:active {
+  background: #fff;
+}
+quote-and-order .multiSelect > button {
+  border: 1px solid #ccc;
+  color: lightgray;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  cursor: pointer;
+  padding: 1px 8px 1px 8px;
+  font-size: 14px;
+  min-height: 28px !important;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  white-space: normal;
+  background-color: #fff;
+  background-image: linear-gradient(#fff, rgba(247, 247, 247, 0));
+  /*width: 250px;*/
+  width: 237px;
+  height: 34px;
+}
+quote-and-order .child-tr table {
+  table-layout: fixed;
+}
+quote-and-order .child-tr table td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+quote-and-order .child-tr .child-td form {
+  width: 50%;
+  margin: auto;
+}

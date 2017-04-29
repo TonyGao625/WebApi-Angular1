@@ -1,0 +1,243 @@
+﻿ 2017-04-29 14:07:57,679 [P19900/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.10 application starting on DESKTOP-P5VEKGQ
+ 2017-04-29 14:07:57,747 [P19900/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-04-29 14:07:57,753 [P19900/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 6ms)
+ 2017-04-29 14:07:57,797 [P19900/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-04-29 14:07:57,798 [P19900/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-04-29 14:07:57,803 [P19900/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-04-29 14:07:57,812 [P19900/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 9ms)
+ 2017-04-29 14:07:57,833 [P19900/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-04-29 14:07:57,834 [P19900/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+ 2017-04-29 14:07:57,834 [P19900/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-04-29 14:07:57,835 [P19900/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 0ms)
+ 2017-04-29 14:07:57,846 [P19900/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-04-29 14:07:57,847 [P19900/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 0ms)
+ 2017-04-29 14:07:57,847 [P19900/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-04-29 14:07:57,851 [P19900/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 3ms)
+ 2017-04-29 14:07:57,881 [P19900/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-04-29 14:07:57,882 [P19900/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2017-04-29 14:07:57,882 [P19900/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-04-29 14:07:57,883 [P19900/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2017-04-29 14:08:14,779 [P19900/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: WH-SVR12, InitialCatalog: DatanetCMSClient. Exception: System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+ 2017-04-29 14:08:14,779 [P19900/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-04-29 14:08:14,871 [P19900/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: WH-SVR12, InitialCatalog: DatanetCMSClient. Exception: System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+ 2017-04-29 14:08:14,871 [P19900/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-04-29 14:08:15,872 [P19900/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: WH-SVR12, InitialCatalog: DatanetCMSClient. Exception: System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+ 2017-04-29 14:08:15,872 [P19900/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-04-29 14:08:16,872 [P19900/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: WH-SVR12, InitialCatalog: DatanetCMSClient. Exception: System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+ 2017-04-29 14:08:16,872 [P19900/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-04-29 14:08:17,873 [P19900/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: WH-SVR12, InitialCatalog: DatanetCMSClient. Exception: System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+ 2017-04-29 14:08:17,873 [P19900/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-04-29 14:08:18,874 [P19900/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: WH-SVR12, InitialCatalog: DatanetCMSClient. Exception: System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+ 2017-04-29 14:08:18,874 [P19900/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-04-29 14:08:34,889 [P19900/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: WH-SVR12, InitialCatalog: DatanetCMSClient. Exception: System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+ 2017-04-29 14:08:34,890 [P19900/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-04-29 14:08:34,891 [P19900/D2/T1] ERROR Umbraco.Core.UmbracoApplicationBase - An unhandled exception occurred
+Umbraco.Core.Exceptions.UmbracoStartupFailedException: Umbraco cannot start. A connection string is configured but Umbraco cannot connect to the database.
+   在 Umbraco.Core.CoreBootManager.EnsureDatabaseConnection()
+   在 Umbraco.Core.CoreBootManager.Complete(Action`1 afterComplete)
+   在 Umbraco.Web.WebBootManager.Complete(Action`1 afterComplete)
+   在 Umbraco.Core.UmbracoApplicationBase.StartApplication(Object sender, EventArgs e)
+   在 Umbraco.Core.UmbracoApplicationBase.Application_Start(Object sender, EventArgs e)
+ 2017-04-29 14:08:44,904 [P19900/D2/T15] INFO  Umbraco.Core.MainDom - Stopping...
+ 2017-04-29 14:08:44,904 [P19900/D2/T15] INFO  Umbraco.Core.MainDom - Released MainDom.
+ 2017-04-29 14:09:00,969 [P19900/D2/T15] ERROR UmbracoExamine.DataServices.UmbracoContentService - EXCEPTION OCCURRED reading GetAllUserPropertyNames
+System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Umbraco.Core.Persistence.FaultHandling.RetryPolicy.<>c__DisplayClass1.<ExecuteAction>b__0()
+   在 Umbraco.Core.Persistence.FaultHandling.RetryPolicy.ExecuteAction[TResult](Func`1 func)
+   在 Umbraco.Core.Persistence.FaultHandling.RetryPolicy.ExecuteAction(Action action)
+   在 Umbraco.Core.Persistence.PetaPocoConnectionExtensions.OpenWithRetry(IDbConnection connection, RetryPolicy retryPolicy)
+   在 Umbraco.Core.Persistence.PetaPocoConnectionExtensions.OpenWithRetry(IDbConnection connection)
+   在 Umbraco.Core.Persistence.Database.OpenSharedConnection()
+   在 Umbraco.Core.Persistence.Database.<Query>d__7`1.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 UmbracoExamine.DataServices.UmbracoContentService.GetAllUserPropertyNames()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+ 2017-04-29 14:09:01,058 [P19900/D2/T15] ERROR UmbracoExamine.DataServices.UmbracoLogService - Provider=InternalIndexer, NodeId=-1
+System.Exception: Error indexing queue items,System.IO.FileNotFoundException: 未能找到文件“F:\CompanyProject\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\Internal\Index\segments_e”。
+文件名:“F:\CompanyProject\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\Internal\Index\segments_e”
+   在 Lucene.Net.Index.SegmentInfos.FindSegmentsFile.Run(IndexCommit commit)
+   在 Lucene.Net.Index.SegmentInfos.Read(Directory directory)
+   在 Lucene.Net.Index.IndexWriter.Init(Directory d, Analyzer a, Boolean create, Boolean closeDir, IndexDeletionPolicy deletionPolicy, Boolean autoCommit, Int32 maxFieldLength, IndexingChain indexingChain, IndexCommit commit)
+   在 Lucene.Net.Index.IndexWriter..ctor(Directory d, Analyzer a, Boolean create, MaxFieldLength mfl)
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.WriterFactory(Directory d) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1825
+   在 Examine.LuceneEngine.WriterTracker.<>c__DisplayClass7_0.<GetWriter>b__0(String s) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Examine.LuceneEngine.WriterTracker.GetWriter(Directory dir, Func`2 factory) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.CreateIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1790
+   在 UmbracoExamine.BaseUmbracoIndexer.CreateIndexWriter()
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.GetIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1844
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.ForceProcessQueueItems(Boolean block) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1507, IndexSet: InternalIndexSet
+ 2017-04-29 14:09:01,062 [P19900/D2/T15] ERROR UmbracoExamine.DataServices.UmbracoLogService - Provider=ExternalIndexer, NodeId=-1
+System.Exception: Error indexing queue items,System.IO.FileNotFoundException: 未能找到文件“F:\CompanyProject\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\External\Index\segments_d”。
+文件名:“F:\CompanyProject\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\External\Index\segments_d”
+   在 Lucene.Net.Index.SegmentInfos.FindSegmentsFile.Run(IndexCommit commit)
+   在 Lucene.Net.Index.SegmentInfos.Read(Directory directory)
+   在 Lucene.Net.Index.IndexWriter.Init(Directory d, Analyzer a, Boolean create, Boolean closeDir, IndexDeletionPolicy deletionPolicy, Boolean autoCommit, Int32 maxFieldLength, IndexingChain indexingChain, IndexCommit commit)
+   在 Lucene.Net.Index.IndexWriter..ctor(Directory d, Analyzer a, Boolean create, MaxFieldLength mfl)
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.WriterFactory(Directory d) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1825
+   在 Examine.LuceneEngine.WriterTracker.<>c__DisplayClass7_0.<GetWriter>b__0(String s) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Examine.LuceneEngine.WriterTracker.GetWriter(Directory dir, Func`2 factory) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.CreateIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1790
+   在 UmbracoExamine.BaseUmbracoIndexer.CreateIndexWriter()
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.GetIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1844
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.ForceProcessQueueItems(Boolean block) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1507, IndexSet: ExternalIndexSet
+ 2017-04-29 14:09:31,115 [P19900/D2/T10] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: InitializationError
+
+_shutDownMessage=Initialization Error
+HostingEnvironment initiated shutdown
+HostingEnvironment 导致关闭
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   在 System.Web.HttpRuntime.AppDomainShutdownTimerCallback(Object state)
+   在 System.Threading.TimerQueueTimer.CallCallbackInContext(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.TimerQueueTimer.CallCallback()
+   在 System.Threading.TimerQueueTimer.Fire()
+   在 System.Threading.TimerQueue.FireNextTimers()
+   在 System.Threading.TimerQueue.AppDomainTimerCallback()
+ 2017-04-29 14:27:20,507 [P19900/D3/T36] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.10 application starting on DESKTOP-P5VEKGQ
+ 2017-04-29 14:27:20,546 [P19900/D3/T36] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-04-29 14:27:20,551 [P19900/D3/T36] INFO  Umbraco.Core.PluginManager - Hash determined (took 5ms)
+ 2017-04-29 14:27:20,590 [P19900/D3/T36] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-04-29 14:27:20,590 [P19900/D3/T36] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-04-29 14:27:20,594 [P19900/D3/T36] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-04-29 14:27:20,850 [P19900/D3/T36] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 255ms)
+ 2017-04-29 14:27:20,863 [P19900/D3/T36] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-04-29 14:27:20,866 [P19900/D3/T36] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 2ms)
+ 2017-04-29 14:27:20,866 [P19900/D3/T36] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-04-29 14:27:20,870 [P19900/D3/T36] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 4ms)
+ 2017-04-29 14:27:20,878 [P19900/D3/T36] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-04-29 14:27:20,881 [P19900/D3/T36] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 2ms)
+ 2017-04-29 14:27:20,881 [P19900/D3/T36] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-04-29 14:27:20,885 [P19900/D3/T36] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 3ms)
+ 2017-04-29 14:27:20,908 [P19900/D3/T36] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-04-29 14:27:20,910 [P19900/D3/T36] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 2ms)
+ 2017-04-29 14:27:20,911 [P19900/D3/T36] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-04-29 14:27:20,914 [P19900/D3/T36] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 2ms)
+ 2017-04-29 14:27:21,576 [P19900/D3/T36] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-04-29 14:27:23,280 [P19900/D3/T36] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-04-29 14:27:23,293 [P19900/D3/T36] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-04-29 14:27:23,335 [P19900/D3/T36] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-04-29 14:27:23,377 [P19900/D3/T36] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 2920ms)
+ 2017-04-29 14:27:23,516 [P19900/D3/T58] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:56488/umbraco (UmbracoModule request)
+ 2017-04-29 14:27:24,336 [P19900/D3/T58] INFO  umbraco.content - Load Xml from file...
+ 2017-04-29 14:27:24,370 [P19900/D3/T58] INFO  umbraco.content - Loaded Xml from file.
+ 2017-04-29 14:27:24,932 [P19900/D3/T58] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-04-29 14:27:24,942 [P19900/D3/T58] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 10ms)
+ 2017-04-29 14:28:07,630 [P19900/D3/T58] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-04-29 14:28:12,849 [P19900/D3/T55] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-04-29 14:28:14,871 [P19900/D3/T55] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-04-29 14:28:24,406 [P19900/D3/T45] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-04-28 14:28:24
+ 2017-04-29 14:28:24,468 [P19900/D3/T55] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2017-04-29 14:28:24,474 [P19900/D3/T55] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 5ms)
+ 2017-04-29 14:29:08,522 [P19900/D3/T51] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-04-29 14:29:31,220 [P19900/D3/T56] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-04-29 14:29:34,562 [P19900/D3/T51] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.

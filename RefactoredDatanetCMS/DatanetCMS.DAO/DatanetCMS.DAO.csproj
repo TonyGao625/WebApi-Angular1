@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C568DF6A-4322-4D81-B117-ECEF91C4D399}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DatanetCMS.DAO</RootNamespace>
+    <AssemblyName>DatanetCMS.DAO</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppLog.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BuyerGroup.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractNumber.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatanetCMSEntity.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatanetCMSEntity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatanetCMSEntity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatanetCMSEntity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatanetCMSEntity.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryAddress.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailTemplate.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GroupProduct.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderAddress.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDoc.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderHistory.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderNumber.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderProduct.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Uom.cs">
+      <DependentUpon>DatanetCMSEntity.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="DatanetCMSEntity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DatanetCMSEntity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="DatanetCMSEntity.edmx.diagram">
+      <DependentUpon>DatanetCMSEntity.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DatanetCMSEntity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DatanetCMSEntity.Context.cs</LastGenOutput>
+      <DependentUpon>DatanetCMSEntity.edmx</DependentUpon>
+    </Content>
+    <Content Include="DatanetCMSEntity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DatanetCMSEntity.edmx</DependentUpon>
+      <LastGenOutput>DatanetCMSEntity.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

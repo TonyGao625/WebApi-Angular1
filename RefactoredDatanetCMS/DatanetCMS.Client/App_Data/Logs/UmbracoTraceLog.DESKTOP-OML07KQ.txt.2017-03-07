@@ -1,0 +1,795 @@
+﻿ 2017-03-07 09:31:41,552 [P32000/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.10 application starting on DESKTOP-OML07KQ
+ 2017-03-07 09:31:41,599 [P32000/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-03-07 09:31:41,621 [P32000/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 22ms)
+ 2017-03-07 09:31:41,677 [P32000/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-03-07 09:31:41,698 [P32000/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-03-07 09:31:41,703 [P32000/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-03-07 09:31:42,497 [P32000/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 793ms)
+ 2017-03-07 09:31:42,886 [P32000/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-03-07 09:31:42,887 [P32000/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 1ms)
+ 2017-03-07 09:31:42,888 [P32000/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-03-07 09:31:42,890 [P32000/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 1ms)
+ 2017-03-07 09:31:42,907 [P32000/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-03-07 09:31:42,909 [P32000/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 2ms)
+ 2017-03-07 09:31:42,909 [P32000/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-03-07 09:31:42,939 [P32000/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 29ms)
+ 2017-03-07 09:31:43,658 [P32000/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-03-07 09:31:43,658 [P32000/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2017-03-07 09:31:43,659 [P32000/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-03-07 09:31:43,660 [P32000/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2017-03-07 09:31:45,650 [P32000/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-03-07 09:31:46,431 [P32000/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-03-07 09:31:46,872 [P32000/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-03-07 09:31:47,225 [P32000/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-03-07 09:31:47,427 [P32000/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 5965ms)
+ 2017-03-07 09:31:55,599 [P32000/D2/T11] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:56488/umbraco (UmbracoModule request)
+ 2017-03-07 09:32:33,882 [P32000/D2/T11] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-03-07 09:32:33,884 [P32000/D2/T11] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 2ms)
+ 2017-03-07 09:32:57,699 [P32000/D2/T3] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2017-03-07 09:32:57,704 [P32000/D2/T3] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 2ms)
+ 2017-03-07 09:32:58,200 [P32000/D2/T3] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username 784627606@qq.com from IP address ::1
+ 2017-03-07 09:32:58,216 [P32000/D2/T3] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: 784627606@qq.com logged in from IP address ::1
+ 2017-03-07 09:32:58,433 [P32000/D2/T3] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-03-07 09:32:58,435 [P32000/D2/T3] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 1ms)
+ 2017-03-07 09:32:59,208 [P32000/D2/T16] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplication
+ 2017-03-07 09:32:59,209 [P32000/D2/T16] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplication, found 0 (took 0ms)
+ 2017-03-07 09:32:59,542 [P32000/D2/T3] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-03-07 09:32:59,542 [P32000/D2/T3] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2017-03-07 09:32:59,547 [P32000/D2/T3] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2017-03-07 09:32:59,548 [P32000/D2/T3] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 1ms)
+ 2017-03-07 09:32:59,852 [P32000/D2/T16] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2017-03-07 09:32:59,853 [P32000/D2/T16] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 1ms)
+ 2017-03-07 09:33:00,687 [P32000/D2/T3] INFO  umbraco.content - Load Xml from file...
+ 2017-03-07 09:33:00,701 [P32000/D2/T3] INFO  umbraco.content - Loaded Xml from file.
+ 2017-03-07 09:34:50,138 [P32000/D2/T30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2017-03-07 09:34:50,138 [P32000/D2/T30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2017-03-07 09:34:50,138 [P32000/D2/T30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2017-03-07 09:34:50,138 [P32000/D2/T30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2017-03-07 09:34:50,138 [P32000/D2/T30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2017-03-07 09:34:50,138 [P32000/D2/T30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2017-03-07 09:34:50,138 [P32000/D2/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2017-03-07 09:34:50,138 [P32000/D2/T16] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2017-03-07 09:34:50,138 [P32000/D2/T12] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2017-03-07 09:34:50,138 [P32000/D2/T30] INFO  Umbraco.Core.MainDom - Stopping...
+ 2017-03-07 09:34:50,170 [P32000/D2/T30] INFO  Umbraco.Core.MainDom - Released MainDom.
+ 2017-03-07 09:34:50,170 [P32000/D2/T30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2017-03-07 09:34:50,170 [P32000/D2/T30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2017-03-07 09:34:50,170 [P32000/D2/T28] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2017-03-07 09:34:50,622 [P32000/D2/T30] ERROR UmbracoExamine.DataServices.UmbracoLogService - Provider=InternalIndexer, NodeId=-1
+System.Exception: Error indexing queue items,System.IO.FileNotFoundException: 未能找到文件“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\Internal\Index\segments_d”。
+文件名:“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\Internal\Index\segments_d”
+   在 Lucene.Net.Index.SegmentInfos.FindSegmentsFile.Run(IndexCommit commit)
+   在 Lucene.Net.Index.SegmentInfos.Read(Directory directory)
+   在 Lucene.Net.Index.IndexWriter.Init(Directory d, Analyzer a, Boolean create, Boolean closeDir, IndexDeletionPolicy deletionPolicy, Boolean autoCommit, Int32 maxFieldLength, IndexingChain indexingChain, IndexCommit commit)
+   在 Lucene.Net.Index.IndexWriter..ctor(Directory d, Analyzer a, Boolean create, MaxFieldLength mfl)
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.WriterFactory(Directory d) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1825
+   在 Examine.LuceneEngine.WriterTracker.<>c__DisplayClass7_0.<GetWriter>b__0(String s) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Examine.LuceneEngine.WriterTracker.GetWriter(Directory dir, Func`2 factory) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.CreateIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1790
+   在 UmbracoExamine.BaseUmbracoIndexer.CreateIndexWriter()
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.GetIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1844
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.ForceProcessQueueItems(Boolean block) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1507, IndexSet: InternalIndexSet
+ 2017-03-07 09:34:50,648 [P32000/D2/T30] ERROR UmbracoExamine.DataServices.UmbracoLogService - Provider=ExternalIndexer, NodeId=-1
+System.Exception: Error indexing queue items,System.IO.FileNotFoundException: 未能找到文件“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\External\Index\segments_c”。
+文件名:“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\External\Index\segments_c”
+   在 Lucene.Net.Index.SegmentInfos.FindSegmentsFile.Run(IndexCommit commit)
+   在 Lucene.Net.Index.SegmentInfos.Read(Directory directory)
+   在 Lucene.Net.Index.IndexWriter.Init(Directory d, Analyzer a, Boolean create, Boolean closeDir, IndexDeletionPolicy deletionPolicy, Boolean autoCommit, Int32 maxFieldLength, IndexingChain indexingChain, IndexCommit commit)
+   在 Lucene.Net.Index.IndexWriter..ctor(Directory d, Analyzer a, Boolean create, MaxFieldLength mfl)
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.WriterFactory(Directory d) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1825
+   在 Examine.LuceneEngine.WriterTracker.<>c__DisplayClass7_0.<GetWriter>b__0(String s) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Examine.LuceneEngine.WriterTracker.GetWriter(Directory dir, Func`2 factory) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.CreateIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1790
+   在 UmbracoExamine.BaseUmbracoIndexer.CreateIndexWriter()
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.GetIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1844
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.ForceProcessQueueItems(Boolean block) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1507, IndexSet: ExternalIndexSet
+ 2017-03-07 09:34:50,648 [P32000/D2/T30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2017-03-07 09:34:50,648 [P32000/D2/T30] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2017-03-07 09:34:50,648 [P32000/D2/T11] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2017-03-07 09:35:18,832 [P32000/D3/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.10 application starting on DESKTOP-OML07KQ
+ 2017-03-07 09:35:18,832 [P32000/D3/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-03-07 09:35:18,857 [P32000/D3/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 16ms)
+ 2017-03-07 09:35:18,878 [P32000/D3/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-03-07 09:35:18,879 [P32000/D3/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-03-07 09:35:18,886 [P32000/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-03-07 09:35:19,011 [P32000/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 135ms)
+ 2017-03-07 09:35:19,132 [P32000/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-03-07 09:35:19,132 [P32000/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+ 2017-03-07 09:35:19,132 [P32000/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-03-07 09:35:19,132 [P32000/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 1ms)
+ 2017-03-07 09:35:19,132 [P32000/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-03-07 09:35:19,132 [P32000/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 0ms)
+ 2017-03-07 09:35:19,132 [P32000/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-03-07 09:35:19,148 [P32000/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 7ms)
+ 2017-03-07 09:35:19,348 [P32000/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-03-07 09:35:19,348 [P32000/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 1ms)
+ 2017-03-07 09:35:19,348 [P32000/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-03-07 09:35:19,348 [P32000/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2017-03-07 09:35:20,782 [P32000/D2/T3] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: ConfigurationChange
+
+_shutDownMessage=Change in App_Offline.htm
+HostingEnvironment initiated shutdown
+Change in App_Offline.htm
+Change in App_Offline.htm
+HostingEnvironment 导致关闭
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   在 System.Web.HttpRuntime.OnAppOfflineFileChange(Object sender, FileChangeEvent e)
+   在 System.Web.DirectoryMonitor.FireNotifications()
+   在 System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   在 System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   在 System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   在 System.Threading.ThreadPoolWorkQueue.Dispatch()
+   在 System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+ 2017-03-07 09:35:21,114 [P32000/D3/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-03-07 09:35:21,231 [P32000/D3/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-03-07 09:35:21,333 [P32000/D3/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-03-07 09:35:21,684 [P32000/D3/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-03-07 09:35:21,783 [P32000/D3/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 3013ms)
+ 2017-03-07 09:35:23,802 [P32000/D3/T9] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:56488/umbraco (UmbracoModule request)
+ 2017-03-07 09:37:08,447 [P3256/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.10 application starting on DESKTOP-OML07KQ
+ 2017-03-07 09:37:08,468 [P3256/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-03-07 09:37:08,484 [P3256/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 13ms)
+ 2017-03-07 09:37:08,515 [P3256/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-03-07 09:37:08,515 [P3256/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-03-07 09:37:08,515 [P3256/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-03-07 09:37:08,667 [P3256/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 155ms)
+ 2017-03-07 09:37:08,794 [P3256/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-03-07 09:37:08,796 [P3256/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 1ms)
+ 2017-03-07 09:37:08,797 [P3256/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-03-07 09:37:08,799 [P3256/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 2ms)
+ 2017-03-07 09:37:08,805 [P3256/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-03-07 09:37:08,821 [P3256/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 1ms)
+ 2017-03-07 09:37:08,821 [P3256/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-03-07 09:37:08,821 [P3256/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 5ms)
+ 2017-03-07 09:37:08,948 [P3256/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-03-07 09:37:08,948 [P3256/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2017-03-07 09:37:08,948 [P3256/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-03-07 09:37:08,948 [P3256/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2017-03-07 09:37:09,983 [P3256/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-03-07 09:37:10,182 [P3256/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-03-07 09:37:10,285 [P3256/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-03-07 09:37:10,332 [P3256/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-03-07 09:37:10,418 [P3256/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 2020ms)
+ 2017-03-07 09:37:16,005 [P3256/D2/T11] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:56488/umbraco (UmbracoModule request)
+ 2017-03-07 09:52:37,474 [P3256/D2/T13] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: 784627606@qq.com, IP Address: ::1
+ 2017-03-07 09:58:50,144 [P3256/D2/T12] INFO  umbraco.content - Load Xml from file...
+ 2017-03-07 09:58:50,148 [P3256/D2/T12] INFO  umbraco.content - Loaded Xml from file.
+ 2017-03-07 09:58:50,991 [P3256/D2/T12] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-03-07 09:58:51,001 [P3256/D2/T12] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 9ms)
+ 2017-03-07 09:59:04,605 [P3256/D2/T12] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 10:01:22,643 [P3256/D2/T26] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 10:13:53,970 [P3256/D2/T14] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2017-03-07 10:13:53,970 [P3256/D2/T14] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2017-03-07 10:13:53,971 [P3256/D2/T14] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2017-03-07 10:13:53,971 [P3256/D2/T14] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2017-03-07 10:13:53,971 [P3256/D2/T14] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2017-03-07 10:13:53,971 [P3256/D2/T14] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2017-03-07 10:13:53,972 [P3256/D2/T28] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2017-03-07 10:13:53,972 [P3256/D2/T32] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2017-03-07 10:13:53,972 [P3256/D2/T24] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2017-03-07 10:13:53,974 [P3256/D2/T14] INFO  Umbraco.Core.MainDom - Stopping...
+ 2017-03-07 10:13:53,975 [P3256/D2/T14] INFO  Umbraco.Core.MainDom - Released MainDom.
+ 2017-03-07 10:13:53,976 [P3256/D2/T14] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2017-03-07 10:13:53,976 [P3256/D2/T14] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2017-03-07 10:13:53,976 [P3256/D2/T4] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2017-03-07 10:13:54,448 [P3256/D2/T14] ERROR UmbracoExamine.DataServices.UmbracoLogService - Provider=InternalIndexer, NodeId=-1
+System.Exception: Error indexing queue items,System.IO.FileNotFoundException: 未能找到文件“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\Internal\Index\segments_d”。
+文件名:“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\Internal\Index\segments_d”
+   在 Lucene.Net.Index.SegmentInfos.FindSegmentsFile.Run(IndexCommit commit)
+   在 Lucene.Net.Index.SegmentInfos.Read(Directory directory)
+   在 Lucene.Net.Index.IndexWriter.Init(Directory d, Analyzer a, Boolean create, Boolean closeDir, IndexDeletionPolicy deletionPolicy, Boolean autoCommit, Int32 maxFieldLength, IndexingChain indexingChain, IndexCommit commit)
+   在 Lucene.Net.Index.IndexWriter..ctor(Directory d, Analyzer a, Boolean create, MaxFieldLength mfl)
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.WriterFactory(Directory d) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1825
+   在 Examine.LuceneEngine.WriterTracker.<>c__DisplayClass7_0.<GetWriter>b__0(String s) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Examine.LuceneEngine.WriterTracker.GetWriter(Directory dir, Func`2 factory) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.CreateIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1790
+   在 UmbracoExamine.BaseUmbracoIndexer.CreateIndexWriter()
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.GetIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1844
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.ForceProcessQueueItems(Boolean block) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1507, IndexSet: InternalIndexSet
+ 2017-03-07 10:13:54,460 [P3256/D2/T14] ERROR UmbracoExamine.DataServices.UmbracoLogService - Provider=ExternalIndexer, NodeId=-1
+System.Exception: Error indexing queue items,System.IO.FileNotFoundException: 未能找到文件“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\External\Index\segments_c”。
+文件名:“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\External\Index\segments_c”
+   在 Lucene.Net.Index.SegmentInfos.FindSegmentsFile.Run(IndexCommit commit)
+   在 Lucene.Net.Index.SegmentInfos.Read(Directory directory)
+   在 Lucene.Net.Index.IndexWriter.Init(Directory d, Analyzer a, Boolean create, Boolean closeDir, IndexDeletionPolicy deletionPolicy, Boolean autoCommit, Int32 maxFieldLength, IndexingChain indexingChain, IndexCommit commit)
+   在 Lucene.Net.Index.IndexWriter..ctor(Directory d, Analyzer a, Boolean create, MaxFieldLength mfl)
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.WriterFactory(Directory d) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1825
+   在 Examine.LuceneEngine.WriterTracker.<>c__DisplayClass7_0.<GetWriter>b__0(String s) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Examine.LuceneEngine.WriterTracker.GetWriter(Directory dir, Func`2 factory) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.CreateIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1790
+   在 UmbracoExamine.BaseUmbracoIndexer.CreateIndexWriter()
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.GetIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1844
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.ForceProcessQueueItems(Boolean block) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1507, IndexSet: ExternalIndexSet
+ 2017-03-07 10:13:54,460 [P3256/D2/T14] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2017-03-07 10:13:54,460 [P3256/D2/T14] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2017-03-07 10:13:54,460 [P3256/D2/T33] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2017-03-07 10:14:24,750 [P3256/D2/T16] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: ConfigurationChange
+
+_shutDownMessage=Change in App_Offline.htm
+HostingEnvironment initiated shutdown
+Change in App_Offline.htm
+Change in App_Offline.htm
+HostingEnvironment 导致关闭
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   在 System.Web.HttpRuntime.OnAppOfflineFileChange(Object sender, FileChangeEvent e)
+   在 System.Web.DirectoryMonitor.FireNotifications()
+   在 System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   在 System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   在 System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   在 System.Threading.ThreadPoolWorkQueue.Dispatch()
+   在 System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+ 2017-03-07 10:27:18,798 [P3256/D3/T3] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.10 application starting on DESKTOP-OML07KQ
+ 2017-03-07 10:27:18,933 [P3256/D3/T3] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-03-07 10:27:18,997 [P3256/D3/T3] INFO  Umbraco.Core.PluginManager - Hash determined (took 64ms)
+ 2017-03-07 10:27:19,158 [P3256/D3/T3] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-03-07 10:27:19,171 [P3256/D3/T3] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-03-07 10:27:19,178 [P3256/D3/T3] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-03-07 10:27:20,273 [P3256/D3/T3] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 1095ms)
+ 2017-03-07 10:27:20,499 [P3256/D3/T3] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-03-07 10:27:20,518 [P3256/D3/T3] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 18ms)
+ 2017-03-07 10:27:20,519 [P3256/D3/T3] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-03-07 10:27:20,536 [P3256/D3/T3] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 16ms)
+ 2017-03-07 10:27:20,552 [P3256/D3/T3] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-03-07 10:27:20,564 [P3256/D3/T3] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 11ms)
+ 2017-03-07 10:27:20,564 [P3256/D3/T3] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-03-07 10:27:20,578 [P3256/D3/T3] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 13ms)
+ 2017-03-07 10:27:20,613 [P3256/D3/T3] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-03-07 10:27:20,625 [P3256/D3/T3] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 12ms)
+ 2017-03-07 10:27:20,626 [P3256/D3/T3] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-03-07 10:27:20,640 [P3256/D3/T3] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 13ms)
+ 2017-03-07 10:27:22,155 [P3256/D3/T3] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-03-07 10:27:23,304 [P3256/D3/T3] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-03-07 10:27:23,545 [P3256/D3/T3] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-03-07 10:27:23,707 [P3256/D3/T3] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-03-07 10:27:23,898 [P3256/D3/T3] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 5273ms)
+ 2017-03-07 10:27:24,979 [P3256/D3/T13] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:56488/umbraco (UmbracoModule request)
+ 2017-03-07 10:35:27,822 [P3256/D3/T29] INFO  umbraco.content - Load Xml from file...
+ 2017-03-07 10:35:27,848 [P3256/D3/T29] INFO  umbraco.content - Loaded Xml from file.
+ 2017-03-07 10:35:28,551 [P3256/D3/T29] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-03-07 10:35:28,573 [P3256/D3/T29] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 21ms)
+ 2017-03-07 10:35:42,480 [P3256/D3/T36] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 10:35:57,117 [P3256/D3/T29] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 10:36:26,967 [P3256/D3/T32] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 10:36:45,614 [P3256/D3/T34] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 10:37:14,482 [P3256/D3/T34] ERROR UmbracoExamine.DataServices.UmbracoLogService - Provider=InternalIndexer, NodeId=-1
+System.Exception: Error indexing queue items,System.IO.FileNotFoundException: 未能找到文件“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\Internal\Index\segments_d”。
+文件名:“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\Internal\Index\segments_d”
+   在 Lucene.Net.Index.SegmentInfos.FindSegmentsFile.Run(IndexCommit commit)
+   在 Lucene.Net.Index.SegmentInfos.Read(Directory directory)
+   在 Lucene.Net.Index.IndexWriter.Init(Directory d, Analyzer a, Boolean create, Boolean closeDir, IndexDeletionPolicy deletionPolicy, Boolean autoCommit, Int32 maxFieldLength, IndexingChain indexingChain, IndexCommit commit)
+   在 Lucene.Net.Index.IndexWriter..ctor(Directory d, Analyzer a, Boolean create, MaxFieldLength mfl)
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.WriterFactory(Directory d) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1825
+   在 Examine.LuceneEngine.WriterTracker.<>c__DisplayClass7_0.<GetWriter>b__0(String s) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Examine.LuceneEngine.WriterTracker.GetWriter(Directory dir, Func`2 factory) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.CreateIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1790
+   在 UmbracoExamine.BaseUmbracoIndexer.CreateIndexWriter()
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.GetIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1844
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.ForceProcessQueueItems(Boolean block) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1507, IndexSet: InternalIndexSet
+ 2017-03-07 10:37:14,493 [P3256/D3/T34] ERROR UmbracoExamine.DataServices.UmbracoLogService - Provider=ExternalIndexer, NodeId=-1
+System.Exception: Error indexing queue items,System.IO.FileNotFoundException: 未能找到文件“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\External\Index\segments_c”。
+文件名:“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\External\Index\segments_c”
+   在 Lucene.Net.Index.SegmentInfos.FindSegmentsFile.Run(IndexCommit commit)
+   在 Lucene.Net.Index.SegmentInfos.Read(Directory directory)
+   在 Lucene.Net.Index.IndexWriter.Init(Directory d, Analyzer a, Boolean create, Boolean closeDir, IndexDeletionPolicy deletionPolicy, Boolean autoCommit, Int32 maxFieldLength, IndexingChain indexingChain, IndexCommit commit)
+   在 Lucene.Net.Index.IndexWriter..ctor(Directory d, Analyzer a, Boolean create, MaxFieldLength mfl)
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.WriterFactory(Directory d) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1825
+   在 Examine.LuceneEngine.WriterTracker.<>c__DisplayClass7_0.<GetWriter>b__0(String s) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Examine.LuceneEngine.WriterTracker.GetWriter(Directory dir, Func`2 factory) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.CreateIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1790
+   在 UmbracoExamine.BaseUmbracoIndexer.CreateIndexWriter()
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.GetIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1844
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.ForceProcessQueueItems(Boolean block) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1507, IndexSet: ExternalIndexSet
+ 2017-03-07 10:37:14,494 [P3256/D3/T34] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2017-03-07 10:37:14,494 [P3256/D3/T34] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2017-03-07 10:37:14,495 [P3256/D3/T34] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2017-03-07 10:37:14,496 [P3256/D3/T34] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2017-03-07 10:37:14,496 [P3256/D3/T34] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2017-03-07 10:37:14,496 [P3256/D3/T34] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2017-03-07 10:37:14,496 [P3256/D3/T34] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2017-03-07 10:37:14,496 [P3256/D3/T34] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2017-03-07 10:37:14,496 [P3256/D3/T14] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2017-03-07 10:37:14,496 [P3256/D3/T16] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2017-03-07 10:37:14,496 [P3256/D3/T4] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2017-03-07 10:37:14,496 [P3256/D3/T36] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2017-03-07 10:37:14,498 [P3256/D3/T34] INFO  Umbraco.Core.MainDom - Stopping...
+ 2017-03-07 10:37:14,499 [P3256/D3/T34] INFO  Umbraco.Core.MainDom - Released MainDom.
+ 2017-03-07 10:37:14,499 [P3256/D3/T34] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2017-03-07 10:37:14,499 [P3256/D3/T34] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2017-03-07 10:37:14,499 [P3256/D3/T20] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2017-03-07 10:37:44,597 [P3256/D3/T34] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: ConfigurationChange
+
+_shutDownMessage=Change in App_Offline.htm
+HostingEnvironment initiated shutdown
+Change in App_Offline.htm
+Change in App_Offline.htm
+HostingEnvironment 导致关闭
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   在 System.Web.HttpRuntime.OnAppOfflineFileChange(Object sender, FileChangeEvent e)
+   在 System.Web.DirectoryMonitor.FireNotifications()
+   在 System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   在 System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   在 System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   在 System.Threading.ThreadPoolWorkQueue.Dispatch()
+   在 System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+ 2017-03-07 10:54:26,283 [P3256/D4/T48] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.10 application starting on DESKTOP-OML07KQ
+ 2017-03-07 10:54:26,302 [P3256/D4/T48] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-03-07 10:54:26,310 [P3256/D4/T48] INFO  Umbraco.Core.PluginManager - Hash determined (took 7ms)
+ 2017-03-07 10:54:26,345 [P3256/D4/T48] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-03-07 10:54:26,346 [P3256/D4/T48] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-03-07 10:54:26,351 [P3256/D4/T48] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-03-07 10:54:26,507 [P3256/D4/T48] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 156ms)
+ 2017-03-07 10:54:26,622 [P3256/D4/T48] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-03-07 10:54:26,623 [P3256/D4/T48] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 1ms)
+ 2017-03-07 10:54:26,623 [P3256/D4/T48] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-03-07 10:54:26,624 [P3256/D4/T48] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 1ms)
+ 2017-03-07 10:54:26,637 [P3256/D4/T48] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-03-07 10:54:26,638 [P3256/D4/T48] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 1ms)
+ 2017-03-07 10:54:26,639 [P3256/D4/T48] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-03-07 10:54:26,645 [P3256/D4/T48] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 5ms)
+ 2017-03-07 10:54:26,765 [P3256/D4/T48] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-03-07 10:54:26,766 [P3256/D4/T48] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2017-03-07 10:54:26,767 [P3256/D4/T48] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-03-07 10:54:26,767 [P3256/D4/T48] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2017-03-07 10:54:27,803 [P3256/D4/T48] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-03-07 10:54:28,051 [P3256/D4/T48] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-03-07 10:54:28,155 [P3256/D4/T48] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-03-07 10:54:28,233 [P3256/D4/T48] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-03-07 10:54:28,381 [P3256/D4/T48] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 2169ms)
+ 2017-03-07 10:54:30,879 [P3256/D4/T47] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:56488/umbraco (UmbracoModule request)
+ 2017-03-07 10:54:31,331 [P3256/D4/T47] INFO  umbraco.content - Load Xml from file...
+ 2017-03-07 10:54:31,332 [P3256/D4/T47] INFO  umbraco.content - Loaded Xml from file.
+ 2017-03-07 10:54:32,017 [P3256/D4/T47] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-03-07 10:54:32,018 [P3256/D4/T47] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 1ms)
+ 2017-03-07 10:54:35,187 [P3256/D4/T47] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 11:09:50,160 [P3256/D4/T14] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 11:11:30,398 [P3256/D4/T36] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 11:22:39,354 [P3256/D4/T20] ERROR UmbracoExamine.DataServices.UmbracoLogService - Provider=InternalIndexer, NodeId=-1
+System.Exception: Error indexing queue items,System.IO.FileNotFoundException: 未能找到文件“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\Internal\Index\segments_d”。
+文件名:“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\Internal\Index\segments_d”
+   在 Lucene.Net.Index.SegmentInfos.FindSegmentsFile.Run(IndexCommit commit)
+   在 Lucene.Net.Index.SegmentInfos.Read(Directory directory)
+   在 Lucene.Net.Index.IndexWriter.Init(Directory d, Analyzer a, Boolean create, Boolean closeDir, IndexDeletionPolicy deletionPolicy, Boolean autoCommit, Int32 maxFieldLength, IndexingChain indexingChain, IndexCommit commit)
+   在 Lucene.Net.Index.IndexWriter..ctor(Directory d, Analyzer a, Boolean create, MaxFieldLength mfl)
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.WriterFactory(Directory d) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1825
+   在 Examine.LuceneEngine.WriterTracker.<>c__DisplayClass7_0.<GetWriter>b__0(String s) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Examine.LuceneEngine.WriterTracker.GetWriter(Directory dir, Func`2 factory) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.CreateIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1790
+   在 UmbracoExamine.BaseUmbracoIndexer.CreateIndexWriter()
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.GetIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1844
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.ForceProcessQueueItems(Boolean block) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1507, IndexSet: InternalIndexSet
+ 2017-03-07 11:22:39,364 [P3256/D4/T20] ERROR UmbracoExamine.DataServices.UmbracoLogService - Provider=ExternalIndexer, NodeId=-1
+System.Exception: Error indexing queue items,System.IO.FileNotFoundException: 未能找到文件“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\External\Index\segments_c”。
+文件名:“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\External\Index\segments_c”
+   在 Lucene.Net.Index.SegmentInfos.FindSegmentsFile.Run(IndexCommit commit)
+   在 Lucene.Net.Index.SegmentInfos.Read(Directory directory)
+   在 Lucene.Net.Index.IndexWriter.Init(Directory d, Analyzer a, Boolean create, Boolean closeDir, IndexDeletionPolicy deletionPolicy, Boolean autoCommit, Int32 maxFieldLength, IndexingChain indexingChain, IndexCommit commit)
+   在 Lucene.Net.Index.IndexWriter..ctor(Directory d, Analyzer a, Boolean create, MaxFieldLength mfl)
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.WriterFactory(Directory d) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1825
+   在 Examine.LuceneEngine.WriterTracker.<>c__DisplayClass7_0.<GetWriter>b__0(String s) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Examine.LuceneEngine.WriterTracker.GetWriter(Directory dir, Func`2 factory) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.CreateIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1790
+   在 UmbracoExamine.BaseUmbracoIndexer.CreateIndexWriter()
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.GetIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1844
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.ForceProcessQueueItems(Boolean block) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1507, IndexSet: ExternalIndexSet
+ 2017-03-07 11:22:39,365 [P3256/D4/T20] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2017-03-07 11:22:39,365 [P3256/D4/T20] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2017-03-07 11:22:39,366 [P3256/D4/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2017-03-07 11:22:39,367 [P3256/D4/T20] INFO  Umbraco.Core.MainDom - Stopping...
+ 2017-03-07 11:22:39,368 [P3256/D4/T20] INFO  Umbraco.Core.MainDom - Released MainDom.
+ 2017-03-07 11:22:39,369 [P3256/D4/T20] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2017-03-07 11:22:39,369 [P3256/D4/T20] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2017-03-07 11:22:39,369 [P3256/D4/T20] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2017-03-07 11:22:39,369 [P3256/D4/T20] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2017-03-07 11:22:39,369 [P3256/D4/T20] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2017-03-07 11:22:39,369 [P3256/D4/T20] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2017-03-07 11:22:39,369 [P3256/D4/T10] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2017-03-07 11:22:39,369 [P3256/D4/T20] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2017-03-07 11:22:39,369 [P3256/D4/T44] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2017-03-07 11:22:39,369 [P3256/D4/T20] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2017-03-07 11:22:39,369 [P3256/D4/T20] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2017-03-07 11:22:39,369 [P3256/D4/T4] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2017-03-07 11:22:48,287 [P3256/D5/T17] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.10 application starting on DESKTOP-OML07KQ
+ 2017-03-07 11:22:48,312 [P3256/D5/T17] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-03-07 11:22:48,323 [P3256/D5/T17] INFO  Umbraco.Core.PluginManager - Hash determined (took 10ms)
+ 2017-03-07 11:22:48,395 [P3256/D5/T17] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-03-07 11:22:48,397 [P3256/D5/T17] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-03-07 11:22:48,402 [P3256/D5/T17] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-03-07 11:22:48,675 [P3256/D5/T17] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 272ms)
+ 2017-03-07 11:22:48,694 [P3256/D5/T17] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-03-07 11:22:48,706 [P3256/D5/T17] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 12ms)
+ 2017-03-07 11:22:48,707 [P3256/D5/T17] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-03-07 11:22:48,721 [P3256/D5/T17] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 14ms)
+ 2017-03-07 11:22:48,737 [P3256/D5/T17] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-03-07 11:22:48,751 [P3256/D5/T17] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 14ms)
+ 2017-03-07 11:22:48,753 [P3256/D5/T17] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-03-07 11:22:48,770 [P3256/D5/T17] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 17ms)
+ 2017-03-07 11:22:48,814 [P3256/D5/T17] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-03-07 11:22:48,828 [P3256/D5/T17] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 14ms)
+ 2017-03-07 11:22:48,830 [P3256/D5/T17] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-03-07 11:22:48,845 [P3256/D5/T17] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 15ms)
+ 2017-03-07 11:22:49,803 [P3256/D5/T17] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-03-07 11:22:49,996 [P3256/D5/T17] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-03-07 11:22:50,015 [P3256/D5/T17] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-03-07 11:22:50,121 [P3256/D5/T17] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-03-07 11:22:50,218 [P3256/D5/T17] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 2016ms)
+ 2017-03-07 11:22:50,363 [P3256/D5/T13] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:56488/umbraco (UmbracoModule request)
+ 2017-03-07 11:22:50,638 [P3256/D5/T13] INFO  umbraco.content - Load Xml from file...
+ 2017-03-07 11:22:50,641 [P3256/D5/T13] INFO  umbraco.content - Loaded Xml from file.
+ 2017-03-07 11:22:51,227 [P3256/D5/T13] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-03-07 11:22:51,249 [P3256/D5/T13] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 21ms)
+ 2017-03-07 11:23:09,401 [P3256/D4/T44] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: BinDirChangeOrDirectoryRename
+
+_shutDownMessage=关键目录的更改通知。
+bin dir change or directory rename
+HostingEnvironment initiated shutdown
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+Change in C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\72135aa8\60c9f6a9\hash\hash.web
+Change in C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\72135aa8\60c9f6a9\hash\hash.web
+HostingEnvironment 导致关闭
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   在 System.Web.HttpRuntime.OnCriticalDirectoryChange(Object sender, FileChangeEvent e)
+   在 System.Web.FileChangesMonitor.OnCriticaldirChange(Object sender, FileChangeEvent e)
+   在 System.Web.DirectoryMonitor.FireNotifications()
+   在 System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   在 System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   在 System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   在 System.Threading.ThreadPoolWorkQueue.Dispatch()
+   在 System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+ 2017-03-07 12:28:28,036 [P3256/D5/T3] INFO  Umbraco.Core.MainDom - Stopping...
+ 2017-03-07 12:28:28,040 [P3256/D5/T3] INFO  Umbraco.Core.MainDom - Released MainDom.
+ 2017-03-07 12:28:28,044 [P3256/D5/T3] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2017-03-07 12:28:28,044 [P3256/D5/T3] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2017-03-07 12:28:28,045 [P3256/D5/T3] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2017-03-07 12:28:28,045 [P3256/D5/T3] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2017-03-07 12:28:28,045 [P3256/D5/T3] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2017-03-07 12:28:28,046 [P3256/D5/T3] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2017-03-07 12:28:28,046 [P3256/D5/T3] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2017-03-07 12:28:28,046 [P3256/D5/T3] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2017-03-07 12:28:28,046 [P3256/D5/T3] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2017-03-07 12:28:28,046 [P3256/D5/T3] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2017-03-07 12:28:28,046 [P3256/D5/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2017-03-07 12:28:28,046 [P3256/D5/T3] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2017-03-07 12:28:28,046 [P3256/D5/T3] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2017-03-07 12:28:28,046 [P3256/D5/T40] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2017-03-07 12:28:28,046 [P3256/D5/T3] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2017-03-07 12:28:28,163 [P3256/D5/T3] ERROR UmbracoExamine.DataServices.UmbracoLogService - Provider=InternalIndexer, NodeId=-1
+System.Exception: Error indexing queue items,System.IO.FileNotFoundException: 未能找到文件“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\Internal\Index\segments_d”。
+文件名:“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\Internal\Index\segments_d”
+   在 Lucene.Net.Index.SegmentInfos.FindSegmentsFile.Run(IndexCommit commit)
+   在 Lucene.Net.Index.SegmentInfos.Read(Directory directory)
+   在 Lucene.Net.Index.IndexWriter.Init(Directory d, Analyzer a, Boolean create, Boolean closeDir, IndexDeletionPolicy deletionPolicy, Boolean autoCommit, Int32 maxFieldLength, IndexingChain indexingChain, IndexCommit commit)
+   在 Lucene.Net.Index.IndexWriter..ctor(Directory d, Analyzer a, Boolean create, MaxFieldLength mfl)
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.WriterFactory(Directory d) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1825
+   在 Examine.LuceneEngine.WriterTracker.<>c__DisplayClass7_0.<GetWriter>b__0(String s) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Examine.LuceneEngine.WriterTracker.GetWriter(Directory dir, Func`2 factory) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.CreateIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1790
+   在 UmbracoExamine.BaseUmbracoIndexer.CreateIndexWriter()
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.GetIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1844
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.ForceProcessQueueItems(Boolean block) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1507, IndexSet: InternalIndexSet
+ 2017-03-07 12:28:28,182 [P3256/D5/T3] ERROR UmbracoExamine.DataServices.UmbracoLogService - Provider=ExternalIndexer, NodeId=-1
+System.Exception: Error indexing queue items,System.IO.FileNotFoundException: 未能找到文件“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\External\Index\segments_c”。
+文件名:“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\External\Index\segments_c”
+   在 Lucene.Net.Index.SegmentInfos.FindSegmentsFile.Run(IndexCommit commit)
+   在 Lucene.Net.Index.SegmentInfos.Read(Directory directory)
+   在 Lucene.Net.Index.IndexWriter.Init(Directory d, Analyzer a, Boolean create, Boolean closeDir, IndexDeletionPolicy deletionPolicy, Boolean autoCommit, Int32 maxFieldLength, IndexingChain indexingChain, IndexCommit commit)
+   在 Lucene.Net.Index.IndexWriter..ctor(Directory d, Analyzer a, Boolean create, MaxFieldLength mfl)
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.WriterFactory(Directory d) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1825
+   在 Examine.LuceneEngine.WriterTracker.<>c__DisplayClass7_0.<GetWriter>b__0(String s) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Examine.LuceneEngine.WriterTracker.GetWriter(Directory dir, Func`2 factory) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.CreateIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1790
+   在 UmbracoExamine.BaseUmbracoIndexer.CreateIndexWriter()
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.GetIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1844
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.ForceProcessQueueItems(Boolean block) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1507, IndexSet: ExternalIndexSet
+ 2017-03-07 12:28:58,219 [P3256/D5/T8] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: ConfigurationChange
+
+_shutDownMessage=Change in App_Offline.htm
+HostingEnvironment initiated shutdown
+Change in App_Offline.htm
+Change in App_Offline.htm
+HostingEnvironment 导致关闭
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   在 System.Web.HttpRuntime.OnAppOfflineFileChange(Object sender, FileChangeEvent e)
+   在 System.Web.DirectoryMonitor.FireNotifications()
+   在 System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   在 System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   在 System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   在 System.Threading.ThreadPoolWorkQueue.Dispatch()
+   在 System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+ 2017-03-07 12:29:31,548 [P3256/D6/T21] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.10 application starting on DESKTOP-OML07KQ
+ 2017-03-07 12:29:31,579 [P3256/D6/T21] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-03-07 12:29:31,601 [P3256/D6/T21] INFO  Umbraco.Core.PluginManager - Hash determined (took 22ms)
+ 2017-03-07 12:29:31,664 [P3256/D6/T21] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-03-07 12:29:31,667 [P3256/D6/T21] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-03-07 12:29:31,677 [P3256/D6/T21] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-03-07 12:29:31,994 [P3256/D6/T21] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 317ms)
+ 2017-03-07 12:29:32,192 [P3256/D6/T21] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-03-07 12:29:32,193 [P3256/D6/T21] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 1ms)
+ 2017-03-07 12:29:32,194 [P3256/D6/T21] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-03-07 12:29:32,197 [P3256/D6/T21] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 2ms)
+ 2017-03-07 12:29:32,221 [P3256/D6/T21] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-03-07 12:29:32,222 [P3256/D6/T21] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 1ms)
+ 2017-03-07 12:29:32,223 [P3256/D6/T21] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-03-07 12:29:32,233 [P3256/D6/T21] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 9ms)
+ 2017-03-07 12:29:32,407 [P3256/D6/T21] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-03-07 12:29:32,408 [P3256/D6/T21] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2017-03-07 12:29:32,408 [P3256/D6/T21] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-03-07 12:29:32,409 [P3256/D6/T21] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2017-03-07 12:29:34,339 [P3256/D6/T21] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-03-07 12:29:34,730 [P3256/D6/T21] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-03-07 12:29:34,879 [P3256/D6/T21] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-03-07 12:29:34,991 [P3256/D6/T21] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-03-07 12:29:35,111 [P3256/D6/T21] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 3651ms)
+ 2017-03-07 12:29:38,520 [P3256/D6/T12] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:56488/umbraco (UmbracoModule request)
+ 2017-03-07 12:29:39,256 [P3256/D6/T12] INFO  umbraco.content - Load Xml from file...
+ 2017-03-07 12:29:39,266 [P3256/D6/T12] INFO  umbraco.content - Loaded Xml from file.
+ 2017-03-07 12:29:40,133 [P3256/D6/T12] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-03-07 12:29:40,134 [P3256/D6/T12] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 1ms)
+ 2017-03-07 12:29:52,908 [P3256/D6/T47] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 12:30:07,676 [P3256/D6/T45] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2017-03-07 12:30:07,676 [P3256/D6/T45] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2017-03-07 12:30:07,678 [P3256/D6/T39] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2017-03-07 12:30:07,772 [P3256/D6/T45] ERROR UmbracoExamine.DataServices.UmbracoLogService - Provider=InternalIndexer, NodeId=-1
+System.Exception: Error indexing queue items,System.IO.FileNotFoundException: 未能找到文件“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\Internal\Index\segments_d”。
+文件名:“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\Internal\Index\segments_d”
+   在 Lucene.Net.Index.SegmentInfos.FindSegmentsFile.Run(IndexCommit commit)
+   在 Lucene.Net.Index.SegmentInfos.Read(Directory directory)
+   在 Lucene.Net.Index.IndexWriter.Init(Directory d, Analyzer a, Boolean create, Boolean closeDir, IndexDeletionPolicy deletionPolicy, Boolean autoCommit, Int32 maxFieldLength, IndexingChain indexingChain, IndexCommit commit)
+   在 Lucene.Net.Index.IndexWriter..ctor(Directory d, Analyzer a, Boolean create, MaxFieldLength mfl)
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.WriterFactory(Directory d) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1825
+   在 Examine.LuceneEngine.WriterTracker.<>c__DisplayClass7_0.<GetWriter>b__0(String s) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Examine.LuceneEngine.WriterTracker.GetWriter(Directory dir, Func`2 factory) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.CreateIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1790
+   在 UmbracoExamine.BaseUmbracoIndexer.CreateIndexWriter()
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.GetIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1844
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.ForceProcessQueueItems(Boolean block) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1507, IndexSet: InternalIndexSet
+ 2017-03-07 12:30:07,782 [P3256/D6/T45] ERROR UmbracoExamine.DataServices.UmbracoLogService - Provider=ExternalIndexer, NodeId=-1
+System.Exception: Error indexing queue items,System.IO.FileNotFoundException: 未能找到文件“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\External\Index\segments_c”。
+文件名:“D:\datanet\code\CustomerOrderDev\DatanetCMS\DatanetCMS.Client\App_Data\TEMP\ExamineIndexes\External\Index\segments_c”
+   在 Lucene.Net.Index.SegmentInfos.FindSegmentsFile.Run(IndexCommit commit)
+   在 Lucene.Net.Index.SegmentInfos.Read(Directory directory)
+   在 Lucene.Net.Index.IndexWriter.Init(Directory d, Analyzer a, Boolean create, Boolean closeDir, IndexDeletionPolicy deletionPolicy, Boolean autoCommit, Int32 maxFieldLength, IndexingChain indexingChain, IndexCommit commit)
+   在 Lucene.Net.Index.IndexWriter..ctor(Directory d, Analyzer a, Boolean create, MaxFieldLength mfl)
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.WriterFactory(Directory d) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1825
+   在 Examine.LuceneEngine.WriterTracker.<>c__DisplayClass7_0.<GetWriter>b__0(String s) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Examine.LuceneEngine.WriterTracker.GetWriter(Directory dir, Func`2 factory) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\WriterTracker.cs:行号 44
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.CreateIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1790
+   在 UmbracoExamine.BaseUmbracoIndexer.CreateIndexWriter()
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.GetIndexWriter() 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1844
+   在 Examine.LuceneEngine.Providers.LuceneIndexer.ForceProcessQueueItems(Boolean block) 位置 X:\Projects\Examine\Examine\src\Examine\LuceneEngine\Providers\LuceneIndexer.cs:行号 1507, IndexSet: ExternalIndexSet
+ 2017-03-07 12:30:07,782 [P3256/D6/T45] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2017-03-07 12:30:07,782 [P3256/D6/T45] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2017-03-07 12:30:07,782 [P3256/D6/T32] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2017-03-07 12:30:07,784 [P3256/D6/T45] INFO  Umbraco.Core.MainDom - Stopping...
+ 2017-03-07 12:30:07,785 [P3256/D6/T45] INFO  Umbraco.Core.MainDom - Released MainDom.
+ 2017-03-07 12:30:07,786 [P3256/D6/T45] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2017-03-07 12:30:07,786 [P3256/D6/T45] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2017-03-07 12:30:07,786 [P3256/D6/T45] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2017-03-07 12:30:07,786 [P3256/D6/T45] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2017-03-07 12:30:07,786 [P3256/D6/T45] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2017-03-07 12:30:07,786 [P3256/D6/T45] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2017-03-07 12:30:07,786 [P3256/D6/T45] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2017-03-07 12:30:07,786 [P3256/D6/T45] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2017-03-07 12:30:07,786 [P3256/D6/T45] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2017-03-07 12:30:37,830 [P3256/D6/T3] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: BinDirChangeOrDirectoryRename
+
+_shutDownMessage=关键目录的更改通知。
+bin dir change or directory rename
+HostingEnvironment initiated shutdown
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+关键目录的更改通知。
+bin dir change or directory rename
+HostingEnvironment 导致关闭
+
+_shutDownStack=   在 System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   在 System.Environment.get_StackTrace()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   在 System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   在 System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   在 System.Web.HttpRuntime.OnCriticalDirectoryChange(Object sender, FileChangeEvent e)
+   在 System.Web.FileChangesMonitor.OnCriticaldirChange(Object sender, FileChangeEvent e)
+   在 System.Web.DirectoryMonitor.FireNotifications()
+   在 System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   在 System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   在 System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   在 System.Threading.ThreadPoolWorkQueue.Dispatch()
+   在 System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+ 2017-03-07 12:31:14,082 [P3256/D7/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.10 application starting on DESKTOP-OML07KQ
+ 2017-03-07 12:31:14,102 [P3256/D7/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-03-07 12:31:14,114 [P3256/D7/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 10ms)
+ 2017-03-07 12:31:14,168 [P3256/D7/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-03-07 12:31:14,170 [P3256/D7/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-03-07 12:31:14,175 [P3256/D7/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-03-07 12:31:14,461 [P3256/D7/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 286ms)
+ 2017-03-07 12:31:14,478 [P3256/D7/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-03-07 12:31:14,492 [P3256/D7/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 13ms)
+ 2017-03-07 12:31:14,493 [P3256/D7/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-03-07 12:31:14,504 [P3256/D7/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 11ms)
+ 2017-03-07 12:31:14,519 [P3256/D7/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-03-07 12:31:14,529 [P3256/D7/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 10ms)
+ 2017-03-07 12:31:14,530 [P3256/D7/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-03-07 12:31:14,544 [P3256/D7/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 14ms)
+ 2017-03-07 12:31:14,575 [P3256/D7/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-03-07 12:31:14,588 [P3256/D7/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 12ms)
+ 2017-03-07 12:31:14,588 [P3256/D7/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-03-07 12:31:14,601 [P3256/D7/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 12ms)
+ 2017-03-07 12:31:15,493 [P3256/D7/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-03-07 12:31:15,745 [P3256/D7/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-03-07 12:31:15,825 [P3256/D7/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-03-07 12:31:15,888 [P3256/D7/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-03-07 12:31:15,932 [P3256/D7/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 1915ms)
+ 2017-03-07 12:31:16,127 [P3256/D7/T25] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:56488/umbraco (UmbracoModule request)
+ 2017-03-07 12:39:58,420 [P30312/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.10 application starting on DESKTOP-OML07KQ
+ 2017-03-07 12:39:58,464 [P30312/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-03-07 12:39:58,488 [P30312/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 24ms)
+ 2017-03-07 12:39:58,587 [P30312/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-03-07 12:39:58,589 [P30312/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-03-07 12:39:58,602 [P30312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-03-07 12:39:59,460 [P30312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 857ms)
+ 2017-03-07 12:39:59,488 [P30312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-03-07 12:39:59,517 [P30312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 29ms)
+ 2017-03-07 12:39:59,518 [P30312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-03-07 12:39:59,546 [P30312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 27ms)
+ 2017-03-07 12:39:59,570 [P30312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-03-07 12:39:59,590 [P30312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 19ms)
+ 2017-03-07 12:39:59,590 [P30312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-03-07 12:39:59,612 [P30312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 22ms)
+ 2017-03-07 12:39:59,807 [P30312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-03-07 12:39:59,878 [P30312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 71ms)
+ 2017-03-07 12:39:59,879 [P30312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-03-07 12:39:59,905 [P30312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 25ms)
+ 2017-03-07 12:40:02,116 [P30312/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-03-07 12:40:02,779 [P30312/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-03-07 12:40:02,798 [P30312/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-03-07 12:40:02,877 [P30312/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-03-07 12:40:02,974 [P30312/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 4686ms)
+ 2017-03-07 12:40:03,343 [P30312/D2/T10] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:56488/umbraco (UmbracoModule request)
+ 2017-03-07 12:40:03,343 [P30312/D2/T9] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:56488/umbraco (UmbracoModule request)
+ 2017-03-07 12:40:03,770 [P30312/D2/T9] INFO  umbraco.content - Load Xml from file...
+ 2017-03-07 12:40:03,773 [P30312/D2/T9] INFO  umbraco.content - Loaded Xml from file.
+ 2017-03-07 12:40:05,060 [P30312/D2/T10] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-03-07 12:40:08,570 [P30312/D2/T10] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 3510ms)
+ 2017-03-07 12:40:21,248 [P30312/D2/T19] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 12:40:36,859 [P30312/D2/T17] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 12:41:03,880 [P30312/D2/T16] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-03-06 12:41:03
+ 2017-03-07 12:41:03,973 [P30312/D2/T12] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2017-03-07 12:41:03,990 [P30312/D2/T12] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 17ms)
+ 2017-03-07 12:54:19,822 [P30312/D2/T9] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 13:09:21,509 [P29516/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.10 application starting on DESKTOP-OML07KQ
+ 2017-03-07 13:09:21,550 [P29516/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-03-07 13:09:21,563 [P29516/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 13ms)
+ 2017-03-07 13:09:21,617 [P29516/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-03-07 13:09:21,619 [P29516/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-03-07 13:09:21,624 [P29516/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-03-07 13:09:21,828 [P29516/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 204ms)
+ 2017-03-07 13:09:21,924 [P29516/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-03-07 13:09:21,925 [P29516/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+ 2017-03-07 13:09:21,925 [P29516/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-03-07 13:09:21,927 [P29516/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 1ms)
+ 2017-03-07 13:09:21,943 [P29516/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-03-07 13:09:21,944 [P29516/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 0ms)
+ 2017-03-07 13:09:21,944 [P29516/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-03-07 13:09:21,951 [P29516/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 6ms)
+ 2017-03-07 13:09:22,258 [P29516/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-03-07 13:09:22,259 [P29516/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2017-03-07 13:09:22,259 [P29516/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-03-07 13:09:22,260 [P29516/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2017-03-07 13:09:23,406 [P29516/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-03-07 13:09:23,773 [P29516/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-03-07 13:09:23,926 [P29516/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-03-07 13:09:24,005 [P29516/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-03-07 13:09:24,092 [P29516/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 2661ms)
+ 2017-03-07 13:09:27,099 [P29516/D2/T10] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:56488/umbraco (UmbracoModule request)
+ 2017-03-07 13:09:27,939 [P29516/D2/T10] INFO  umbraco.content - Load Xml from file...
+ 2017-03-07 13:09:27,948 [P29516/D2/T10] INFO  umbraco.content - Loaded Xml from file.
+ 2017-03-07 13:09:28,962 [P29516/D2/T10] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-03-07 13:09:28,963 [P29516/D2/T10] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 1ms)
+ 2017-03-07 13:09:38,711 [P29516/D2/T17] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 13:10:27,975 [P29516/D2/T10] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-03-06 13:10:27
+ 2017-03-07 13:10:28,094 [P29516/D2/T18] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2017-03-07 13:10:28,094 [P29516/D2/T18] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 1ms)
+ 2017-03-07 13:11:26,503 [P29516/D2/T18] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 13:19:45,460 [P956/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.10 application starting on DESKTOP-OML07KQ
+ 2017-03-07 13:19:45,480 [P956/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-03-07 13:19:45,494 [P956/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 14ms)
+ 2017-03-07 13:19:45,545 [P956/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-03-07 13:19:45,547 [P956/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-03-07 13:19:45,554 [P956/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-03-07 13:19:45,820 [P956/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 266ms)
+ 2017-03-07 13:19:45,929 [P956/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-03-07 13:19:45,930 [P956/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+ 2017-03-07 13:19:45,930 [P956/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-03-07 13:19:45,931 [P956/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 0ms)
+ 2017-03-07 13:19:45,943 [P956/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-03-07 13:19:45,944 [P956/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 1ms)
+ 2017-03-07 13:19:45,945 [P956/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-03-07 13:19:45,952 [P956/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 7ms)
+ 2017-03-07 13:19:46,069 [P956/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-03-07 13:19:46,070 [P956/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2017-03-07 13:19:46,071 [P956/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-03-07 13:19:46,071 [P956/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2017-03-07 13:19:47,192 [P956/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-03-07 13:19:47,507 [P956/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-03-07 13:19:47,613 [P956/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-03-07 13:19:47,700 [P956/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-03-07 13:19:47,806 [P956/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 2416ms)
+ 2017-03-07 13:19:49,928 [P956/D2/T10] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:56488/umbraco (UmbracoModule request)
+ 2017-03-07 13:19:50,488 [P956/D2/T10] INFO  umbraco.content - Load Xml from file...
+ 2017-03-07 13:19:50,493 [P956/D2/T10] INFO  umbraco.content - Loaded Xml from file.
+ 2017-03-07 13:19:51,116 [P956/D2/T10] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-03-07 13:19:51,118 [P956/D2/T10] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 1ms)
+ 2017-03-07 13:20:50,557 [P956/D2/T10] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-03-06 13:20:50
+ 2017-03-07 13:20:50,637 [P956/D2/T11] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2017-03-07 13:20:50,638 [P956/D2/T11] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 0ms)
+ 2017-03-07 13:29:13,595 [P956/D2/T14] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 13:39:45,003 [P956/D2/T23] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 13:42:58,691 [P956/D2/T63] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-07 17:20:50,631 [P956/D2/T10] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-03-06 17:20:50

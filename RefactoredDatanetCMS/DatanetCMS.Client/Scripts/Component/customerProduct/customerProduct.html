@@ -1,0 +1,90 @@
+﻿<section ng-init="init()">
+    <div class="container">
+        <div class="row product_box">
+            <div class="col-md-3 col-xs-12 col-sm-12">
+                <div class="product-categopy">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-click="setCategory(0);search(page,category.Id);">All</li>
+                        <li class="list-group-item" ng-click="setCategory(category.Id);search(0,category.Id)" ng-repeat="category in categories">{{category.CategoryName}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9 col-xs-12 col-sm-12">
+                <ul class="productList row">
+                    <li class="card-box col-xs-12 col-sm-6 col-lg-4" ng-repeat="product in products">
+                        <div class="card-box-wrap" >
+                            <div class="mask-wrap" ng-mouseenter="showtimes=true" ng-mouseleave="showtimes=false">
+                            <div class="info-mask" ng-if="showtimes">
+                                <p>{{product.Code}}</p>
+                                <p>Product information</p>
+                                <p>{{product.LongDesc}}</p>
+                                <p>Vendor : {{product.Vendor}}</p>
+                                <p>Uom : {{product.Uom.Name}}</p>
+                                <p>Price : {{product.Price| currency : "$"}}</p>
+                            </div>
+                            <div class="card-img" >
+                                <div class="img_box" pop-over   ng-click="showPopup($index)" data-content=""  title="1233" tabindex="0" data-toggle="popover" data-trigger="hover">
+                                    <div class="img-container"   ng-style="{'background-image': 'url('+  (product.Image != undefined ? product.Image: '/Content/images/default.svg') +' )'}">
+                                    </div>
+                                   
+                                </div>
+                                <div class="modal fade" id="myModal{{$index}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                <h4 class="modal-title" id="myModalLabel">{{product.Code}}</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p><b>Product information</b></p>
+                                                <p>{{product.LongDesc}}</p>
+                                                <p><b>Vendor</b>: {{product.Vendor}}</p>
+                                                <p><b>UOM</b>: {{product.Uom.Name}}</p>
+                                                <p><b>Price</b>: {{product.Price| currency : "$"}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                            <div class="card-info">
+                                <a href="#">{{product.Code}}</a>
+                                <div class="card-info2">
+                                    <p>{{product.ShortDesc}}</p>
+                                </div>
+                                <div class="card-product-btn clearfix">
+                                    <form name="quantityForm" class="form-inline">
+                                        <div class="form-group">
+                                            <span>{{product.Price| currency : "$"}}</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="product-qty" >
+                                                <a class="decrement" ng-click="decrease(product)">-</a>
+                                                <input type="text" name="quantity" ng-model="product.Quantity"  ng-change="changeQuantity(product);selectProduct(product,product.Quantity);">
+                                                <a class="increment" ng-click="increase(product)">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="form-group pull-right">
+                                            <button class="btn-icon action-btn save-btn" ng-show="product.Quantity>0" style="cursor:auto;">
+                                                <svg height="22" viewBox="0 0 22 22" width="22" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 0h24v24H0z" fill="none" />
+                                                    <path fill="#4caf50" class="icon-svg" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="text-center">
+                    <custom-pager page="{{page}}" pages-count="{{pagesCount}}" total-count="{{totalCount}}" search-func="search(page)"></custom-pager>
+                </div>
+                <div ng-hide="!products.length">
+                    <button class="btn btn-primary pull-right btn-product" style="padding:6px 12px;" ng-click="continue()" >Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

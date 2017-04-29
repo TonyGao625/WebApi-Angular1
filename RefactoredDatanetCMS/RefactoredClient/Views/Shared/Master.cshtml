@@ -1,0 +1,53 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Datanet Admin</title>
+    @Styles.Render("~/bundles/css")
+
+</head>
+<body>
+    <div growl limit-messages="1"></div>
+    <div class="progress progress-load" ng-class="{active:$root.loading>0,last:$root.loading>60}"></div>
+    <!--frame place here-->
+    <div class="container-fluid" ng-init="init()" ng-controller="masterCtrl">
+        <div class="container">
+            <div id="header_container">
+                <div id="header">
+                    <ul class="nav navbar-nav ng-cloak">
+                        <li>
+                            <a class="nav-link" ui-sref="uom">uom</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" ui-sref="uom">uom</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" ui-sref="uom">uom</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" ui-sref="uom">uom</a>
+                        </li>
+                    </ul>
+                    <div class="navbar-right">
+                        <div class="dropdown">
+                            <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <span ng-bind="userInfo.Name"></span>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="####" ng-click="logout()">Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+    @Scripts.Render("~/bundles/Js")
+</body>
+</html>

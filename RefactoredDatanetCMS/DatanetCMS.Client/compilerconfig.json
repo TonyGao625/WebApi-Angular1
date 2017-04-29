@@ -1,0 +1,66 @@
+﻿[
+  {
+    "outputFile": "Scripts/Component/adminUom/adminUom.css",
+    "inputFile": "Scripts/Component/adminUom/adminUom.less"
+  },
+  {
+    "outputFile": "Scripts/Component/adminProduct/adminProduct.css",
+    "inputFile": "Scripts/Component/adminProduct/adminProduct.less"
+  },
+  {
+    "outputFile": "Scripts/Component/adminBuyerGroup/adminBuyerGroup.css",
+    "inputFile": "Scripts/Component/adminBuyerGroup/adminBuyerGroup.less"
+  },
+  {
+    "outputFile": "Scripts/Component/adminCustomer/adminCustomer.css",
+    "inputFile": "Scripts/Component/adminCustomer/adminCustomer.less"
+  },
+  {
+    "outputFile": "Scripts/Plugins/bootstrap-switch/bootstrap-switch.css",
+    "inputFile": "Scripts/Plugins/bootstrap-switch/bootstrap-switch.less"
+  },
+  {
+    "outputFile": "Scripts/Component/customerProduct/customerProduct.css",
+    "inputFile": "Scripts/Component/customerProduct/customerProduct.less"
+  },
+  {
+    "outputFile": "Scripts/Component/customerQuote/customerQuote.css",
+    "inputFile": "Scripts/Component/customerQuote/customerQuote.less"
+  },
+  {
+    "outputFile": "Scripts/Component/adminCategory/adminCategory.css",
+    "inputFile": "Scripts/Component/adminCategory/adminCategory.less"
+  },
+  {
+    "outputFile": "Scripts/Component/customerOrder/customerOrder.css",
+    "inputFile": "Scripts/Component/customerOrder/customerOrder.less"
+  },
+  {
+    "outputFile": "Scripts/Component/adminManager/adminManager.css",
+    "inputFile": "Scripts/Component/adminManager/adminManager.less"
+  },
+  {
+    "outputFile": "Scripts/Component/customerWelcome/customerWelcome.css",
+    "inputFile": "Scripts/Component/customerWelcome/customerWelcome.less"
+  },
+  {
+    "outputFile": "Scripts/Component/login/login.css",
+    "inputFile": "Scripts/Component/login/login.less"
+  },
+  {
+    "outputFile": "Scripts/Component/adminQuoteAndOrder/adminQuoteAndOrder.css",
+    "inputFile": "Scripts/Component/adminQuoteAndOrder/adminQuoteAndOrder.less"
+  },
+  {
+    "outputFile": "Scripts/Component/customerQToOrder/customerQToOrder.css",
+    "inputFile": "Scripts/Component/customerQToOrder/customerQToOrder.less"
+  },
+  {
+    "outputFile": "Scripts/Component/customerQuoteAndOrder/customerQuoteAndOrder.css",
+    "inputFile": "Scripts/Component/customerQuoteAndOrder/customerQuoteAndOrder.less"
+  },
+  {
+    "outputFile": "Scripts/Component/adminEmailTemplate/adminEmailTemplate.css",
+    "inputFile": "Scripts/Component/adminEmailTemplate/adminEmailTemplate.less"
+  }
+]

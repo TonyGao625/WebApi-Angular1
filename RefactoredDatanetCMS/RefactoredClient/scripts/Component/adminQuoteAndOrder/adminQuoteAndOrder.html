@@ -1,0 +1,135 @@
+﻿<div class="container" ng-init="init()">
+    <div class="list-container">
+        <div class="row">
+            <div class="col-sm-8 list_box">
+                <div class='col-sm-4 quote-order-info'>
+                    <div class="form-group">
+                        <label>Types</label>
+                        <div>
+                            <select class="form-control" ng-model="selectedTypeId">
+                                <option value="1">All</option>
+                                <option value="7">Order</option>
+                                <option value="9">Quote</option>
+                            </select>
+                        </div>
+                    </div>
+              </div>
+                <div class='col-sm-4 quote-order-info'>
+                    <div class="form-group">
+                        <label>From Date</label>
+                        <input type='text' id="formdate" class="form-control" init-datetime ng-model="fromDate" />
+                    </div>
+                </div>
+                <div class='col-sm-4 quote-order-info'>
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <div isteven-multi-select
+                             input-model="customers"
+                             output-model="companyNames"
+                             button-label="CompanyName"
+                             item-label="CompanyName"
+                             tick-property="ticked"
+                             selection-mode="single"
+                             helper-elements="all filter"
+                             max-height="250px"
+                             search-property="CompanyName">
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+            <div class="row">
+                <div class="col-sm-8 list_box">
+                    <div class='col-sm-4 quote-order-info'>
+                        <div class="form-group">
+                            <label>Quote or Order Code</label>
+                            <input type='text'  maxlength="30" class="form-control" ng-model="orderCode" />
+                        </div>
+                    </div>
+                    <div class='col-sm-4 quote-order-info'>
+                        <div class="form-group">
+                            <label>To Date</label>
+                            <input type='text' id="todate" class="form-control" init-datetime ng-model="toDate" />
+                        </div>
+
+                    </div>
+                    <div class='col-sm-4 quote-order-info'>
+                        <div class="form-group">
+                            <label>Contact Name</label>
+                            <input type='text' maxlength="30" class="form-control" ng-model="contactName" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 quote-order-btn">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default quote-order-search" ng-click="search()">Search</button>
+                        <button type="button" class="btn btn-link" ng-click="searchReset()">
+                            Clear
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div ng-if="searched && deliveryReportListCtrl.deliveres.length==0">
+                <h6 class="grey-text lighten-3">No results by search conditions</h6>
+            </div>
+            <div class="row">
+                <table class="table table-hover table-bordered">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th width="5%">#</th>
+                            <th width="7%">Type</th>
+                            <th width="8%">Code</th>
+                            <th width="15%">Company Name</th>
+                            <th width="20%">Contact Name</th>
+                            <th width="15%" class="text-right">Amount</th>
+                            <th width="20%">Created Time</th>
+                            <th width="10%">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="quoteOrder in quoteOrders track by quoteOrder.Id">
+                            <th>{{$index+1}}</th>
+                            <td>
+                                {{quoteOrder.Mode==='9'? "Quote":"Order"}}
+                            </td>
+                            <td>
+                                {{quoteOrder.Mode === '9' ? quoteOrder.QuoteCode : quoteOrder.OrderCode}}
+                            </td>
+                            <td title="{{quoteOrder.CompanyName}}">
+                                {{quoteOrder.CompanyName}}
+                            </td>
+                            <td title="{{quoteOrder.ContactName}}">
+                                {{quoteOrder.ContactName}}
+                            </td>
+                            <td class="text-right">
+                                {{quoteOrder.Amount|number : 2}}
+                            </td>
+                            <td>
+                                {{quoteOrder.CreateTime|timezone}}
+                            </td>
+                            <td class="center-text">
+                                <button class="btn-icon cursor-pointer action-btn" ng-click="showItem(quoteOrder,$event)">
+                                    <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                                        <path fill="#000000" d="M3,3H21V5H3V3M3,7H15V9H3V7M3,11H21V13H3V11M3,15H15V17H3V15M3,19H21V21H3V19Z" />
+                                    </svg>
+                                </button>
+                                <button class="btn-icon cursor-pointer action-btn" ng-click="email(quoteOrder)">
+                                    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-center">
+                    <custom-pager page="{{page}}" pages-count="{{pagesCount}}" total-count="{{totalCount}}" search-func="$root.checkIfEdit()&&search(page)"></custom-pager>
+                </div>
+            </div>
+
+
+        </div>
+    </div>

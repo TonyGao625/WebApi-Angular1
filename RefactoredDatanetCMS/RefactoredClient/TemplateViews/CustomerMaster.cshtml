@@ -1,0 +1,80 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using System.Web.Optimization
+@using StackExchange.Profiling
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    @Styles.Render("~/bundles/css")
+    <title>Customer Order Portal</title>
+</head>
+<body ng-controller="customerMasterCtrl" ng-init="init()">
+    <div growl limit-messages="1"></div>
+    <div class="progress progress-load" ng-class="{active:$root.loading>0,last:$root.loading>60}"></div>
+    <header class="container">
+        <a href="/welcome" class="header-left" ng-style="{'background-image': 'url('+ Logo +' )'}"></a>
+         <div class="header-right">
+             <a href="#" >
+                 <span class="glyphicon glyphicon-user"></span><span ng-bind="userInfo.Name"></span>
+             </a>
+             <ul>
+                 <li><a href="####" ng-click="logout();$root.backToProduct=false">Log out</a></li>
+             </ul>
+         </div>
+    </header>
+    <nav class="navbar navbar-default navbar-bgd">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="bs-example">
+                <ul class="nav navbar-nav" id="nav">
+                    <li><a href="/welcome"class="nav_home">HOME</a></li>
+                    <li  class="nav-display"><a href="/products"><span class="glyphicon glyphicon-menu-right nav_arrow"></span><span ng-click="$root.backToProduct=false">PRODUCTS</span></a></li>
+                    <li  class="nav-display"><a href="/qtoorder"><span class="glyphicon glyphicon-menu-right nav_arrow"></span><span>QUOTE TO ORDER</span></a></li>
+                    <li  class="nav-display"><a href="/order"><span class="glyphicon glyphicon-menu-right nav_arrow"></span><span>ORDER</span></a></li>
+                    <li  class="nav-display"><a href="/quote"><span class="glyphicon glyphicon-menu-right nav_arrow"></span><span>QUOTE</span></a></li>
+                    <li class="nav-display"><a href="/qandorder"><span class="glyphicon glyphicon-menu-right nav_arrow"></span><span ng-click="$root.backToProduct=false">QUOTE&ORDER</span></a></li>
+                    <li class="nav-display"><a href="/order"><span class="glyphicon glyphicon-menu-right nav_arrow"></span><span>ORDERS</span></a></li>
+                </ul>
+                <form class="navbar-form  nav-display navbar-seaech" style="float:right;" >
+                    <div class="form-group has-feedback">
+                        <input type="text" class="form-control search-text" placeholder="Search Product Code" ng-model="$root.filterProductCode" maxlength="20">
+                        <button type="submit" class="btn btn-default search-btn" ng-click="search()">Search</button>
+                    </div>
+                </form> 
+            </div><!-- /.navbar-collapse -->
+          
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- sectioon start -->
+    @RenderBody()
+    <!-- section end -->
+    <footer >
+        <div class="container">
+            <h3 class="footer-h3">Contact Us</h3>
+            <p class="footer-address" >
+                <span class="glyphicon glyphicon-map-marker"></span>
+                WA - 28 Stiles Avenue, Burswood, WA, 6100
+             </p>
+               <p class="footer-address" style="padding-left:29px"> SA - 96 Gilbert Street, Adelaide, SA, 5000</p>
+               <p class="footer-address" style="padding-left:29px"> NSW - Suite 2.11, Delhi Corp. Centre, 32 Delhi Road, North Ryde, NSW, 2113</p>
+         
+            <p class="footer-phone">
+                <span class="glyphicon glyphicon-earphone"></span>
+                Phone - 1300 3282638
+            </p>
+            <p class="footer-email" >
+                <span class="glyphicon glyphicon-envelope"></span>
+                <span>Email - </span><a href="mailto:sales@datanet.com.au">sales@datanet.com.au</a>
+            </p>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/Js")
+    @*@MiniProfiler.RenderIncludes()*@
+</body>
+</html>			

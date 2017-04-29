@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E0596E82-2978-4F01-80C9-3E2699029E9D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DatanetCMS.Repository</RootNamespace>
+    <AssemblyName>DatanetCMS.Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Z.EntityFramework.Extensions, Version=3.10.61.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.EntityFramework.Extensions.3.10.61\lib\net45\Z.EntityFramework.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuyerGroupRepository.cs" />
+    <Compile Include="CategoryRepository.cs" />
+    <Compile Include="ContractNumberRepository.cs" />
+    <Compile Include="CustomerRepository.cs" />
+    <Compile Include="DeliveryAddrRepository.cs" />
+    <Compile Include="ManagerRepository.cs" />
+    <Compile Include="OrderAddrRepository.cs" />
+    <Compile Include="OrderDocRepository.cs" />
+    <Compile Include="OrderHistoryRepository.cs" />
+    <Compile Include="OrderNumberRepository.cs" />
+    <Compile Include="OrderProductRepository.cs" />
+    <Compile Include="OrderRepositroy.cs" />
+    <Compile Include="ProductRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UomRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountRepository.cs" />
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatanetCMS.Common\DatanetCMS.Common.csproj">
+      <Project>{87e54553-0b1e-4817-b45d-164217ad512f}</Project>
+      <Name>DatanetCMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatanetCMS.DAO\DatanetCMS.DAO.csproj">
+      <Project>{c568df6a-4322-4d81-b117-ecef91c4d399}</Project>
+      <Name>DatanetCMS.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatanetCMS.Model\DatanetCMS.Model.csproj">
+      <Project>{dd74c1a9-2222-4d47-a9ea-1f5eb9d4bc6c}</Project>
+      <Name>DatanetCMS.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,94 @@
+﻿<section ng-init="init()">
+    <div class="order-show container">
+        <div class="container">
+            <div class="ctrl-wrap">
+                <div class="ctrl-thead">
+                    <div class="column-good">Product</div>
+                    <div class="column-price">Price</div>
+                    <div class="column-quantity">Quantity</div>
+                    <div class="column-sum">Amount</div>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="product in products track by product.Id">
+                        <div>
+                            <img class="img-container" src="{{product.Image}}" />
+                        </div>
+                        <span class="order-type">{{product.Code}} {{product.ShortDesc}}</span>
+                        <div class="order-price">
+                            <strong>{{product.Price | currency : "$"}}</strong>
+                        </div>
+                        <div class="quantity-form">
+                            <a class="decrement" ng-click="decrease(product)">-</a>
+                            <input id="quantity" type="text" ng-model="product.Quantity" ng-change="changeQuantity(product)" />
+                            <a class="increment" ng-click="increase(product)">+</a>
+                        </div>
+                        <div class="order-sum">
+                            <strong>{{product.Price * product.Quantity | currency : "$"}}</strong>
+                        </div>
+                        <button class="btn btn-link " ng-click="removeProduct(product)">Remove</button>
+                    </li>
+                </ul>
+                <div class="cart_money">
+                    <!--<div class="Delivery-charge">Delivery Charge: <span>{{ deliveryCharge | currency : "$"}}</span></div>-->
+                    <div class="Delivery-charge">Delivery Charge: <span>{{ userInfo.DeliveryCharge | currency : "$"}}</span></div>
+                    <div class="order-total">SUB TOTAL:&nbsp;<span>{{getSubtotal() | currency : "$"}}</span></div>
+                    <div class="order-gst">GST: <span>{{getGST() | currency : "$"}}</span></div>
+                    <div class="order-amount">Amount: <span>{{getTotal() | currency : "$"}}</span></div>
+                </div>
+            </div>
+            <form name="quoteForm" novalidate>
+                <div class="form-group">
+                    <label class="contact-name">Contact Name: </label>
+                    <input name="contactName" type="text" ng-model="contactName" ng-maxlength="50" maxlength="50" required class="form-control" />
+                    <div ng-messages="quoteForm.contactName.$error" class="error-message-con" ng-show="quoteForm.contactName.$touched || quoteForm.$submitted">
+                        <div ng-message="required">Contact name is Required</div>
+                        <div ng-message="maxlength">Contact name should be less than 50 characters</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="contact-email">Contact Email: </label>
+                    <input type="email" name="contactEmail" ng-model="contactEmail" ng-maxlength="50" maxlength="50" required class="form-control" />
+                    <div ng-messages="quoteForm.contactEmail.$error" class="error-message-con" ng-show="quoteForm.contactEmail.$touched || quoteForm.$submitted">
+                        <div ng-message="required">Contact email is Required</div>
+                        <div ng-message="email">Not valid emai address</div>
+                        <div ng-message="maxlength">Contact email should be less than 50 characters</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Contact Phone: </label>
+                    <input name="contactPhone" type="text" ng-model="contactPhone" ng-maxlength="50" maxlength="50" required class="form-control" />
+                    <div ng-messages="quoteForm.contactPhone.$error" class="error-message-con" ng-show="quoteForm.contactPhone.$touched || quoteForm.$submitted">
+                        <div ng-message="required">Contact phone is Required</div>
+                        <div ng-message="maxlength">Contact phone should be less than 50 characters</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label quote-address">Delivery Address:</label>
+                    <div isteven-multi-select
+                         input-model="deliveryAddrs"
+                         output-model="deliveryAddr"
+                         button-label="Addr1 Addr2 Addr3 State PostCode"
+                         item-label="Addr1 Addr2 Addr3 State PostCode"
+                         tick-property="ticked"
+                         selection-mode="single"
+                         helper-elements="filter"
+                         max-height="150px"
+                         search-property="Addr1 Addr2 Addr3 State PostCode"
+                         on-item-click="calcDeliveryCharge(data)">
+                    </div>
+                    <button type="button" class="btn btn-link add-new-address" ng-click="addAddress()">
+                        Add new address
+                    </button> <span>|</span>
+                    <button type="button" class="btn btn-link clear-btn" ng-click="selectReset()">
+                        Clear
+                    </button>
+                </div>
+                <button type="submit" ng-disabled="saving" style="padding:6px 10px;" class="btn btn-primary  pull-right" ng-click="quoteForm.$valid && saveQuote()">Build Quote</button>
+            </form>
+        </div>
+    </div>
+    <div confirm-on-exit="!saving"
+         confirm-message-window="All your changes will be lost."
+         confirm-message-route="All your changes will be lost. Are you sure you want to do this?">
+    </div>
+</section>

@@ -1,0 +1,90 @@
+﻿<div>
+    <table class="table table-condensed table-bordered pop-table">
+        <thead class="thead-inverse">
+            <tr>
+                <th width="5%">#</th>
+                <th width="25%">Product Code</th>
+                <th width="25%">Description</th>
+                <th width="10%" class="text-right">QTY</th>
+                <th width="15%" class="text-right">Unit Price</th>
+                <th width="20%" class="text-right">Line Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="product in quoteDetail.OrderProductModels track by product.Id">
+                <td data-content="#">{{$index+1}}</td>
+                <td data-content="Product Code" title={{product.ProductModel.Code}}>{{product.ProductModel.Code}}</td>
+                <td data-content="Description" title={{product.ProductModel.ShortDesc}}>{{product.ProductModel.ShortDesc}}</td>
+                <td data-content="QTY" title={{product.Quantity}} class="text-right">{{product.Quantity}}</td>
+                <td data-content="Unit Price" title={{product.Price}} class="text-right">
+                    {{product.Price|currency : "$"}}
+                </td>
+                <td data-content="Line Total" style="text-align:right">
+                    {{product.Price*product.Quantity|currency : "$"}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- phone  screen template start -->
+    <div class="swiper-container" id="swiper-container-id">
+        <div class="swiper-wrapper">
+            <ul class="swiper-slide" ng-repeat="product in quoteDetail.OrderProductModels track by product.Id">
+                <li data-content="#">{{$index+1}}</li>
+                <li data-content="Product Code" title={{product.ProductModel.Code}}>{{product.ProductModel.Code}}</li>
+                <li data-content="Description" title={{product.ProductModel.ShortDesc}}>{{product.ProductModel.ShortDesc}}</li>
+                <li data-content="QTY" title={{product.Quantity}}>{{product.Quantity}}</li>
+                <li data-content="Unit Price" title={{product.Price}} class="text-right">
+                    {{product.Price|currency : "$"}}
+                </li>
+                <li data-content="Line Total" style="text-align:right">
+                    {{product.Price*product.Quantity|currency : "$"}}
+                </li>
+            </ul>
+        </div>
+        <div class="swiper-pagination"></div>
+        <!--<div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>-->
+    </div>
+
+    <table class="table">
+        <tbody>
+            <tr class="no-border">
+                <th width="80%" class="text-right text-border">Delivery Charge</th>
+                <td width="20%" class="text-right text-border">{{quoteDetail.DeliveryCharge|currency : "$"}}</td>
+            </tr>
+            <tr class="no-border">
+                <th class="text-right text-border">Sub Total</th>
+                <td class="text-right text-border">{{quoteDetail.Amount-quoteDetail.GST|currency : "$"}}</td>
+            </tr>
+            <tr class="no-border">
+                <th class="text-right text-border">GST</th>
+                <td class="text-right text-border">{{quoteDetail.GST|currency : "$"}}</td>
+            </tr>
+            <tr>
+                <th class="text-right ">Total Amount</th>
+                <td class="text-right ">{{quoteDetail.Amount|currency : "$"}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!--</div>
+        </div>
+    </div>-->
+</div>
+<script>
+    var screenWidth = window.screen.width;
+    if (screenWidth > 0 && screenWidth <= 767) {
+        var swiper = new Swiper('#swiper-container-id',
+            {
+                //nextButton: '.swiper-button-next',
+                //prevButton: '.swiper-button-prev',
+                loop: false,
+                spaceBetween: 30,
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                observer: true,
+                observeParents: true,
+                initialSlide: 0
+            });
+    }
+
+</script>

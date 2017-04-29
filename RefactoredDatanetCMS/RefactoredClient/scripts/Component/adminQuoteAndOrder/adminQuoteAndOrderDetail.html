@@ -1,0 +1,105 @@
+﻿<tr class="child-tr">
+    <td class="child-td" colspan="8">
+        <div class="col-lg-4 selectCustomer">
+            <label class="control-label">Overview</label>
+            <div>
+                <div>
+                    <table class="table table-condensed table-bordered">
+                        <tbody>
+                            <tr>
+                                <th width="40%">Contact Name</th>
+                                <td width="60%" title="{{quoteOrder.ContactName}}">{{quoteOrder.ContactName}}</td>
+                            </tr>
+                            <tr>
+                                <th>Contact Email</th>
+                                <td title="{{quoteOrder.ContactEmail}}">{{quoteOrder.ContactEmail}}</td>
+                            </tr>
+                            <tr>
+                                <th>Contact Phone</th>
+                                <td title="{{quoteOrder.ContactPhone}}">{{quoteOrder.ContactPhone}}</td>
+                            </tr>
+                            <tr>
+                                <th>Delivery Address</th>
+                                <td title="{{quoteOrder.Addr1}}  {{quoteOrder.Addr2}} {{quoteOrder.Addr3}}  {{quoteOrder.State}}  {{quoteOrder.PostCode}}">
+                                    {{quoteOrder.Addr1}}  {{quoteOrder.Addr2}}
+                                    {{quoteOrder.Addr3}}  {{quoteOrder.State}}  {{quoteOrder.PostCode}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Purchase Type</th>
+                                <td title="{{quoteOrder.PurchaseNumber}}">
+                                    {{quoteOrder.PurchaseType==1?"CN":""}}{{quoteOrder.PurchaseType==2?"PO":""}}
+                                    {{quoteOrder.PurchaseNumber==null?"":("-"+quoteOrder.PurchaseNumber)}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>PO Doc</th>
+                                <td title="{{quoteOrder.PoDocPath}}" >
+                                    <a target='_blank' class="download-file" download >{{quoteOrder.PoDocPath? "View":""}}</a>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-condensed table-bordered">
+                        <tbody>
+                            <tr>
+                                <th width="40%">Delivery Charge</th>
+                                <td width="60%" class="text-right">{{quoteOrder.DeliveryCharge|number : 2}}</td>
+                            </tr>
+                            <tr>
+                                <th>Sub Total</th>
+                                <td class="text-right">{{quoteOrder.Amount-quoteOrder.GST|number : 2}}</td>
+                            </tr>
+                            <tr>
+                                <th>GST</th>
+                                <td class="text-right">{{quoteOrder.GST|number : 2}}</td>
+                            </tr>
+                            <tr>
+                                <th>Total Amount</th>
+                                <td class="text-right">{{quoteOrder.Amount|number : 2}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8 selectProduct">
+            <label class="control-label">Product Detail</label>
+            <div>
+                <table class="table table-condensed table-bordered">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th width="5%">#</th>
+                            <th width="25%">Product Code</th>
+                            <th width="25%">Description</th>
+                            <th width="10%" class="text-right">QTY</th>
+                            <th width="15%" class="text-right">Unit Price</th>
+                            <th width="20%" class="text-right">Line Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="product in quoteOrder.OrderProductModels track by product.Id">
+                            <th>{{$index+1}}</th>
+                            <td title={{product.ProductModel.Code}}>{{product.ProductModel.Code}}</td>
+                            <td title={{product.ProductModel.ShortDesc}}>{{product.ProductModel.ShortDesc}}</td>
+                            <td title={{product.Quantity}} class="text-right">{{product.Quantity}}</td>
+                            <td title={{product.Price}} class="text-right">
+                                {{product.Price|number : 2}}
+                            </td>
+                            <td class="text-right">
+                                {{product.Price*product.Quantity|number : 2}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-center">
+                    <custom-pager page="{{pageProduct}}" pages-count="{{pagesCountProduct}}" total-count="{{totalCountProduct}}" search-func="searchProducts(quoteOrder.Id,page)"></custom-pager>
+                </div>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
+

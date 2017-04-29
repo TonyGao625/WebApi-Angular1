@@ -1,0 +1,331 @@
+*{margin: 0;padding: 0px;
+font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box; /* Safari */
+
+}
+.header-right .header-right-login{
+	margin-right:15px;
+}
+header{
+	height:100px;
+  }
+.navbar-bgd{
+	background:#f8f8f;
+	border-color:#e7e7e7;
+  }
+#nav li>a{
+  font-size:16px;
+  color:#4688be;
+  font-weight:bold;
+  padding-top:20px;
+  height:60px;
+}
+#nav>li:hover{
+	background:#eee;
+}
+ .header-right{
+ float:right;
+
+  }
+  .header-left{
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top:40px;
+  float: left;
+  colr:#3f3f3f;
+  margin-left:20px;
+  }
+   .form-inline .form-group .input-group{
+ 	display:block;
+ }
+ footer ul li{list-style:none;}
+footer .btn{margin-top:8px;}
+ .header-right a{
+	display: inline-block;
+	text-decoration: none;
+	color:#333;
+    margin-top: 45px;
+	text-align: center;
+	vertical-align: middle;
+  }
+ .header-right .header-right-cart{
+ 	padding-right:15px;
+ }
+.header-right .header-right-cart span{color:red}
+.header-right .header-right-login span{
+	color:red;
+}
+
+//响应式写法
+
+@media screen and (max-width:767px){
+ .header-left{
+ 	font-size:33px;
+ 	color:#3f3f3f;
+ 	margin-left:60px;
+ }
+ footer .btn{margin-top:0px;}
+ 
+}
+	
+@media (min-width:768px) and (max-width:991px) {
+ 
+ .header-left{
+  font-size: 33px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top:26px;
+  float: left;
+  colr:#3f3f3f;
+  margin-left:0px; 
+  }
+  .navbar-bgd{
+	background:#4688be;
+	
+  }
+  #nav>li>a{
+  	color:#fff;
+  }
+  #nav>li>a:hover{
+ background:#4688be;
+ border-bottom:3px solid #fff;
+}
+  .navbar-bgd .navbar-right .search-text{
+	margin-top:4px;
+	color:#000;
+}
+ .navbar-form .has-feedback .form-control-feedback{
+ 	top:5px;
+ }
+ .footer-right .form-control{
+    width:448px!important;
+	height:46px;
+
+	display:inline-block;
+	background:#efefef;
+  }
+  .footer-right .btn{
+	width:116px;
+	height:46px;
+	font-weight:bold;
+}
+footer .btn{margin-top:0px;}
+ 
+}
+@media(min-width:992px) and (max-width:1169px){
+  .navbar-bgd .navbar-right .search-text{
+	width: 327px;
+	height:46px;
+	color:#000;
+   }
+   .navbar-form .has-feedback .form-control-feedback{
+ 	top:8px;
+ }
+ .navbar-bgd{
+	background:#4688be;
+	
+  }
+  #nav>li>a{
+  	color:#fff;
+  }
+  #nav>li>a:hover{
+ background:#4688be;
+ border-bottom:3px solid #fff;
+}
+ .header-left{
+   font-size: 33px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top:26px;
+  float: left;
+  colr:#3f3f3f;
+  margin-left:0px; 
+ }
+   .footer-right .form-control{
+    width:448px!important;
+	height:46px;
+
+	display:inline-block;
+	background:#efefef;
+  }
+  .footer-right .btn{
+	width:116px;
+	height:46px;
+	font-weight:bold;
+}
+footer .btn{margin-top:0px;}
+}
+@media(min-width:1170px){
+
+  .header-left{
+  font-size: 33px;
+  font-weight: bold;
+  letter-spacing: 2px;
+   margin-left:-125px;
+   margin-top:26px;
+}
+
+.header-right a{
+	display: inline-block;
+	text-decoration: none;
+	color:#334771;
+    margin-top: 45px;
+	text-align: center;
+	font-weight: bold;
+	vertical-align: middle;
+	font-size:16px;
+}
+.header-right .glyphicon{
+	padding-right:5px;
+}
+.header-right .header-right-login{
+	margin-left: 18px;
+}
+.header-right .header-right-cart span:nth-of-type(2){
+	padding-left:8px;
+	font-weight:300;
+}
+.header-right .header-right-cart span{color:red}
+.header-right .header-right-login span{
+	color:red;
+}
+
+
+#nav>li{
+	margin-right:22px;
+}
+
+footer div.container{
+	border-top: 4px solid #4688be;
+	margin-top:20px;
+	padding-left:30px;
+}
+footer h3{
+	color:#00ccff;
+	margin-top:20px;
+	font-weight:100;
+	font-size:22px;
+	margin-bottom:0px;
+	font-style:italic;
+}
+.navbar-bgd .navbar-right .search-text{
+	width: 327px;
+	height:46px;
+	color:#000;
+}
+.navbar-bgd .navbar-form{
+	margin-top:6px;
+} 
+.navbar-bgd .navbar-right input:-moz-placeholder{
+ color:#3f3f3f;
+}
+.navbar-bgd .navbar-right input:-webkit-input-placeholder{
+ color:#3f3f3f;
+}
+.navbar-bgd .navbar-right input:-ms-input-placeholder{
+ color:#3f3f3f;
+}
+.navbar-right .form-group .form-control-feedback{
+	line-height:45px;font-size:18px;
+	padding-right:9px;
+}
+#nav{
+	margin-left:-114px;height:60px;
+}
+#nav > li > a:focus, .nav > li > a:hover{
+	text-decoration:none;
+	background:#4688be;
+	border-bottom: 3px solid #fff;
+
+}
+footer p{
+	margin-bottom:25px;
+}
+
+//login的代码
+section .login-wrap{
+	width: 480px;
+	height:330px;
+	margin:20px auto;
+	color:#4688be;
+}
+
+.login-wrap .form-horizontal .form-group{
+
+	border-bottom:1px solid #4688de;
+	overflow: hidden;
+}
+footer ul{
+	overflow:hidden;
+}
+footer ul li{
+	float: left;
+	list-style: none;
+  
+}
+	
+.footer-right{
+	width:570px;
+	overflow:hidden;
+    word-break:break-all;
+	word-wrap:break-word;
+	margin-left:25px;
+}
+.footer-right .form-control{
+    width:448px!important;
+	height:46px;
+
+	display:inline-block;
+	background:#efefef;
+}
+.footer-left{
+	margin-right:109px;
+}
+.footer-left p{
+	margin-bottom: 0px;
+}
+
+.footer-right .btn{
+	width:116px;
+	height:46px;
+	font-weight:bold;
+}
+footer ul li>h3{
+ padding-bottom:4px;
+}
+footer .btn{margin-top:0px;}
+.navbar-bgd{
+	background: #4b88be;
+	height:60px;	
+}
+.navbar-collapse{
+	height:60px;
+}
+#nav li>a{
+  font-size:16px;
+  color:#fff;
+  font-weight:bold;
+  padding-top:20px;
+  height:60px;
+}
+   .header-left{
+  font-size: 33px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top:21px;
+  float: left;
+  colr:#3f3f3f;
+
+  }
+  .header-right{
+ float:right;
+ margin-right: 60px;
+  }
+  #nav>li>a:hover{
+ background:#4688be;
+ border-bottom:3px solid #fff;
+}
+}
